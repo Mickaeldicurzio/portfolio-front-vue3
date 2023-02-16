@@ -8,7 +8,7 @@
     <div class="HomePageHero-title">
       {{ homepageHero.data.attributes.hero.title }}
     </div>
-
+    <br>
     <div class="HomePageHero-description">
       {{ homepageHero.data.attributes.hero.subtitle }}
     </div>
@@ -51,6 +51,7 @@ export default {
 }
 
 .HomePage-background {
+  margin-top: 40px;
   width: 100%;
   height: 100%;
 }
