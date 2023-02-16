@@ -8,7 +8,7 @@
     </div>
 <!--    footer-->
     <footer>
-      &copy; Awesome Company
+      footer
     </footer>
   </div>
 
