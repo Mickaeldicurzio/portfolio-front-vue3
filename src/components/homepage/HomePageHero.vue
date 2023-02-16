@@ -44,12 +44,18 @@ export default {
 <style>
 
 .HomePageHero {
-  width: 100%;
+  padding: 40px 80px 40px 40px;
+  width: calc(100% - 80px);
   height: 100%;
 
 }
 
 .HomePage-background {
+  width: 100%;
+  height: 100%;
+}
+
+.HomePage-background img {
   width: 100%;
   height: 100%;
 }

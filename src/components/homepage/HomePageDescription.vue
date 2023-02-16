@@ -23,3 +23,10 @@ export default {
   },
 }
 </script>
+
+<style>
+
+.HomePageDescription {
+  padding: 40px;
+}
+</style>
