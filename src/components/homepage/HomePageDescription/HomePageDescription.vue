@@ -1,8 +1,14 @@
 <template>
   <div class="HomePageDescription" v-if="loading === 0">
-    <h2>Homepage description</h2>
-    {{ homepageDescription.data.attributes.description }}
+    <div class="HomePageDescription-logo">
+      <v-img src="@/assets/whoami.svg"></v-img>
+
+    </div>
+    <div class="HomePageDescription-logo">{{ homepageDescription.data.attributes.description }}</div>
     <br>
+  </div>
+  <div v-else>
+    loading...
   </div>
 </template>
 
@@ -27,6 +33,6 @@ export default {
 <style>
 
 .HomePageDescription {
-  padding: 40px;
+  margin-top: 40px;
 }
 </style>

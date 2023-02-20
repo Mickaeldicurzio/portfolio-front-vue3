@@ -1,0 +1,86 @@
+
+.HomePageHero {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: calc(100vh - 60px);
+}
+
+.HomePageHero-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.HomePageHero-containerInner {
+  z-index: 10;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @media (max-width: 720px) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.HomePage-background2 {
+  z-index: 3;
+  transform: skew(30deg, 0deg);
+  width: 100%;
+  left: -60%;
+  --v-theme-background: transparent;
+}
+
+.HomePage-background2 .v-img {
+  width: 100%;
+  left: 55%;
+  transform: skew(-30deg, 0deg);
+}
+
+.HomePage-background3 {
+  z-index: 2;
+  transform: skew(-40deg, 0deg);
+  width: 100%;
+  right: -45%;
+  --v-theme-background: transparent;
+
+  @media (max-width: 720px) {
+    right: -65%;
+  }
+}
+
+.HomePage-background3 .v-img {
+  width: 100%;
+  right: 40%;
+  transform: skew(40deg, 0deg);
+}
+
+.HomePage-background {
+  z-index: 0;
+  width: 100%;
+}
+
+.HomePage-background, .HomePage-background2, .HomePage-background3 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 50%);
+
+}
+
+.v-theme--light {
+  --v-theme-background: transparent !important;
+}

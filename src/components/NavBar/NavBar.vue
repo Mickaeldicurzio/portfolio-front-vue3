@@ -1,7 +1,15 @@
 <template>
-  <nav class="NavBar">
-    <router-link to="/">Home</router-link>
-  </nav>
+    <v-app-bar app color="white">
+      <v-toolbar-title shrink-on-scroll>Mickaël DI CURZIO</v-toolbar-title>
+      <v-tabs align-with-title>
+        <v-tab>
+          <router-link to="/">Home</router-link>
+        </v-tab>
+        <v-tab>
+          <router-link to="/articles">Articles</router-link>
+        </v-tab>
+      </v-tabs>
+    </v-app-bar>
 </template>
 
 <!-- script -->
@@ -14,29 +22,6 @@ export default {
 <!-- stylesheet -->
 
 <style>
-
-.NavBar {
-  display: flex;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  padding: 20px 40px;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.NavBar a {
-  color: #000;
-  opacity: 0.7;
-  text-decoration: none;
-}
-
-.NavBar a:hover {
-  opacity: 1;
-  text-decoration: underline;
-  transition: all 0.25s ease-in-out;
-}
 
 
 </style>
