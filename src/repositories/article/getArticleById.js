@@ -10,3 +10,12 @@ export const GET_ARTICLE_BY_ID = gql`query ($id: ID!){
     }
   }
 }`
+
+//
+// query {
+//     articles(filters: { title: { startsWith: "mon"  }}) {
+//         data {
+//             id
+//         }
+//     }
+// }

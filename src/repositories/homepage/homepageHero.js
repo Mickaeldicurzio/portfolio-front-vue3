@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const GET_HOMEPAGE_HERO = gql`query  {
+export const GET_HOMEPAGE_HERO = gql`query GetHomepageHero {
         homepageHero: homepage {
           data {
             id

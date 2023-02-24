@@ -2,7 +2,8 @@
   <div class="App">
     <v-app>
       <!--  navbar-->
-      <nav-bar></nav-bar>
+      <nav-bar>
+      </nav-bar>
 
       <!--  body-->
 
@@ -25,9 +26,23 @@ export default {
   components: {
     NavBar
   },
-  computed: {
-    isCurrentHome() {
-      return this.$router.currentRoute._value.name === "home";
+  data() {
+    return {
+      isCurrentHome: true
+    }
+  },
+
+  mounted() {
+    this.getCurrentHomeState()
+  },
+
+  updated() {
+    this.getCurrentHomeState()
+  },
+
+  methods: {
+    getCurrentHomeState() {
+      this.isCurrentHome = this.$router.currentRoute._value.path === "/";
     }
   }
 }
@@ -38,9 +53,15 @@ export default {
 
 body {
   margin: 0 auto;
+  font-size: 18px;
+}
+
+.container, .homeContainer {
+  overflow: hidden;
 }
 
 .container {
-  margin-top: 60px;
+  margin-top: 80px;
 }
+
 </style>
