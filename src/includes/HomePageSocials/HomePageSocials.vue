@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import maltIcon from "@/assets/malt-svgrepo-com.svg";
+import maltIcon from "@/assets/images/malt-svgrepo-com.svg";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 export default {

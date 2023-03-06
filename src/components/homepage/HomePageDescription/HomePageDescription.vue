@@ -1,7 +1,7 @@
 <template>
   <div class="HomePageDescription" v-if="loading === 0">
     <div class="HomePageDescription-logo">
-      <v-img :src="myLogoSrc"></v-img>
+      <v-img :src="whoAmiILogo"></v-img>
     </div>
     <div class="HomePageDescription-text">{{ homepageDescription.data.attributes.description }}</div>
     <br>
@@ -13,13 +13,13 @@
 
 <script>
 import {repositories} from "@/repositories";
-import myLogoSrc from "@/assets/whoami.svg";
+import whoAmiILogo from "@/assets/images/whoami.svg";
 import "./HomePageDescription.scss"
 
 export default {
   setup() {
     return {
-      myLogoSrc
+      whoAmiILogo
     };
   },
   data() {

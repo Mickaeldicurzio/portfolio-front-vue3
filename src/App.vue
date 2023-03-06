@@ -21,11 +21,16 @@
 
 import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";
+import '@/assets/styles/fonts.scss';
+import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
+
 export default {
+
   components: {
     MenuComponent,
     NavBar
   },
+
   data() {
     return {
       isCurrentHome: true
@@ -34,6 +39,8 @@ export default {
 
   mounted() {
     this.getCurrentHomeState()
+    this.emitter.on(OPEN_MENU, () => this.setHtmlStyle(true));
+    this.emitter.on(CLOSE_MENU, () => this.setHtmlStyle(false));
   },
 
   updated() {
@@ -41,6 +48,11 @@ export default {
   },
 
   methods: {
+    setHtmlStyle(isMenuOpen) {
+      let el = document.getElementsByTagName('html')[0]
+      isMenuOpen ? el.style.overflowY = "hidden" : el.style.overflowY = "unset"
+    },
+
     getCurrentHomeState() {
       this.isCurrentHome = this.$router.currentRoute._value.path === "/";
     }
@@ -51,7 +63,21 @@ export default {
 <!--stylesheet-->
 <style>
 
+@font-face {
+  font-family: "MoonBold";
+  src: local("MoonBold"),
+  url(@/assets/fonts/moon/MoonBold.otf);
+}
+
+@font-face {
+  font-family: "MoonLight";
+  src: local("MoonLight"),
+  url(@/assets/fonts/moon/MoonLight.otf);
+}
+
+
 body {
+  font-family: "LatoRegular";
   margin: 0 auto;
   font-size: 18px;
 }

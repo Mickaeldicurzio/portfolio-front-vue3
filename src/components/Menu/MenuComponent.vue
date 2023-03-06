@@ -1,28 +1,31 @@
 <template>
 
-  <div class="Menu" v-if="menuDisplay">
+  <div class="Menu" :class="menuDisplay ? 'display': ''">
 
     <div class="Menu-ItemContainer">
-      <div class="Menu-Images">
-      </div>
       <div class="Menu-Item">
+        <div class="Menu-ItemImagesLayer">
+          <v-img :src="skullight" class="Menu-ItemImages"></v-img>
+        </div>
         <router-link to="/">HomePage</router-link>
       </div>
     </div>
 
     <div class="Menu-ItemContainer">
-      <div class="Menu-Images">
-      </div>
       <div class="Menu-Item">
+        <div class="Menu-ItemImagesLayer">
+          <v-img :src="pandules" class="Menu-ItemImages"></v-img>
+        </div>
         <router-link to="/article">Articles</router-link>
       </div>
     </div>
 
     <div class="Menu-ItemContainer">
-      <div class="Menu-Images">
-      </div>
       <div class="Menu-Item">
-        <router-link to="/article">AboutMe</router-link>
+        <div class="Menu-ItemImagesLayer">
+          <v-img :src="woodkid" class="Menu-ItemImages"></v-img>
+        </div>
+        <router-link to="/article">About Me</router-link>
       </div>
     </div>
 
@@ -31,7 +34,11 @@
 </template>
 
 <script>
+import './MenuComponent.scss'
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
+import skullight from "@/assets/images/skullight-transparent.png";
+import woodkid from "@/assets/images/woodkid-transparent.png";
+import pandules from "@/assets/images/pendule.svg";
 
 export default {
   name: 'MenuComponent',
@@ -41,6 +48,14 @@ export default {
     }
   },
 
+  setup() {
+    return {
+      woodkid,
+      pandules,
+      skullight
+    };
+  },
+
   mounted() {
     this.emitter.on(OPEN_MENU, () => this.menuDisplay = true);
     this.emitter.on(CLOSE_MENU, () => this.menuDisplay = false);
@@ -48,26 +63,3 @@ export default {
 }
 </script>
 
-<style>
-.Menu {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1005;
-  background-color: aliceblue;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.Menu-ItemContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-</style>

@@ -25,6 +25,14 @@ export default {
     group: null,
     isMenuOpen: false
   }),
+
+  watch:{
+    $route (){
+      this.isMenuOpen = false
+      this.emitter.emit(CLOSE_MENU);
+    }
+  },
+
   methods: {
     openMenu() {
       this.isMenuOpen = true
@@ -43,7 +51,6 @@ export default {
 <style>
 
 .v-toolbar__content {
-
   background-color: aliceblue;
 }
 </style>
