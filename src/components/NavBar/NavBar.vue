@@ -1,21 +1,40 @@
 <template>
-    <v-app-bar app color="white">
-      <v-toolbar-title shrink-on-scroll>Mickaël DI CURZIO</v-toolbar-title>
-      <v-tabs align-with-title>
-        <v-tab>
-          <router-link to="/">Home</router-link>
-        </v-tab>
-        <v-tab>
-          <router-link to="/articles">Articles</router-link>
-        </v-tab>
-      </v-tabs>
-    </v-app-bar>
+
+  <v-app-bar app color="transparent" dark collapse>
+    <v-app-bar-nav-icon v-if="!isMenuOpen" @click="openMenu">
+      <font-awesome-icon icon="fa-solid fa-bars"/>
+    </v-app-bar-nav-icon>
+    <v-app-bar-nav-icon v-else @click="closeMenu">
+      <font-awesome-icon icon="fa-solid fa-bars"/>
+    </v-app-bar-nav-icon>
+    <v-app-bar-title>Collapsing Bar</v-app-bar-title>
+  </v-app-bar>
+
+
 </template>
 
 <!-- script -->
 <script>
+
+
+import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
+
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  data: () => ({
+    group: null,
+    isMenuOpen: false
+  }),
+  methods: {
+    openMenu() {
+      this.isMenuOpen = true
+      this.emitter.emit(OPEN_MENU);
+    },
+    closeMenu() {
+      this.isMenuOpen = false
+      this.emitter.emit(CLOSE_MENU);
+    }
+  }
 }
 </script>
 
@@ -23,5 +42,8 @@ export default {
 
 <style>
 
+.v-toolbar__content {
 
+  background-color: aliceblue;
+}
 </style>

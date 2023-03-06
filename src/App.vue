@@ -2,9 +2,8 @@
   <div class="App">
     <v-app>
       <!--  navbar-->
-      <nav-bar>
-      </nav-bar>
-
+      <nav-bar></nav-bar>
+      <menu-component></menu-component>
       <!--  body-->
 
       <div :class="isCurrentHome ? 'homeContainer': 'container'">
@@ -21,9 +20,10 @@
 
 
 import NavBar from "@/components/NavBar/NavBar";
-
+import MenuComponent from "@/components/Menu/MenuComponent";
 export default {
   components: {
+    MenuComponent,
     NavBar
   },
   data() {
