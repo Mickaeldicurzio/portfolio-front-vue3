@@ -21,7 +21,7 @@
 
 import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";
-import '@/assets/styles/fonts.scss';
+import '@/assets/styles/index.scss';
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
 
 export default {
@@ -61,25 +61,12 @@ export default {
 </script>
 
 <!--stylesheet-->
-<style>
-
-@font-face {
-  font-family: "MoonBold";
-  src: local("MoonBold"),
-  url(@/assets/fonts/moon/MoonBold.otf);
-}
-
-@font-face {
-  font-family: "MoonLight";
-  src: local("MoonLight"),
-  url(@/assets/fonts/moon/MoonLight.otf);
-}
-
+<style lang="scss">
 
 body {
   font-family: "LatoRegular";
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .container, .homeContainer {

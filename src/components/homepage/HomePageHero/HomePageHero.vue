@@ -27,8 +27,8 @@
 <script>
 import {repositories} from "@/repositories";
 import './HomePageHero.scss'
-import HomePageBackground from "@/includes/HomePageBackground/HomePageBackground";
-import HomePageSocials from "@/includes/HomePageSocials/HomePageSocials";
+import HomePageBackground from "@/includes/HomePage/HomePageBackground/HomePageBackground";
+import HomePageSocials from "@/includes/HomePage/HomePageSocials/HomePageSocials";
 
 export default {
   components: {HomePageSocials, HomePageBackground},
