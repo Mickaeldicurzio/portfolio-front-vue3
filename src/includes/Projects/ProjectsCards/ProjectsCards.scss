@@ -1,0 +1,15 @@
+.ProjectsCards {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px;
+  color: #fff;
+  font-family: "MoonBold";
+}
+
+.ProjectsCards-illustration {
+  width: 600px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}

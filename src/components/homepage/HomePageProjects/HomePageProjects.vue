@@ -13,7 +13,12 @@
       </div>
 
       <div class="HomePageProjects-projects">
-        <projects-slider></projects-slider>
+        <div class="HomePageDescription" v-if="loading === 0">
+        <projects-slider :projects="projectsCards"></projects-slider>
+        </div>
+        <div class="v-else">
+          loading...
+        </div>
       </div>
     </v-container>
   </div>
@@ -24,6 +29,7 @@
 import './homePageProjects.scss'
 import ProjectsSlider from "@/includes/Projects/ProjectsSlider/ProjectsSlider";
 import devIcon from "@/assets/images/developer.svg";
+import {repositories} from "@/repositories";
 
 
 export default {
@@ -33,8 +39,22 @@ export default {
       devIcon,
     };
   },
+
+  data() {
+    return {
+      loading: 0,
+    }
+  },
+
   components: {
     ProjectsSlider
-  }
+  },
+
+  apollo: {
+    projectsCards: {
+      query: repositories.projectRepository.GET_PROJECTS_CARDS,
+      loadingKey: 'loading',
+    }
+  },
 }
 </script>

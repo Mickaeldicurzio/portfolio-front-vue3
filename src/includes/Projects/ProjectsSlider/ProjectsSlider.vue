@@ -11,29 +11,20 @@
           center-active
           show-arrows
       >
+
+        <template v-slot:next>
+          <v-icon color="orange" large>mdi-hand-pointing-right</v-icon>
+        </template>
+        <template v-slot:prev>
+          <v-icon color="orange" large>mdi-hand-pointing-left</v-icon>
+        </template>
+
         <v-slide-group-item
-            v-for="n in 15"
+            v-for="n in projects.data"
             :key="n"
-            v-slot="{ isSelected, toggle }"
         >
-          <v-card
-              :color="isSelected ? 'primary' : 'grey-lighten-1'"
-              class="ma-4"
-              height="200"
-              width="100"
-              @click="toggle"
-          >
-            <div class="d-flex fill-height align-center justify-center">
-              <v-scale-transition>
-                <v-icon
-                    v-if="isSelected"
-                    color="white"
-                    size="48"
-                    icon="mdi-close-circle-outline"
-                ></v-icon>
-              </v-scale-transition>
-            </div>
-          </v-card>
+          <projects-cards :project="n"></projects-cards>
+
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -41,8 +32,14 @@
 </template>
 
 <script>
+import ProjectsCards from "@/includes/Projects/ProjectsCards/ProjectsCards";
+import './ProjectsSlider.scss'
 export default {
-  name: "ProjectsSlider"
+  name: "ProjectsSlider",
+  components: {ProjectsCards},
+  props: {
+    projects: Array
+  }
 }
 </script>
 
