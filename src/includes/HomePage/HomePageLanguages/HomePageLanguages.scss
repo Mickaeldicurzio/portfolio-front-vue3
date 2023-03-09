@@ -1,0 +1,29 @@
+.HomePageLanguages {
+  display: flex;
+  align-items: center;
+  width: 120%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.ColoredContainer-left .HomePageLanguages {
+  right: -200px;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.ColoredContainer-right .HomePageLanguages {
+  left: -200px;
+  justify-content: flex-start;
+}
+
+.HomePageLanguages-logos {
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

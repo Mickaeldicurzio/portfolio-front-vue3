@@ -1,8 +1,8 @@
 <template>
-  <div class="HomePageProjects">
+  <div class="HomePageProjects ColoredContainer ColoredContainer-left">
 
     <v-container>
-      <h2 class="Title-underline">Projets auxquels j'ai participé </h2>
+      <h2 class="Title-underline">Projets auxquels j'ai participe </h2>
       <div class="HomePageProjects-devIcon">
         <v-img :src="devIcon"></v-img>
       </div>
@@ -12,14 +12,14 @@
           sunt.</p>
       </div>
 
-      <div class="HomePageProjects-projects">
-        <div class="HomePageDescription" v-if="loading === 0">
+
+        <div class="HomePageProjects-carrousel" v-if="loading === 0">
         <projects-slider :projects="projectsCards"></projects-slider>
         </div>
-        <div class="v-else">
+        <div v-else>
           loading...
         </div>
-      </div>
+
     </v-container>
   </div>
 </template>

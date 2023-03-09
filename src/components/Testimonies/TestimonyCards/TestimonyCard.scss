@@ -1,0 +1,76 @@
+.TestimonyCard {
+  display: flex;
+  width: 80%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  align-items: center ;
+  margin: 60px 0;
+  justify-content: space-between;
+}
+
+.TestimonyCard-quotes {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  transform: rotateY(180deg);
+  opacity: 0.2;
+}
+
+.HomePageTestimonies-cards:nth-child(odd) .TestimonyCard {
+  margin-left: auto;
+  flex-direction: row-reverse;
+  .TestimonyCard-quotes {
+    transform: rotateY(0deg);
+    left: -25px;
+  }
+  .TestimonyCard-profileContainer {
+    border-left: 2px solid rgba(0,0,0,0.1);
+    border-right: 0;
+  }
+}
+
+.TestimonyCard-profileContainer {
+  width: 20%;
+  text-align: center;
+  border-right: 2px solid rgba(0,0,0,0.1);
+}
+
+.TestimonyCard-content {
+  width: 70%;
+  margin-right: 30px;
+  text-align: center;
+
+}
+
+.TestimonyCard-pictures {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.TestimonyCard-pictures img {
+  border-radius: 50%;
+  filter: grayscale(40%);
+}
+
+.TestimonyCard-name {
+  margin-top: 10px;
+  font-family: MoonBold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TestimonyCard-company {
+  width: 150px;
+  height: 50px;
+  margin:  20px auto auto auto;
+}
+
+.TestimonyCard-testimony {
+  margin: 20px;
+}

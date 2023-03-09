@@ -1,15 +1,24 @@
 .ProjectsCards {
   display: flex;
   flex-direction: column;
-  margin: 0 40px;
   color: #fff;
   font-family: "MoonBold";
 }
 
 .ProjectsCards-illustration {
-  width: 600px;
-  height: 400px;
+  width: 800px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
+}
+
+.ProjectsCards-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProjectsCards-companyLogo {
+  width: 100px;
 }

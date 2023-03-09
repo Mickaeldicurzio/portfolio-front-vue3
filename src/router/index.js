@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
-import HomePage from '../Views/HomePage'
-import ArticlesList from "@/Views/Articles/ArticlesList";
-import ArticleFullPage from "@/Views/Articles/ArticleFullPage";
+import HomePage from '../views/HomePage'
+import ArticlesList from "@/views/Articles/ArticlesList";
+import ArticleFullPage from "@/views/Articles/ArticleFullPage";
 
 const routes = [
     {

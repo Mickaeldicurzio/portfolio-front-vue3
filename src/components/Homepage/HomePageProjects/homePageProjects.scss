@@ -1,0 +1,49 @@
+.HomePageProjects {
+  background-color: #D64045;
+}
+
+.HomePageProjects-description {
+  margin-top: 60px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: 120px;
+}
+.HomePageProjects-carrousel {
+  margin-top: 60px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: -180px;
+}
+
+.HomePageProjects-projects {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  position: relative;
+  right: -340px;
+}
+
+.HomePageProjects-devIcon  {
+  position: absolute;
+  left: 0;
+  top: 250px;
+  width: 30%;
+  height: 40%;
+  transform: rotateY(180deg);
+  opacity: 0.9;
+}
+
+.HomePageProjects .carousel__pagination {
+  color: #fff;
+  margin-top: 40px;
+}
+
+.HomePageProjects .carousel__pagination-button::after {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 13px;
+  width: 12px;
+  border-radius: 50%;
+}
+.HomePageProjects .carousel__pagination-button:hover::after,
+.HomePageProjects .carousel__pagination-button--active::after {
+  background-color: rgba(#fff, 1);
+}

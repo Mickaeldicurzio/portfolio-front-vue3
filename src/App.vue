@@ -67,6 +67,11 @@ body {
   font-family: "LatoRegular";
   margin: 0 auto;
   font-size: 20px;
+  color: #012A36 !important;
+}
+
+.v-application {
+  color: inherit !important;
 }
 
 .container, .homeContainer {

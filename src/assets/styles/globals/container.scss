@@ -1,0 +1,30 @@
+.ColoredContainer {
+  color: #fff;
+  padding: 40px;
+  position: relative;
+  width: 90%;
+
+  &-left {
+    text-align: right;
+  }
+
+  &-right {
+    text-align: left;
+  }
+}
+
+.ColoredContainer.ColoredContainer-right {
+  margin-left: auto;
+}
+.ColoredContainer.ColoredContainer-left {
+  margin-right: auto;
+}
+
+.ColoredContainer-left .Title-underline:after {
+  left: 0;
+  right: auto;
+}
+.ColoredContainer-right .Title-underline:after {
+  right: 0;
+  left: auto;
+}

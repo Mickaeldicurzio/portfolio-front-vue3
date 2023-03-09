@@ -1,19 +1,14 @@
 <template>
   <div class="ProjectsCards">
-    <div class="ProjectsCards-illustration" v-bind:style="{ 'background-image': 'url(http://localhost:1337' + project.attributes.galerie.data[0].attributes.url + ')' }">
-      <v-scale-transition>
-        <v-icon
-            v-if="isSelected"
-            color="white"
-            size="48"
-            icon="mdi-close-circle-outline"
-        ></v-icon>
-      </v-scale-transition>
+    <div class="ProjectsCards-illustration"
+         v-bind:style="{ 'background-image': 'url(http://localhost:1337' + project.attributes.galerie.data[0].attributes.url + ')' }">
     </div>
     <div class="ProjectsCards-description">
-      <v-scale-transition>
-        <p> {{ project.attributes.title }}</p>
-      </v-scale-transition>
+      <p> {{ project.attributes.title }}</p>
+      <div class="ProjectsCards-companyLogo">
+        <v-img
+            :src="'http://localhost:1337' + project.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+      </div>
     </div>
   </div>
 </template>
