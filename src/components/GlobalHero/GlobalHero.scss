@@ -1,0 +1,50 @@
+.GlobalHero {
+}
+
+.GlobalHero-container {
+  display: flex;
+  justify-content: center;
+}
+
+.GlobalHero-parallax {
+  width: 65%;
+  display: flex;
+  border-bottom-right-radius: 125px;
+  justify-content: center;
+  align-items: center;
+}
+
+.GlobalHero-title {
+  text-align: center;
+  margin-right: 75px;
+}
+
+.GlobalHero-left {
+  width: 35%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(#000, 0.3);
+  .blankFill {
+    color: #fff;
+  }
+}
+
+.GlobalHero-leftBefore {
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height: 500px;
+  border-bottom-left-radius: 125px;
+  background-color: #ffffff;
+  box-shadow:  -10px 0px 20px -10px rgba(#000, 0.3);
+}
+
+.GlobalHero-leftImage {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  left: -25px;
+}
