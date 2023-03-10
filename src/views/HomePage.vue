@@ -9,6 +9,7 @@
       <home-page-testimonies></home-page-testimonies>
     </v-container>
     <home-page-skills></home-page-skills>
+
   </div>
 </template>
 

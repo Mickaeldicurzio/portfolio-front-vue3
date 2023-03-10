@@ -7,7 +7,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="skullight" class="Menu-ItemImages"></v-img>
         </div>
-        <router-link to="/">HomePage</router-link>
+        <router-link :to="{ name: 'home' }">HomePage</router-link>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="pandules" class="Menu-ItemImages"></v-img>
         </div>
-        <router-link to="/article">Articles</router-link>
+        <router-link :to="{ name: 'experiences' }">Experiences</router-link>
       </div>
     </div>
 

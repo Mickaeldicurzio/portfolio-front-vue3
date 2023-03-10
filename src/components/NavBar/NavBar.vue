@@ -17,7 +17,7 @@
 <script>
 
 
-import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
+import { CLOSE_MENU, OPEN_MENU } from "@/constants/event-constants";
 
 export default {
   name: 'NavBar',
