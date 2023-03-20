@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const GET_PROJECTS_CARDS = gql`query GetProjectsCards {
-        projectsCards: projects {
+export const GET_PROJECTS_SLIDES = gql`query GetProjectsSlides {
+        projectsSlides: projects {
             data {
               id
               attributes {
@@ -14,25 +14,8 @@ export const GET_PROJECTS_CARDS = gql`query GetProjectsCards {
                     }
                   }
                 }
-                languages {
-                  data {
-                    id,
-                    attributes {
-                      name
-                      logo {
-                        data {
-                          id,
-                          attributes {
-                            url
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
                 company {
                   data {
-                    id,
                     attributes {
                       logo {
                         data {

@@ -15,7 +15,7 @@
 
 <script>
 import GlobalHero from "@/components/GlobalHero/GlobalHero";
-import aboutIcon from "@/assets/images/panda.svg";
+import aboutIcon from "@/assets/images/panda-red.svg";
 import aboutImage from "@/assets/images/about.jpg";
 
 export default {

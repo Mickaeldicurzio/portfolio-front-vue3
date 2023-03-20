@@ -1,0 +1,68 @@
+.ProjectsFull-container {
+  margin: 120px auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ProjectsFull-filtersContainer {
+  width: 25%;
+  margin: 40px;
+  height: 100%;
+  align-self: flex-start;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+}
+
+.ProjectsFull-projectContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+// FILTERS
+.ProjectsFull-containerFilters h3 {
+  margin-bottom: 20px;
+  color: #D64045;
+}
+
+.ProjectsFull-containerFiltersInner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.ProjectsFull-filtersCompany {
+  width: 120px;
+  padding: 20px;
+}
+
+.ProjectsFull-filtersLanguages {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.ProjectsFull-filtersCompany, .ProjectsFull-filtersLanguages {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}

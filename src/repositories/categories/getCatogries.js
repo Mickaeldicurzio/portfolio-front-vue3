@@ -7,7 +7,6 @@ export const GET_CATEGORIES = gql`query GetCategories {
         CategoryName
         languages {
           data {
-            id
             attributes {
               logo {
                 data {

@@ -2,7 +2,7 @@
   <div class="ProjectsSlider">
     <carousel :items-to-show="1.5" :pagination="false">
       <slide v-for="slide in projects.data" :key="slide">
-        <projects-cards :project="slide"></projects-cards>
+        <projects-slide :project="slide"></projects-slide>
       </slide>
 
       <template #addons>
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import ProjectsCards from "@/includes/Projects/ProjectsCards/ProjectsCards";
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import './ProjectsSlider.scss'
+import ProjectsSlide from "@/includes/Projects/ProjectsSlide/ProjectsSlide";
 
 export default {
   name: "ProjectsSlider",
@@ -26,7 +26,7 @@ export default {
     Slide,
     Pagination,
     Navigation,
-    ProjectsCards
+    ProjectsSlide
   },
   props: {
     projects: Array

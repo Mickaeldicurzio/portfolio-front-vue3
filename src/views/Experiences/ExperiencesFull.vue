@@ -22,7 +22,7 @@
 
 <script>
 
-import experiencesIcon from "@/assets/images/anchor.svg";
+import experiencesIcon from "@/assets/images/anchor-red.svg";
 import experiencesImage from "@/assets/images/experiences.jpg";
 
 import GlobalHero from "@/components/GlobalHero/GlobalHero";

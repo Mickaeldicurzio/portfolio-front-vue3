@@ -4,6 +4,7 @@ import ArticlesList from "@/views/Articles/ArticlesList";
 import ArticleFullPage from "@/views/Articles/ArticleFullPage";
 import ExperiencesFull from "@/views/Experiences/ExperiencesFull";
 import AboutMe from "@/views/AboutMe/AboutMe";
+import ProjectsFull from "@/views/projects/ProjectsFull";
 
 const routes = [
     {
@@ -30,6 +31,16 @@ const routes = [
         path: '/about-me',
         name: 'aboutMe',
         component: AboutMe
+    },
+    {
+        path: '/projects',
+        name: 'projects',
+        component: ProjectsFull
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: ProjectsFull
     },
 ]
 

@@ -74,9 +74,6 @@ body {
   color: inherit !important;
 }
 
-.container, .homeContainer {
-  overflow: hidden;
-}
 
 .container {
   margin-top: 80px;
