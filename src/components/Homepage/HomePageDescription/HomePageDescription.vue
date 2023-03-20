@@ -13,7 +13,7 @@
 
 <script>
 import {repositories} from "@/repositories";
-import whoAmiILogo from "@/assets/images/whoami.svg";
+import whoAmiILogo from "@/assets/images/panda.svg";
 import "./HomePageDescription.scss"
 
 export default {

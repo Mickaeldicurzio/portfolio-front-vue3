@@ -12,6 +12,7 @@
   align-items: center;
   flex-direction: column;
   transition: all 0.20s ease-in-out;
+
 }
 
 .Menu.display {
@@ -52,6 +53,7 @@
 
 .Menu-ItemImagesLayer .Menu-ItemImages {
   max-height: 700px;
+  max-width: 500px;
 }
 
 .Menu-ItemContainer:nth-child(odd) .Menu-ItemImagesLayer {

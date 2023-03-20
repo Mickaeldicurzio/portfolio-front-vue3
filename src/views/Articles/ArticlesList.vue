@@ -17,6 +17,7 @@ import {repositories} from "@/repositories";
 
 export default {
   name: 'ArticleList',
+
   data() {
     return {
       id: 1,

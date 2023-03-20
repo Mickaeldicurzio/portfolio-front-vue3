@@ -1,13 +1,23 @@
 <template>
   <div class="HomePage">
+
+    <!-- HERO -->
     <home-page-hero></home-page-hero>
+
+    <!-- DESCRIPTION -->
     <v-container>
       <home-page-description></home-page-description>
     </v-container>
+
+    <!-- PROJECT -->
     <home-page-projects></home-page-projects>
+
+    <!-- TESTIMONIES -->
     <v-container>
       <home-page-testimonies></home-page-testimonies>
     </v-container>
+
+    <!-- SKILLS -->
     <home-page-skills></home-page-skills>
 
   </div>

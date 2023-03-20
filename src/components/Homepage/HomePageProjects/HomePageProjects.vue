@@ -28,7 +28,7 @@
 
 import './homePageProjects.scss'
 import ProjectsSlider from "@/includes/Projects/ProjectsSlider/ProjectsSlider";
-import devIcon from "@/assets/images/developer.svg";
+import devIcon from "@/assets/images/cigarette-white.svg";
 import {repositories} from "@/repositories";
 
 

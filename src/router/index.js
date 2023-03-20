@@ -3,6 +3,7 @@ import HomePage from '../views/HomePage'
 import ArticlesList from "@/views/Articles/ArticlesList";
 import ArticleFullPage from "@/views/Articles/ArticleFullPage";
 import ExperiencesFull from "@/views/Experiences/ExperiencesFull";
+import AboutMe from "@/views/AboutMe/AboutMe";
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: '/expriences',
         name: 'experiences',
         component: ExperiencesFull
+    },
+    {
+        path: '/about-me',
+        name: 'aboutMe',
+        component: AboutMe
     },
 ]
 

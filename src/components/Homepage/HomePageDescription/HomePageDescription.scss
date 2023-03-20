@@ -7,6 +7,14 @@
 .HomePageDescription-logo {
   width: 40%;
   padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  .v-img {
+    max-width: 400px;
+    margin: auto;
+  }
 }
 
 .HomePageDescription-text {

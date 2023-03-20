@@ -1,13 +1,15 @@
 <template>
   <div class="GlobalHero">
-    <div class="GlobalHero-container">
+    <div class="GlobalHero-container" :class="reverse ? 'reverse': ''">
       <v-parallax
           class="GlobalHero-parallax"
           height="600px"
-          src="https://img.freepik.com/premium-photo/always-state-wonder-awe_73899-12.jpg?w=1380"
+          :src="imageSrc"
       >
-        <div class="GlobalHero-title">
-          <h1>{{ heroTitle }}</h1>
+        <div class="GlobalHero-title" :style="{ color: textColor }">
+          <div class="GlobalHero-titleContainer">
+            <h1>{{ heroTitle }}</h1>
+          </div>
         </div>
       </v-parallax>
       <div class="GlobalHero-left"
@@ -17,6 +19,7 @@
         <div class="GlobalHero-leftBefore" :style="{backgroundColor: backgroundColor}">
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -31,6 +34,13 @@ export default {
     backgroundColor: {
       type: String,
       default: "#fff"
+    },
+    textColor: {
+      type: String,
+    },
+    reverse: {
+      type: Boolean,
+      default: false
     },
     heroTitle: String,
     leftImageSrc: String
