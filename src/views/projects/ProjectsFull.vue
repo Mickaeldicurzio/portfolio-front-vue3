@@ -13,19 +13,35 @@
     <div class="ProjectsFull-container">
 
       <div class="ProjectsFull-filtersContainer">
+
+        <div class="ProjectsFull-resetFilters" v-if="hasFilters" @click="resetFilters">
+          Reset all <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
+        </div>
+
         <div class="ProjectsFull-containerFilters">
           <h3>Companies</h3>
 
           <div class="ProjectsFull-containerFiltersInner">
-            <div class="ProjectsFull-filtersCompany" v-for="(index, key) in companiesLogo" :key="key">
+            <div
+                :class="this.selectedCompanies.includes(index.id) ? 'ProjectsFull-filtersCompany filtered' : 'ProjectsFull-filtersCompany' "
+                @click="setSelectedCompanies(index.id)"
+                 v-for="(index, key) in companiesLogo" :key="key">
               <v-img :src="'http://localhost:1337' + index.url"></v-img>
+              <div class="ProjectsFull-filtersIcon" v-if="this.selectedCompanies.includes(index.id)">
+                <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
+              </div>
             </div>
           </div>
 
           <h3>Languages</h3>
           <div class="ProjectsFull-containerFiltersInner">
-            <div class="ProjectsFull-filtersLanguages" v-for="(index, key) in languagesLogo" :key="key">
+            <div :class="this.selectedLanguages.includes(index.id) ? 'ProjectsFull-filtersLanguages filtered' : 'ProjectsFull-filtersLanguages' "
+                 @click="setSelectedLanguages(index.id)"
+                 v-for="(index, key) in languagesLogo" :key="key">
               <v-img :src="'http://localhost:1337' + index.url"></v-img>
+              <div class="ProjectsFull-filtersIcon" v-if="this.selectedLanguages.includes(index.id)">
+                <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
+              </div>
             </div>
           </div>
         </div>
@@ -45,13 +61,15 @@ import projectIcon from "@/assets/images/cigarette-red.svg";
 import aboutImage from "@/assets/images/projects.jpg";
 import ProjectsCards from "@/includes/Projects/ProjectsCards/ProjectsCards";
 import {repositories} from "@/repositories";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import './ProjectsFull.scss'
 
 export default {
   name: "ProjectsFull",
   components: {
     GlobalHero,
-    ProjectsCards
+    ProjectsCards,
+    FontAwesomeIcon
   },
 
   data() {
@@ -59,7 +77,9 @@ export default {
       loading: 0,
       projects: [],
       companiesLogo: [],
-      languagesLogo: []
+      languagesLogo: [],
+      selectedCompanies: [],
+      selectedLanguages: []
     }
   },
   setup() {
@@ -69,10 +89,22 @@ export default {
     };
   },
 
+  computed: {
+    hasFilters() {
+      return this.selectedLanguages.length > 0 || this.selectedCompanies.length > 0
+    }
+  },
+
   apollo: {
     projectsCards: {
       query: repositories.projectRepository.GET_PROJECTS_CARDS,
       loadingKey: 'loading',
+      variables () {
+        return {
+          selectedCompanies: this.selectedCompanies.length > 0 ? this.selectedCompanies : undefined,
+          selectedLanguages: this.selectedLanguages.length > 0 ? this.selectedLanguages : undefined,
+        }
+      },
       result(data) {
         this.projects = data.data.projectsCards.data
         this.loading = 0
@@ -96,6 +128,11 @@ export default {
       this.companiesLogo = [...new Map(allCompaniesLogo.map((item) => [item["id"], item])).values()];
     },
 
+    resetFilters() {
+      this.selectedLanguages = []
+      this.selectedCompanies = []
+    },
+
     getLanguages(projects) {
       let allLanguagesLogo = []
       projects.forEach((project) => {
@@ -110,8 +147,22 @@ export default {
         })
       })
 
-      console.log(allLanguagesLogo)
       this.languagesLogo = [...new Map(allLanguagesLogo.map((item) => [item["id"], item])).values()];
+    },
+
+    setSelectedCompanies(id) {
+      if (!this.selectedCompanies.includes(id)) {
+        this.selectedCompanies.push(id)
+      } else {
+        this.selectedCompanies.splice(this.selectedCompanies.indexOf(id), 1);
+      }
+    },
+    setSelectedLanguages(id) {
+      if (!this.selectedLanguages.includes(id)) {
+        this.selectedLanguages.push(id)
+      } else {
+        this.selectedLanguages.splice(this.selectedLanguages.indexOf(id), 1);
+      }
     }
   }
 }

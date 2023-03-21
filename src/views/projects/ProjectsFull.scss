@@ -53,16 +53,39 @@
   }
 }
 
+.ProjectsFull-filtersIcon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
 .ProjectsFull-filtersCompany, .ProjectsFull-filtersLanguages {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 20px;
   margin-top: 20px;
   transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+
+  &.filtered {
+    box-shadow: 5px 5px 20px rgba(#d64045, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 5px 5px 20px rgba(#d64045, 0.7);
+    }
+  }
 
   &:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease-in-out;
   }
+}
+
+.ProjectsFull-resetFilters {
+  color: #d64045;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }

@@ -1,7 +1,10 @@
 import gql from "graphql-tag";
 
-export const GET_PROJECTS_CARDS = gql`query GetProjectsCards {
-        projectsCards: projects {
+export const GET_PROJECTS_CARDS = gql`query GetProjectsCards ($selectedCompanies: [ID], $selectedLanguages: [ID]){
+          projectsCards: projects(filters: { 
+            languages: { id: { in: $selectedLanguages } },
+            company: { id: { in: $selectedCompanies } }
+          }) {
             data {
               id
               attributes {
