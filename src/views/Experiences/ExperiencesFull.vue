@@ -8,6 +8,8 @@
           :left-image-src="experiencesIcon"
           :image-src="experiencesImage"
           :text-color="'#fff'"
+          linkText="Projects"
+          :link="'projects'"
       ></global-hero>
     </div>
 

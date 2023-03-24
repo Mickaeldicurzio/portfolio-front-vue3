@@ -1,5 +1,5 @@
-import { GET_HOMEPAGE_HERO } from "@/repositories/homepage/homepageHero";
-import { GET_HOMEPAGE_DESCRIPTION } from "@/repositories/homepage/homepageDescription";
+import { GET_HOMEPAGE_HERO } from "@/repositories/homepage/getHomepageHero";
+import { GET_HOMEPAGE_DESCRIPTION } from "@/repositories/homepage/getHomepageDescription";
 
 export const homepageRepository = {
     GET_HOMEPAGE_DESCRIPTION,

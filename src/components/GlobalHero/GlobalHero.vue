@@ -18,6 +18,12 @@
         <v-img :src="leftImageSrc" class="GlobalHero-leftImage"></v-img>
         <div class="GlobalHero-leftBefore" :style="{backgroundColor: backgroundColor}">
         </div>
+        <h3 class="GlobalHero-leftLink" v-if="linkText !== ''">
+          <router-link :to="{ name: link }">{{ linkText }}
+            <font-awesome-icon class="GlobalHero-chevronIcon" icon="fa-solid fa-chevron-right"/>
+          </router-link>
+
+        </h3>
       </div>
 
     </div>
@@ -34,6 +40,13 @@ export default {
     backgroundColor: {
       type: String,
       default: "#fff"
+    },
+    linkText: {
+      type: String,
+      default: ''
+    },
+    link: {
+      type: String
     },
     textColor: {
       type: String,

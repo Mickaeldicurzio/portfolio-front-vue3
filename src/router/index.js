@@ -1,10 +1,10 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from '../views/HomePage'
-import ArticlesList from "@/views/Articles/ArticlesList";
-import ArticleFullPage from "@/views/Articles/ArticleFullPage";
+import ArticlesList from "@/views/Articles/ArticlesList/ArticlesList";
+import ArticleFullPage from "@/views/Articles/ArticleFull/ArticleFull";
 import ExperiencesFull from "@/views/Experiences/ExperiencesFull";
 import AboutMe from "@/views/AboutMe/AboutMe";
-import ProjectsFull from "@/views/projects/ProjectsFull";
+import ProjectsList from "@/views/Projects/ProjectsList/ProjectsList";
 
 const routes = [
     {
@@ -35,12 +35,12 @@ const routes = [
     {
         path: '/projects',
         name: 'projects',
-        component: ProjectsFull
+        component: ProjectsList
     },
     {
         path: '/contact',
         name: 'contact',
-        component: ProjectsFull
+        component: ProjectsList
     },
 ]
 

@@ -1,45 +1,52 @@
 <template>
-  <div class="ProjectsFull">
+  <div class="ProjectsList">
     <!-- HERO -->
-    <div class="ProjectsFull-hero">
+    <div class="ProjectsList-hero">
       <global-hero
           :image-src="aboutImage"
           hero-title="Projects"
           :left-image-src="projectIcon"
           :text-color="'#fff'"
+          :link="'aboutMe'"
+          link-text="About Me"
       ></global-hero>
     </div>
 
-    <div class="ProjectsFull-container">
+    <div class="ProjectsList-container">
 
-      <div class="ProjectsFull-filtersContainer">
+      <!-- FILTERS-->
+      <div class="ProjectsList-filtersContainer">
 
-        <div class="ProjectsFull-resetFilters" v-if="hasFilters" @click="resetFilters">
+        <!-- FILTERS RESET -->
+        <div class="ProjectsList-resetFilters" v-if="hasFilters" @click="resetFilters">
           Reset all <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
         </div>
 
-        <div class="ProjectsFull-containerFilters">
+
+        <!-- FILTERS COMPANIES -->
+        <div class="ProjectsList-containerFilters">
           <h3>Companies</h3>
 
-          <div class="ProjectsFull-containerFiltersInner">
+          <div class="ProjectsList-containerFiltersInner">
             <div
-                :class="this.selectedCompanies.includes(index.id) ? 'ProjectsFull-filtersCompany filtered' : 'ProjectsFull-filtersCompany' "
+                :class="this.selectedCompanies.includes(index.id) ? 'ProjectsList-filtersCompany filtered' : 'ProjectsList-filtersCompany' "
                 @click="setSelectedCompanies(index.id)"
                  v-for="(index, key) in companiesLogo" :key="key">
               <v-img :src="'http://localhost:1337' + index.url"></v-img>
-              <div class="ProjectsFull-filtersIcon" v-if="this.selectedCompanies.includes(index.id)">
+              <div class="ProjectsList-filtersIcon" v-if="this.selectedCompanies.includes(index.id)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
               </div>
             </div>
           </div>
 
+          <!-- FILTERS LANGUAGES -->
           <h3>Languages</h3>
-          <div class="ProjectsFull-containerFiltersInner">
-            <div :class="this.selectedLanguages.includes(index.id) ? 'ProjectsFull-filtersLanguages filtered' : 'ProjectsFull-filtersLanguages' "
+          <div class="ProjectsList-containerFiltersInner">
+            <div :class="this.selectedLanguages.includes(index.id) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "
                  @click="setSelectedLanguages(index.id)"
                  v-for="(index, key) in languagesLogo" :key="key">
               <v-img :src="'http://localhost:1337' + index.url"></v-img>
-              <div class="ProjectsFull-filtersIcon" v-if="this.selectedLanguages.includes(index.id)">
+              <div class="ProjectsList-filtersIcon" v-if="this.selectedLanguages.includes(index.id)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
               </div>
             </div>
@@ -47,7 +54,8 @@
         </div>
       </div>
 
-      <div class="ProjectsFull-projectContainer" v-if="loading === 0">
+      <!-- PROJECTS-->
+      <div class="ProjectsList-projectContainer" v-if="loading === 0">
         <projects-cards :project="index" v-for="(index, key) in projects" :key="key"></projects-cards>
       </div>
 
@@ -59,13 +67,13 @@
 import GlobalHero from "@/components/GlobalHero/GlobalHero";
 import projectIcon from "@/assets/images/cigarette-red.svg";
 import aboutImage from "@/assets/images/projects.jpg";
-import ProjectsCards from "@/includes/Projects/ProjectsCards/ProjectsCards";
+import ProjectsCards from "@/components/Projects/ProjectsCards/ProjectsCards";
 import {repositories} from "@/repositories";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import './ProjectsFull.scss'
+import './ProjectsList.scss'
 
 export default {
-  name: "ProjectsFull",
+  name: "ProjectsList",
   components: {
     GlobalHero,
     ProjectsCards,
@@ -167,7 +175,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

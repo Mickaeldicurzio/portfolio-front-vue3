@@ -63,11 +63,16 @@ export default {
 <!--stylesheet-->
 <style lang="scss">
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "LatoRegular";
   margin: 0 auto;
   font-size: 20px;
   color: #012A36 !important;
+  background-color: aliceblue;
 }
 
 .v-application {

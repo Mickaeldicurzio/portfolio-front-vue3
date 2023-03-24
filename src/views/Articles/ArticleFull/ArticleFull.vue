@@ -14,7 +14,7 @@
 import { repositories } from "@/repositories";
 
 export default {
-  name: 'ArticleFullPage',
+  name: 'ArticleFull',
   data() {
     return {
       loading: 0,
@@ -29,6 +29,10 @@ export default {
           id: this.$route.params.id,
         }
       },
+      loadingKey: 'loading'
+    },
+    project: {
+      query: repositories.projectRepository.GET_PROJECTS_SLIDES,
       loadingKey: 'loading'
     },
   },

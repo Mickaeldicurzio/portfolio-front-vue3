@@ -1,0 +1,63 @@
+.v-dialog--fullscreen .v-overlay__content > .v-card,
+.v-dialog--fullscreen .v-overlay__content > .v-sheet {
+  background-color: aliceblue;
+}
+
+.ProjectFull-header {
+  width: 100%;
+  height: 100%;
+  span {
+    position: absolute;
+    right: 350px;
+  }
+}
+
+.ProjectFull-linkContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProjectFull-link {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #D64045;
+  position: relative;
+  margin: 40px 0;
+  font-weight: bold;
+  text-indent: 12px;
+  button {
+  letter-spacing: 3px;
+  }
+}
+
+.ProjectFull-linkIcon {
+  margin-left: 20px;
+}
+
+.ProjectFull-description {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.ProjectFull-headerContainer {
+  background-color: #D64045;
+  padding-top: 40px;
+  color: rgba(#fff, 0.9);
+  position: relative;
+}
+
+.ProjectFull-gallery {
+  max-width: calc(100% - 200px);
+  margin: auto;
+  z-index: 9;
+}
+.ProjectFull-technos {
+  z-index: 9;
+  position: relative;
+  padding: 60px 0;
+}
+.ProjectFull-companyLogo img {
+  width: 300px;
+}
