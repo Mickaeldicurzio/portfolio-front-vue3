@@ -83,7 +83,7 @@ export default {
       this.$refs['gears'].$el.style.transform = "rotate(" + amount / devider + "deg)";
       this.$refs['gears'].$el.style.top = 200 + amount / (devider * 2) + "px";
       this.$refs['gearsAround'].$el.style.transform = "rotate(" + amount / (devider * 3) + "deg)";
-      this.$refs['gearsAround'].$el.style.width = 400 + amount / (devider * 3) + "px";
+      this.$refs['gearsAround'].$el.style.width = 400 + amount / (devider) + "px";
       this.$refs['gearsAround'].$el.style.height = 400 + amount / (devider) + "px";
     }
   }
