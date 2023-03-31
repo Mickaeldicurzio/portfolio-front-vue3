@@ -10,6 +10,9 @@
           :text-color="'#fff'"
           linkText="Projects"
           :link="'projects'"
+          :link-previous="'home'"
+          link-text-previous="Homepage"
+          :reverse="true"
       ></global-hero>
     </div>
 

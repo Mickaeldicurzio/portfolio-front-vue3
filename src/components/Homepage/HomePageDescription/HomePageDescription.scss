@@ -17,7 +17,15 @@
   }
 }
 
-.HomePageDescription-text {
+.HomePageDescription-inner {
   width: 60%;
   padding: 40px;
+}
+
+.HomePageDescription-link {
+  margin-left: auto;
+  display: flex !important;
+  position: relative;
+  right: -20px;
+  margin-top: 40px;
 }

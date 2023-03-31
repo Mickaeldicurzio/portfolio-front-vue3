@@ -68,27 +68,10 @@
   opacity: 0.7;
 }
 
-.Menu-ItemContainer a {
-  font-family: "MoonBold";
-  color: rgba(0,0,0,0.7);
-  font-size: 20px;
-  text-decoration: none;
-  transition: color 0.25s ease-in-out;
-  position: relative;
-  &:after {
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    content: '';
-    border-top: 2px solid rgba(0,0,0,0.8);
-    width: 0;
-    transition: width 0.25s ease-in-out;
-  }
-}
-
 .Menu-ItemContainer:hover a {
   color: rgb(0,0,0);
   transition: color 0.25s ease-in-out;
+
   &:after {
     //width: 100%;
     transition: width 0.25s ease-in-out;

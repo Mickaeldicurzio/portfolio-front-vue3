@@ -21,7 +21,7 @@
       fullscreen
       :scrim="false"
   >
-    <v-card>
+
       <v-btn
           icon
           dark
@@ -30,9 +30,7 @@
       >
         <font-awesome-icon icon="fa-solid fa-xl fa-xmark" style="color: #d64045;"/>
       </v-btn>
-      <project-full :project-id="project.id"></project-full>
-
-    </v-card>
+      <project-full :project-id="project.id" :is-modal="true"></project-full>
   </v-dialog>
 
 </template>

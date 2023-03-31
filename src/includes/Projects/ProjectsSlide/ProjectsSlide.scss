@@ -11,14 +11,24 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
+  border-radius: 20px;
+  img {
+    border-radius: 20px;
+  }
 }
 
 .ProjectsSlide-description {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  margin: 20px 0;
 }
 
 .ProjectsSlide-companyLogo {
   width: 100px;
+}
+
+.ProjectsSlide-button a {
+  color: #D64045 !important;
 }

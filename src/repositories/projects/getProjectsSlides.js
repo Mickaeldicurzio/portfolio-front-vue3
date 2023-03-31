@@ -5,8 +5,9 @@ export const GET_PROJECTS_SLIDES = gql`query GetProjectsSlides {
             data {
               id
               attributes {
-                title
-                galerie {
+                  title
+                  link
+                  galerie {
                   data  {
                     attributes {
                       alternativeText

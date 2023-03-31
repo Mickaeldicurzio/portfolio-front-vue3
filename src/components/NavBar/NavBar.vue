@@ -5,9 +5,13 @@
       <font-awesome-icon icon="fa-solid fa-bars"/>
     </v-app-bar-nav-icon>
     <v-app-bar-nav-icon v-else @click="closeMenu">
-      <font-awesome-icon icon="fa-solid fa-bars"/>
+      <font-awesome-icon icon="fa-solid fa-close"/>
     </v-app-bar-nav-icon>
-    <v-app-bar-title>Collapsing Bar</v-app-bar-title>
+    <v-app-bar-nav-icon>
+      <router-link class="HomeLinkIcon" :to="{name: 'home'}">
+        <font-awesome-icon icon="fa-solid fa-home"/>
+      </router-link>
+    </v-app-bar-nav-icon>
   </v-app-bar>
 
 
@@ -17,7 +21,7 @@
 <script>
 
 
-import { CLOSE_MENU, OPEN_MENU } from "@/constants/event-constants";
+import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
 
 export default {
   name: 'NavBar',
@@ -26,8 +30,8 @@ export default {
     isMenuOpen: false
   }),
 
-  watch:{
-    $route (){
+  watch: {
+    $route() {
       this.isMenuOpen = false
       this.emitter.emit(CLOSE_MENU);
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="ProjectsSlider">
-    <carousel :items-to-show="1.5" :pagination="false">
-      <slide v-for="slide in projects.data" :key="slide">
+    <carousel :items-to-show="1.5" :pagination="false"  >
+      <slide v-for="slide in projects.data" :key="slide" >
         <projects-slide :project="slide"></projects-slide>
       </slide>
 
@@ -10,7 +10,9 @@
         <pagination />
       </template>
     </carousel>
+
   </div>
+
 </template>
 
 <script>
@@ -26,7 +28,7 @@ export default {
     Slide,
     Pagination,
     Navigation,
-    ProjectsSlide
+    ProjectsSlide,
   },
   props: {
     projects: Array

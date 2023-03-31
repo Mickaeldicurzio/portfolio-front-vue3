@@ -18,9 +18,14 @@
         <v-img :src="leftImageSrc" class="GlobalHero-leftImage"></v-img>
         <div class="GlobalHero-leftBefore" :style="{backgroundColor: backgroundColor}">
         </div>
-        <h3 class="GlobalHero-leftLink" v-if="linkText !== ''">
-          <router-link :to="{ name: link }">{{ linkText }}
-            <font-awesome-icon class="GlobalHero-chevronIcon" icon="fa-solid fa-chevron-right"/>
+        <h3 class="GlobalHero-leftLink">
+          <router-link  v-if="linkTextPrevious !== ''" :to="{ name: linkPrevious }">
+            <font-awesome-icon class="ChevronIcon ChevronLeft" icon="fa-solid fa-chevron-left"/>
+            {{ linkTextPrevious }}
+          </router-link>
+
+          <router-link  v-if="linkText !== ''" :to="{ name: link }">{{ linkText }}
+            <font-awesome-icon class="ChevronIcon" icon="fa-solid fa-chevron-right"/>
           </router-link>
 
         </h3>
@@ -46,6 +51,13 @@ export default {
       default: ''
     },
     link: {
+      type: String
+    },
+    linkTextPrevious: {
+      type: String,
+      default: ''
+    },
+    linkPrevious: {
       type: String
     },
     textColor: {

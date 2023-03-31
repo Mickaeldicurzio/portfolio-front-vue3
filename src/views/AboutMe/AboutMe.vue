@@ -8,6 +8,10 @@
         :left-image-src="aboutIcon"
         :text-color="'#fff'"
         reverse="true"
+        linkText="Contact"
+        :link="'contact'"
+        :link-previous="'projects'"
+        link-text-previous="Projects"
     ></global-hero>
   </div>
 </div>

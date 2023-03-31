@@ -6,9 +6,9 @@
       <menu-component></menu-component>
       <!--  body-->
 
-      <div :class="isCurrentHome ? 'homeContainer': 'container'">
+
         <router-view/>
-      </div>
+
       <!--  footer-->
       <v-footer> footer</v-footer>
     </v-app>

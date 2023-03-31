@@ -1,36 +1,51 @@
 <template>
-  <div class="ProjectFull" v-if="loading === 0">
-    <div class="ProjectFull-headerContainer">
-      <v-container>
-        <div class="ProjectFull-header">
-          <h2 class="Title-underline">{{ project.data.attributes.title }} <span>{{
-              project.data.attributes.projectDate
-            }}</span></h2>
-          <br>
-          <div class="ProjectFull-description">
-            <p>{{ project.data.attributes.description }}</p>
+  <v-card>
+    <div class="ProjectFull" v-if="loading === 0">
+      <div class="ProjectFull-headerContainer">
+
+        <v-container>
+
+<!--          LINK-->
+          <div class="ProjectFull-linkList" v-if="!isModal">
+            <router-link :to="{ name: 'projects'}" :class="'WhiteLink'"> <font-awesome-icon class="ChevronIcon ChevronLeft" icon="fa-solid fa-chevron-left"/> Liste des projets</router-link>
           </div>
-        </div>
 
-        <div class="ProjectFull-gallery">
-          <project-gallery :gallery="project.data.attributes.galerie.data"></project-gallery>
-          <div class="ProjectFull-linkContainer" v-if="project.data.attributes.link">
-            <v-img class="ProjectFull-companyLogo" :src="'http://localhost:1337' + project.data.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
-            <a class="ProjectFull-link" :href="project.data.attributes.link" target="_blank">
-              <button>Voir le site <font-awesome-icon class="ProjectFull-linkIcon" icon="fa-solid fa-chevron-right"/></button>
-            </a>
+<!--          HEADER-->
+          <div class="ProjectFull-header">
+            <h2 class="Title-underline">{{ project.data.attributes.title }} <span>{{
+                project.data.attributes.projectDate
+              }}</span></h2>
+            <br>
+            <div class="ProjectFull-description">
+              <p>{{ project.data.attributes.description }}</p>
+            </div>
           </div>
-        </div>
+
+<!--          GALLERY-->
+          <div class="ProjectFull-gallery">
+            <project-gallery :gallery="project.data.attributes.galerie.data"></project-gallery>
+            <div class="ProjectFull-linkContainer" v-if="project.data.attributes.link">
+              <v-img class="ProjectFull-companyLogo"
+                     :src="'http://localhost:1337' + project.data.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+              <a class="ProjectFull-link" :href="project.data.attributes.link" target="_blank">
+                <button>Voir le site
+                  <font-awesome-icon class="ProjectFull-linkIcon" icon="fa-solid fa-chevron-right"/>
+                </button>
+              </a>
+            </div>
+          </div>
 
 
-      </v-container>
+        </v-container>
+      </div>
+
+<!--      TECHNOS-->
+      <div class="ProjectFull-technos">
+        <project-full-techno :project-languages="project.data.attributes.languages.data" :is-modal="isModal"></project-full-techno>
+      </div>
+
     </div>
-
-    <div class="ProjectFull-technos">
-      <project-full-techno :project-languages="project.data.attributes.languages.data"></project-full-techno>
-    </div>
-
-  </div>
+  </v-card>
 </template>
 
 <script>
@@ -43,12 +58,16 @@ export default {
   name: "ProjectFull",
   components: {
     ProjectFullTechno,
-    ProjectGallery
+    ProjectGallery,
   },
 
   props: {
     projectId: {
       type: Number,
+    },
+    isModal: {
+      type: Boolean,
+      default: false,
     }
   },
 
@@ -63,7 +82,7 @@ export default {
       query: repositories.projectRepository.GET_PROJECT_BY_ID,
       variables() {
         return {
-          id: this.projectId,
+          id: this.$route.params.id ? this.$route.params.id : this.projectId,
         }
       },
       loadingKey: 'loading'

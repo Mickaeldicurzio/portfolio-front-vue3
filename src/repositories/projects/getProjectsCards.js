@@ -9,6 +9,7 @@ export const GET_PROJECTS_CARDS = gql`query GetProjectsCards ($selectedCompanies
               id
               attributes {
                 title
+                link
                 galerie {
                   data  {
                     attributes {

@@ -3,9 +3,21 @@
   background-color: aliceblue;
 }
 
+
+.v-card {
+  overflow: inherit !important;
+}
+
+
+.ProjectFull {
+  background-color: aliceblue;
+}
+
 .ProjectFull-header {
   width: 100%;
   height: 100%;
+  padding-top: 40px;
+
   span {
     position: absolute;
     right: 350px;
@@ -21,14 +33,15 @@
 .ProjectFull-link {
   padding: 10px 20px;
   border-radius: 10px;
-  color: #fff;
+  color: #fff !important;
   background-color: #D64045;
   position: relative;
   margin: 40px 0;
   font-weight: bold;
-  text-indent: 12px;
+
   button {
-  letter-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: 16px;
   }
 }
 
@@ -53,11 +66,19 @@
   margin: auto;
   z-index: 9;
 }
+
 .ProjectFull-technos {
   z-index: 9;
   position: relative;
   padding: 60px 0;
 }
+
 .ProjectFull-companyLogo img {
   width: 300px;
+}
+
+@media (min-width: 1920px) {
+  .v-container {
+    max-width: 1600px !important;
+  }
 }

@@ -9,6 +9,8 @@
           :text-color="'#fff'"
           :link="'aboutMe'"
           link-text="About Me"
+          :link-previous="'experiences'"
+          link-text-previous="Experiences"
       ></global-hero>
     </div>
 

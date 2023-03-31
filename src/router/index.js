@@ -5,6 +5,7 @@ import ArticleFullPage from "@/views/Articles/ArticleFull/ArticleFull";
 import ExperiencesFull from "@/views/Experiences/ExperiencesFull";
 import AboutMe from "@/views/AboutMe/AboutMe";
 import ProjectsList from "@/views/Projects/ProjectsList/ProjectsList";
+import ProjectFull from "@/views/Projects/ProjectFull/ProjectFull";
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         path: '/projects',
         name: 'projects',
         component: ProjectsList
+    },
+    {
+        path: '/project/:id',
+        name: 'projectFull',
+        component: ProjectFull
     },
     {
         path: '/contact',

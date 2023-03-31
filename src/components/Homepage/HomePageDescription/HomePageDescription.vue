@@ -3,8 +3,17 @@
     <div class="HomePageDescription-logo">
       <v-img :src="whoAmiILogo"></v-img>
     </div>
-    <div class="HomePageDescription-text">{{ homepageDescription.data.attributes.description }}</div>
-    <br>
+    <div class="HomePageDescription-inner">
+      <div class="HomePageDescription-text">{{ homepageDescription.data.attributes.description }}</div>
+      <br>
+
+      <router-link :to="{ name: 'aboutMe'}">
+        <v-btn class="HomePageDescription-link RedButton">About Me
+          <font-awesome-icon icon="fa-solid fa-chevron-right"/>
+        </v-btn>
+      </router-link>
+
+    </div>
   </div>
   <div v-else>
     loading...

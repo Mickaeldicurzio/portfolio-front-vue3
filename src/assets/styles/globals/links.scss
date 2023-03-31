@@ -1,0 +1,68 @@
+
+a:not(.HomeLinkIcon) {
+  font-family: "MoonBold";
+  color: rgba(0,0,0,0.7);
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+  position: relative;
+
+  &.WhiteLink {
+    color: rgba(255,255,255, 1);
+    &:after {
+      border-top: 2px solid rgba(255,255,255,0.8);
+    }
+  }
+
+  &.RedLink {
+    color: rgba(#D64045, 1);
+    &:after {
+      border-top: 2px solid rgba(#D64045,0.8);
+    }
+  }
+
+
+  svg {
+    margin-left: 20px;
+    &.ChevronLeft {
+      margin-right: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .ChevronIcon {
+    transform: translate(0px);
+    opacity: 0.2;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  &:hover .ChevronIcon {
+    transform: translate(20px);
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+    &.ChevronLeft {
+      transform: translate(-20px);
+    }
+  }
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: '';
+    border-top: 2px solid rgba(0,0,0,0.8);
+    width: 0;
+    transition: width 0.25s ease-in-out;
+  }
+}
+
+a.Underlined:hover {
+  &:after {
+    width: 100%;
+    transition: width 0.25s ease-in-out;
+  }
+}
+
+a.HomeLinkIcon {
+  color: rgba(0,0,0,0.9);
+}

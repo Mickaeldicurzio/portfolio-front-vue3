@@ -16,7 +16,6 @@
                    :src="'http://localhost:1337' + language.languageObject.logoUrl"></v-img>
           </div>
         </div>
-
       </div>
     </v-container>
   </div>
@@ -29,12 +28,15 @@ import gears from '@/assets/images/gears.svg'
 import gearsAround from '@/assets/images/gears-arround.svg'
 import {groupArrayByKey} from "@/services/groupeArrayByKey";
 import {listenStickyIsPinned} from "@/services/listenStickyIsPinned";
-import {throttle} from "@/services/throttle";
 
 export default {
   name: "ProjectFullTechno",
   props: {
     projectLanguages: Object,
+    isModal: {
+      type: Boolean,
+      default: false
+    }
   },
   setup() {
     return {
@@ -46,14 +48,13 @@ export default {
   mounted() {
     listenStickyIsPinned(".ProjectFullTechno-gearsImage")
     listenStickyIsPinned(".ProjectFullTechno-gearsImageAround")
-    this.listenScroll()
+    this.isModal ? this.listenScrollOnModal() : this.listenScroll()
   },
 
   computed: {
     formatedProjectLanguages() {
       let categoriesObject = []
       this.projectLanguages.forEach((language) => {
-        console.log(language)
         let categoryName = language.attributes.category.data?.attributes.CategoryName
         let languageObject = {
           name: language.attributes.name,
@@ -67,19 +68,31 @@ export default {
   },
 
   methods: {
+
     listenScroll() {
-      document.querySelector('.v-card').addEventListener('scroll', throttle(
-              (e) => {
-                console.log('here')
-                let sticky = document.querySelectorAll('.sticky-element')
-                if (sticky.length < 1) {
-                  return
-                }
-                this.scrollRotate(e.target.scrollTop, 20)
-              })
-          , 50000)
+      window.addEventListener('scroll',
+          () => {
+            if (document.querySelector('.sticky-element') < 1) {
+              return
+            }
+            let sticky = document.querySelectorAll('.sticky-element')
+            if (sticky.length < 1) {
+              return
+            }
+
+            this.scrollRotate(window.scrollY, 20)
+          })
+    },
+
+    listenScrollOnModal() {
+      document.querySelector('.v-card').addEventListener('scroll', (e) => {
+        let sticky = document.querySelectorAll('.sticky-element')
+        if(sticky.length < 1) {return}
+        this.scrollRotate(e.target.scrollTop, 20)
+      })
     },
     scrollRotate(amount, devider) {
+      console.log(amount, devider)
       this.$refs['gears'].$el.style.transform = "rotate(" + amount / devider + "deg)";
       this.$refs['gears'].$el.style.top = 200 + amount / (devider * 2) + "px";
       this.$refs['gearsAround'].$el.style.transform = "rotate(" + amount / (devider * 3) + "deg)";
