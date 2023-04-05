@@ -14,7 +14,7 @@
          :style="{ backgroundColor: index.attributes.color.data.attributes.color }"
     >
       <v-container>
-        <div class="Title-underline">
+        <div class="Title-underline whiteTitle">
           <h3>{{ index.attributes.CategoryName }}</h3>
         </div>
 

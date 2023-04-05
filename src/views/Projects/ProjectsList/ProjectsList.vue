@@ -58,7 +58,7 @@
 
       <!-- PROJECTS-->
       <div class="ProjectsList-projectContainer" v-if="loading === 0">
-        <projects-cards :project="index" v-for="(index, key) in projects" :key="key"></projects-cards>
+        <project-card :project="index" v-for="(index, key) in projects" :key="key"></project-card>
       </div>
 
     </div>
@@ -69,16 +69,16 @@
 import GlobalHero from "@/components/GlobalHero/GlobalHero";
 import projectIcon from "@/assets/images/cigarette-red.svg";
 import aboutImage from "@/assets/images/projects.jpg";
-import ProjectsCards from "@/components/Projects/ProjectsCards/ProjectsCards";
 import {repositories} from "@/repositories";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import './ProjectsList.scss'
+import ProjectCard from "@/includes/Projects/ProjectCard/ProjectCard";
 
 export default {
   name: "ProjectsList",
   components: {
+    ProjectCard,
     GlobalHero,
-    ProjectsCards,
     FontAwesomeIcon
   },
 

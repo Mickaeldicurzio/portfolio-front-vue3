@@ -2,7 +2,7 @@
   <div class="HomePageProjects ColoredContainer ColoredContainer-left">
 
     <v-container>
-      <h2 class="Title-underline">Projets auxquels j'ai participe </h2>
+      <h2 class="Title-underline whiteTitle">Projets auxquels j'ai participe </h2>
       <div class="HomePageProjects-devIcon">
         <v-img :src="devIcon"></v-img>
       </div>

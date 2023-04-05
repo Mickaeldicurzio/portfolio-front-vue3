@@ -10,8 +10,12 @@ h1 , h2, h3, h4 {
     position: absolute;
     content: "";
     width: 80%;
-    border-top: 2px solid rgba(#fff, 0.4);
+    border-top: 2px solid rgba(#000, 0.4);
     left: 0;
     bottom: -10px;
   }
+}
+
+.Title-underline.whiteTitle:after {
+  border-top: 2px solid rgba(#fff, 0.4);
 }

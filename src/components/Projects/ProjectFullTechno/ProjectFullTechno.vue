@@ -18,6 +18,9 @@
         </div>
       </div>
     </v-container>
+
+
+    <slot name="nextProject"></slot>
   </div>
 </template>
 

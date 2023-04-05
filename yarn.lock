@@ -8850,6 +8850,11 @@
   "resolved" "https://registry.npmjs.org/stealthy-require/-/stealthy-require-1.1.1.tgz"
   "version" "1.1.1"
 
+"strapi-plugin-random-sort@^0.0.3":
+  "integrity" "sha512-l++/dSvMzJtZVPnT+FJ6cV9W0C/UlfkoHDwb2xYCl1iSHaGndwrod7JrwQT1TINmR015d+TPAKll0JOry9Xy/Q=="
+  "resolved" "https://registry.npmjs.org/strapi-plugin-random-sort/-/strapi-plugin-random-sort-0.0.3.tgz"
+  "version" "0.0.3"
+
 "streamsearch@0.1.2":
   "integrity" "sha512-jos8u++JKm0ARcSUTAZXOVC0mSox7Bhn6sBgty73P1f3JGf7yG2clTbBNHUdde/kdvP2FESam+vM6l8jBrNxHA=="
   "resolved" "https://registry.npmjs.org/streamsearch/-/streamsearch-0.1.2.tgz"

@@ -5,14 +5,17 @@
 
         <v-container>
 
-<!--          LINK-->
+          <!--          LINK-->
           <div class="ProjectFull-linkList" v-if="!isModal">
-            <router-link :to="{ name: 'projects'}" :class="'WhiteLink'"> <font-awesome-icon class="ChevronIcon ChevronLeft" icon="fa-solid fa-chevron-left"/> Liste des projets</router-link>
+            <router-link :to="{ name: 'projects'}" :class="'WhiteLink'">
+              <font-awesome-icon class="ChevronIcon ChevronLeft" icon="fa-solid fa-chevron-left"/>
+              Liste des projets
+            </router-link>
           </div>
 
-<!--          HEADER-->
+          <!--          HEADER-->
           <div class="ProjectFull-header">
-            <h2 class="Title-underline">{{ project.data.attributes.title }} <span>{{
+            <h2 class="Title-underline whiteTitle">{{ project.data.attributes.title }} <span>{{
                 project.data.attributes.projectDate
               }}</span></h2>
             <br>
@@ -21,7 +24,7 @@
             </div>
           </div>
 
-<!--          GALLERY-->
+          <!--          GALLERY-->
           <div class="ProjectFull-gallery">
             <project-gallery :gallery="project.data.attributes.galerie.data"></project-gallery>
             <div class="ProjectFull-linkContainer" v-if="project.data.attributes.link">
@@ -39,9 +42,16 @@
         </v-container>
       </div>
 
-<!--      TECHNOS-->
+      <!--      TECHNOS-->
       <div class="ProjectFull-technos">
-        <project-full-techno :project-languages="project.data.attributes.languages.data" :is-modal="isModal"></project-full-techno>
+        <project-full-techno :project-languages="project.data.attributes.languages.data" :is-modal="isModal">
+
+          <!--          NEXT PROJECT - slot    -->
+          <template v-slot:nextProject  v-if="!isModal">
+            <projects-related :exclude-id="getProjectId"></projects-related>
+          </template>
+        </project-full-techno>
+
       </div>
 
     </div>
@@ -53,10 +63,13 @@ import './ProjectFull.scss'
 import {repositories} from "@/repositories";
 import ProjectGallery from "@/components/Projects/ProjectGallery/ProjectGallery";
 import ProjectFullTechno from "@/components/Projects/ProjectFullTechno/ProjectFullTechno";
+import ProjectsRelated from "@/components/Projects/ProjectsRelated/ProjectsRelated";
+
 
 export default {
   name: "ProjectFull",
   components: {
+    ProjectsRelated,
     ProjectFullTechno,
     ProjectGallery,
   },
@@ -82,11 +95,18 @@ export default {
       query: repositories.projectRepository.GET_PROJECT_BY_ID,
       variables() {
         return {
-          id: this.$route.params.id ? this.$route.params.id : this.projectId,
+          id: this.getProjectId,
         }
       },
       loadingKey: 'loading'
     },
+
   },
+
+  computed: {
+    getProjectId() {
+      return this.$route.params.id ? this.$route.params.id : this.projectId
+    }
+  }
 }
 </script>
