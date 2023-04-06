@@ -29,7 +29,7 @@
             <project-gallery :gallery="project.data.attributes.galerie.data"></project-gallery>
             <div class="ProjectFull-linkContainer" v-if="project.data.attributes.link">
               <v-img class="ProjectFull-companyLogo"
-                     :src="'http://localhost:1337' + project.data.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+                     :src="$variables.getStrapiBaseUrl() + project.data.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
               <a class="ProjectFull-link" :href="project.data.attributes.link" target="_blank">
                 <button>Voir le site
                   <font-awesome-icon class="ProjectFull-linkIcon" icon="fa-solid fa-chevron-right"/>

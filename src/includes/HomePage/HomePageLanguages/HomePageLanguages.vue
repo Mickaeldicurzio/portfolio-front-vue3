@@ -4,7 +4,7 @@
          v-for="(index, key) in languages"
          :key="key"
     >
-      <v-img :src="'http://localhost:1337' + index.attributes.logo.data.attributes.url"></v-img>
+      <v-img :src="$variables.getStrapiBaseUrl() + index.attributes.logo.data.attributes.url"></v-img>
     </div>
   </div>
 </template>

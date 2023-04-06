@@ -13,7 +13,7 @@
         <div class="ProjectFullTechno-languageRow">
           <div class="ProjectFullTechno-languages" v-for="(language) in index" :key="language">
             <v-img class="ProjectFullTechno-languageImage"
-                   :src="'http://localhost:1337' + language.languageObject.logoUrl"></v-img>
+                   :src="$variables.getStrapiBaseUrl() + language.languageObject.logoUrl"></v-img>
           </div>
         </div>
       </div>

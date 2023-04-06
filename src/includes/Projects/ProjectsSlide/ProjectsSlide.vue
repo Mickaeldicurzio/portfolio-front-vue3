@@ -4,11 +4,11 @@
       <p> {{ project.attributes.title }}</p>
       <div class="ProjectsSlide-companyLogo">
         <v-img
-            :src="'http://localhost:1337' + project.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+            :src="$variables.getStrapiBaseUrl() + project.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
       </div>
     </div>
     <div class="ProjectsSlide-illustration"
-         v-bind:style="{ 'background-image': 'url(http://localhost:1337' + project.attributes.galerie.data[0].attributes.url + ')' }">
+         v-bind:style="{ 'background-image': 'url('  + $variables.getStrapiBaseUrl() + project.attributes.galerie.data[0].attributes.url + ')' }">
     </div>
 
     <div class="ProjectsSlide-description">
@@ -34,6 +34,10 @@ export default {
   name: "ProjectsSlide",
   props: {
     project: Object
+  },
+
+  mounted() {
+
   }
 }
 

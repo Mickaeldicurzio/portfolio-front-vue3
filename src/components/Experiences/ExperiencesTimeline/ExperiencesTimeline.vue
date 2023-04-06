@@ -10,7 +10,7 @@
         <template v-slot:icon>
 
           <div class="ExperiencesTimeline-icon"
-               :style="{backgroundImage: 'url(http://localhost:1337' + experienceItem.companyLogo + ')' }"></div>
+               :style="{backgroundImage: 'url(' + $variables.getStrapiBaseUrl() + experienceItem.companyLogo + ')' }"></div>
         </template>
 
         <template v-slot:opposite>

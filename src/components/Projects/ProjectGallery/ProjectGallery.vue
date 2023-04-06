@@ -3,7 +3,7 @@
     <Carousel id="gallery" class="ProjectGallery-gallery" :items-to-show="1" :wrap-around="false"
               v-model="currentSlide">
       <Slide v-for="slide in gallery" :key="slide">
-        <v-img class="ProjectGallery-galleryImage" :src="'http://localhost:1337' + slide.attributes.url"></v-img>
+        <v-img class="ProjectGallery-galleryImage" :src="$variables.getStrapiBaseUrl() + slide.attributes.url"></v-img>
       </Slide>
     </Carousel>
 
@@ -17,7 +17,7 @@
     >
       <Slide v-for="(slide, key) in gallery" :key="key">
         <div class="ProjectGallery-thumbnailsContainer"
-             v-bind:style="{ 'background-image': 'url(http://localhost:1337' + slide.attributes.url + ')' }"
+             v-bind:style="{ 'background-image': 'url(' + $variables.getStrapiBaseUrl()  + slide.attributes.url + ')' }"
              @click="slideTo(key)">
         </div>
       </Slide>

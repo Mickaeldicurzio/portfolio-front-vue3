@@ -4,7 +4,7 @@
       <v-img :src="whoAmiILogo"></v-img>
     </div>
     <div class="HomePageDescription-inner">
-      <div class="HomePageDescription-text">{{ homepageDescription.data.attributes.description }}</div>
+      <div class="HomePageDescription-text" v-html="homepageDescription.data.attributes.description"></div>
       <br>
 
       <router-link :to="{ name: 'aboutMe'}">

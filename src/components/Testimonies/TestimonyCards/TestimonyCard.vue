@@ -6,7 +6,7 @@
     </div>
     <div class="TestimonyCard-profileContainer">
       <div class="TestimonyCard-pictures">
-        <v-img :src="'http://localhost:1337' + testimony.attributes.pictures.data.attributes.url"></v-img>
+        <v-img :src="$variables.getStrapiBaseUrl() + testimony.attributes.pictures.data.attributes.url"></v-img>
       </div>
       <div class="TestimonyCard-name">
         <bold>
@@ -19,7 +19,7 @@
         </span>
       </div>
       <div class="TestimonyCard-company">
-        <v-img :src="'http://localhost:1337' + testimony.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+        <v-img :src="$variables.getStrapiBaseUrl() + testimony.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
       </div>
     </div>
     <div class="TestimonyCard-content">

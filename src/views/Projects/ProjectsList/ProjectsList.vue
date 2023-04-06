@@ -34,7 +34,7 @@
                 :class="this.selectedCompanies.includes(index.id) ? 'ProjectsList-filtersCompany filtered' : 'ProjectsList-filtersCompany' "
                 @click="setSelectedCompanies(index.id)"
                  v-for="(index, key) in companiesLogo" :key="key">
-              <v-img :src="'http://localhost:1337' + index.url"></v-img>
+              <v-img :src="$variables.getStrapiBaseUrl() + index.url"></v-img>
               <div class="ProjectsList-filtersIcon" v-if="this.selectedCompanies.includes(index.id)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
               </div>
@@ -47,7 +47,7 @@
             <div :class="this.selectedLanguages.includes(index.id) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "
                  @click="setSelectedLanguages(index.id)"
                  v-for="(index, key) in languagesLogo" :key="key">
-              <v-img :src="'http://localhost:1337' + index.url"></v-img>
+              <v-img :src="$variables.getStrapiBaseUrl() + index.url"></v-img>
               <div class="ProjectsList-filtersIcon" v-if="this.selectedLanguages.includes(index.id)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
               </div>

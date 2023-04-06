@@ -1,6 +1,7 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import {apolloProvider} from "@/services/apolloProvider";
+import { getStrapiBaseUrl } from "@/services/getStrapiBaseUrl";
 import router from './router'
 
 // Create app
@@ -32,6 +33,9 @@ const emitter = mitt();
 
 // app use and mount
 app.config.globalProperties.emitter = emitter;
+app.config.globalProperties.$variables = {
+    getStrapiBaseUrl
+}
 app.use(apolloProvider)
     .use(vuetify)
     .component('font-awesome-icon', FontAwesomeIcon)
