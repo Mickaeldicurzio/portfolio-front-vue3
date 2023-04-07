@@ -10,7 +10,7 @@
         <router-view/>
 
       <!--  footer-->
-      <v-footer> footer</v-footer>
+      <footer-component></footer-component>
     </v-app>
   </div>
 </template>
@@ -23,10 +23,12 @@ import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";
 import '@/assets/styles/index.scss';
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
+import FooterComponent from "@/components/Footer/FooterComponent";
 
 export default {
 
   components: {
+    FooterComponent,
     MenuComponent,
     NavBar
   },

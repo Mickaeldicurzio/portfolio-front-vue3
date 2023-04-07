@@ -17,7 +17,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 
 library.add(fas, far, fab)
 
-// Vuetify
+// VUETIFY
 import 'vuetify/styles'
 import {createVuetify} from 'vuetify'
 import * as components from 'vuetify/components'
@@ -27,15 +27,17 @@ const vuetify = createVuetify({
     directives,
 })
 
-// mitt
+// MITT
 import mitt from 'mitt';
 const emitter = mitt();
-
-// app use and mount
 app.config.globalProperties.emitter = emitter;
+
+// VARIABLES
 app.config.globalProperties.$variables = {
     getStrapiBaseUrl
 }
+
+// app use and mount
 app.use(apolloProvider)
     .use(vuetify)
     .component('font-awesome-icon', FontAwesomeIcon)
