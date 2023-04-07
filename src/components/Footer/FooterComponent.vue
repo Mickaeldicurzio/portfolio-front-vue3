@@ -1,7 +1,7 @@
 <template>
   <div class="Footer">
     <div class="Footer-socials">
-      <home-page-socials></home-page-socials>
+      <home-page-socials :is-footer="true"></home-page-socials>
     </div>
     <div class="Footer-contact">
       <h3 class="Title-underline whiteTitle">Contact</h3>

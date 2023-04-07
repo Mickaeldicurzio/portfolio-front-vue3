@@ -17,24 +17,37 @@
       <font-awesome-icon icon="fa-brands fa-gitlab" />
     </a>
     <a class="HomePageSocials-link" href="https://www.malt.fr/profile/mickaeldicurzio" target="_blank">
-      <img :src="maltIcon" alt="">
+      <img :src="maltIconWhite" alt="" v-if="isFooter" class="OverrideMalt">
+      <img :src="maltIcon" alt="" v-else>
     </a>
   </div>
 
 </template>
 
 <script>
+
 import maltIcon from "@/assets/images/malt-svgrepo-com.svg";
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import maltIconWhite from "@/assets/images/malt-icon-white.svg";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
   name: "HomePageSocials",
+
   components: {
     FontAwesomeIcon,
   },
+
+  props: {
+    isFooter: {
+      type: Boolean,
+      default: false
+    }
+  },
+
   setup() {
     return {
-      maltIcon
+      maltIcon,
+      maltIconWhite
     };
   },
 }
@@ -64,5 +77,13 @@ export default {
   width: 50px;
   height: 50px;
   color: #ffffff;
+}
+
+.HomePageSocials-link .OverrideMalt {
+  width: 35px;
+  height: 35px;
+  left: 17px;
+  top: 7px;
+  position: relative;
 }
 </style>
