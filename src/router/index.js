@@ -1,52 +1,45 @@
 import { createWebHistory, createRouter } from "vue-router";
-import HomePage from '../views/HomePage'
-import ArticlesList from "@/views/Articles/ArticlesList/ArticlesList";
-import ArticleFullPage from "@/views/Articles/ArticleFull/ArticleFull";
-import ExperiencesFull from "@/views/Experiences/ExperiencesFull";
-import AboutMe from "@/views/AboutMe/AboutMe";
-import ProjectsList from "@/views/Projects/ProjectsList/ProjectsList";
-import ProjectFull from "@/views/Projects/ProjectFull/ProjectFull";
 
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: HomePage
+        component: () => import(`../views/HomePage`)
     },
     {
         path: '/articles',
         name: 'articles',
-        component: ArticlesList
+        component: () => import(`@/views/Articles/ArticlesList/ArticlesList`)
     },
     {
         path: '/article/:id',
         name: 'articleFull',
-        component: ArticleFullPage
+        component: () => import(`@/views/Articles/ArticleFull/ArticleFull`)
     },
     {
         path: '/expriences',
         name: 'experiences',
-        component: ExperiencesFull
+        component: () => import(`@/views/Experiences/ExperiencesFull`)
     },
     {
         path: '/about-me',
         name: 'aboutMe',
-        component: AboutMe
+        component: () => import(`@/views/AboutMe/AboutMe`)
     },
     {
         path: '/projects',
         name: 'projects',
-        component: ProjectsList
+        component: () => import(`@/views/Projects/ProjectsList/ProjectsList`)
     },
     {
         path: '/project/:id',
         name: 'projectFull',
-        component: ProjectFull
+        component: () => import(`@/views/Projects/ProjectFull/ProjectFull`)
     },
     {
         path: '/contact',
         name: 'contact',
-        component: ProjectsList
+        component: () => import(`@/views/Projects/ProjectsList/ProjectsList`)
     },
 ]
 

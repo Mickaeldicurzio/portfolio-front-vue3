@@ -16,6 +16,10 @@
     <vue-masonry-gallery :imgs-arr="imgsArr"></vue-masonry-gallery>
   </div>
 
+  <div class="AboutMe-description">
+    <about-me-description></about-me-description>
+  </div>
+
 <!--  DESCRIPTION-->
 </div>
 </template>
@@ -24,40 +28,22 @@
 import GlobalHero from "@/components/GlobalHero/GlobalHero";
 import aboutIcon from "@/assets/images/panda-red.svg";
 import aboutImage from "@/assets/images/about.jpg";
-import {repositories} from "@/repositories";
+import AboutMeDescription from "@/components/AboutMe/AboutMeDescription/AboutMeDescription";
 
 
 export default {
   name: "AboutMe",
   components: {
+    AboutMeDescription,
     GlobalHero,
 
   },
-  data() {
-    return {
-      imgsArr: [],
-      group: 0,   // request param
-      loading: 0,
-    };
-  },
 
-  apollo: {
-    project: {
-      query: repositories.projectRepository.GET_PROJECT_BY_ID,
-      variables() {
-        return {
-          id: this.getProjectId,
-        }
-      },
-      loadingKey: 'loading'
-    },
-  },
 
   setup() {
     return {
       aboutIcon,
       aboutImage,
-
     };
   },
 }
