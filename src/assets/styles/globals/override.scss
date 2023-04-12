@@ -1,3 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "LatoRegular";
+  margin: 0 auto;
+  font-size: 20px;
+  color: #012A36 !important;
+  background-color: aliceblue;
+}
+
+.v-application {
+  color: inherit !important;
+}
+
+
+.container {
+  margin-top: 80px;
+}
+
 .v-toolbar {
   max-width: 130px !important;
 }

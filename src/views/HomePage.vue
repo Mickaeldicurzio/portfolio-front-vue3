@@ -2,23 +2,23 @@
   <div class="HomePage">
 
     <!-- HERO -->
-    <home-page-hero></home-page-hero>
+    <home-page-hero v-fade-in></home-page-hero>
 
     <!-- DESCRIPTION -->
-    <v-container>
+    <v-container v-fade-in>
       <home-page-description></home-page-description>
     </v-container>
 
     <!-- PROJECT -->
-    <home-page-projects></home-page-projects>
+      <home-page-projects  v-fade-in></home-page-projects>
 
     <!-- TESTIMONIES -->
-    <v-container>
+    <v-container v-fade-in>
       <home-page-testimonies></home-page-testimonies>
     </v-container>
 
     <!-- SKILLS -->
-    <home-page-skills></home-page-skills>
+    <home-page-skills v-fade-in></home-page-skills>
 
   </div>
 </template>
@@ -42,3 +42,9 @@ export default {
 }
 </script>
 
+<style>
+.fade-in {
+  opacity: 0;
+  transition: 0.5s all ease-out;
+}
+</style>

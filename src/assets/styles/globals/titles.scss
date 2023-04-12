@@ -1,7 +1,10 @@
-h1 , h2, h3, h4 {
+h1, h2, h3, h4 {
   font-family: "MoonBold";
 }
 
+.Title-center {
+  text-align: center;
+}
 
 .Title-underline {
   position: relative;
@@ -13,6 +16,15 @@ h1 , h2, h3, h4 {
     border-top: 2px solid rgba(#000, 0.4);
     left: 0;
     bottom: -10px;
+  }
+}
+
+.Title-underline.rightAlign {
+  text-align: right;
+
+  &:after {
+    left: auto;
+    right: 0;
   }
 }
 

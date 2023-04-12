@@ -1,16 +1,17 @@
 <template>
   <div class="App">
     <v-app>
+
       <!--  navbar-->
       <nav-bar></nav-bar>
       <menu-component></menu-component>
+
       <!--  body-->
-
-
-        <router-view/>
+      <router-view/>
 
       <!--  footer-->
       <footer-component></footer-component>
+
     </v-app>
   </div>
 </template>
@@ -18,10 +19,10 @@
 <!-- SCRIPT-->
 <script>
 
+import '@/assets/styles/index.scss';
 
 import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";
-import '@/assets/styles/index.scss';
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
 import FooterComponent from "@/components/Footer/FooterComponent";
 
@@ -61,29 +62,3 @@ export default {
   }
 }
 </script>
-
-<!--stylesheet-->
-<style lang="scss">
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "LatoRegular";
-  margin: 0 auto;
-  font-size: 20px;
-  color: #012A36 !important;
-  background-color: aliceblue;
-}
-
-.v-application {
-  color: inherit !important;
-}
-
-
-.container {
-  margin-top: 80px;
-}
-
-</style>

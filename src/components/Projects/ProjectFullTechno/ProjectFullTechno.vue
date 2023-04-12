@@ -95,7 +95,6 @@ export default {
       })
     },
     scrollRotate(amount, devider) {
-      console.log(amount, devider)
       this.$refs['gears'].$el.style.transform = "rotate(" + amount / devider + "deg)";
       this.$refs['gears'].$el.style.top = 200 + amount / (devider * 2) + "px";
       this.$refs['gearsAround'].$el.style.transform = "rotate(" + amount / (devider * 3) + "deg)";

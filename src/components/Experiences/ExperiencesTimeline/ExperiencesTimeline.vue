@@ -5,6 +5,7 @@
 
       <v-timeline-item
           v-for="(experienceItem, i) in getExperiences"
+
           :key="i"
       >
         <template v-slot:icon>
@@ -30,7 +31,7 @@
       </v-timeline-item>
 
     </v-timeline>
-    <div class="ExperiencesTimeline-end">
+    <div class="ExperiencesTimeline-end" v-fade-in>
       <h3>What's next ?</h3>
     </div>
     <div class="ExperiencesTimeline-iconHand">

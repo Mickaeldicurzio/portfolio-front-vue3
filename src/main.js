@@ -37,6 +37,10 @@ app.config.globalProperties.$variables = {
     getStrapiBaseUrl
 }
 
+// DIRECTIVE
+import {fadeInDirective} from "@/directives/fadeIn";
+app.directive("fade-in", fadeInDirective)
+
 // app use and mount
 app.use(apolloProvider)
     .use(vuetify)

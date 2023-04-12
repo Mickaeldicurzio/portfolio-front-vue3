@@ -1,5 +1,5 @@
 <template>
-  <div class="Footer">
+  <div class="Footer" v-fade-in>
     <div class="Footer-socials">
       <home-page-socials :is-footer="true"></home-page-socials>
     </div>
@@ -10,7 +10,7 @@
         <h4>Telephone : <a href="tel:+33629051745">+33629051745</a></h4>
       </div>
 
-        <v-img :src="contactIconWhite" class="Footer-contactImage"></v-img>
+        <v-img :src="contactIcon" class="Footer-contactImage"></v-img>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@
 <script>
 import HomePageSocials from "@/includes/HomePage/HomePageSocials/HomePageSocials";
 import './FooterComponent.scss'
-import contactIconWhite from "@/assets/images/contact-white.svg";
+import contactIcon from "@/assets/images/contact.svg";
 
 export default {
   name: "FooterComponent",
@@ -29,7 +29,7 @@ export default {
 
   setup() {
     return {
-      contactIconWhite
+      contactIcon
     };
   },
 

@@ -1,7 +1,7 @@
 <template>
   <div class="HomePageDescription" v-if="loading === 0">
     <div class="HomePageDescription-logo">
-      <v-img :src="whoAmiILogo"></v-img>
+      <v-img :src="pandaLogo"></v-img>
     </div>
     <div class="HomePageDescription-inner">
       <div class="HomePageDescription-text" v-html="homepageDescription.data.attributes.description"></div>
@@ -22,13 +22,13 @@
 
 <script>
 import {repositories} from "@/repositories";
-import whoAmiILogo from "@/assets/images/panda.svg";
+import pandaLogo from "@/assets/images/panda.svg";
 import "./HomePageDescription.scss"
 
 export default {
   setup() {
     return {
-      whoAmiILogo
+      pandaLogo
     };
   },
   data() {
