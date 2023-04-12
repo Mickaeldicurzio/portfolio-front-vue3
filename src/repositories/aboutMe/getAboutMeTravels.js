@@ -6,7 +6,8 @@ export const GET_ABOUT_ME_TRAVELS = gql`query getAboutMeTravels {
       attributes {
         Travel {
           Place
-          date
+          dateStart
+          dateEnd
           galery {
             data {
               attributes {

@@ -18,9 +18,8 @@
         </div>
       </v-card>
 
-
-    <div v-for="(travel, key) in travels.data.attributes" :key="key">
-      <travel-component :travel="travel[0]"></travel-component>
+    <div v-for="(travel, key) in travels.data.attributes.Travel" :key="key">
+      <travel-component :travel="travel" :travel-key="key"></travel-component>
     </div>
 
   </v-container>
