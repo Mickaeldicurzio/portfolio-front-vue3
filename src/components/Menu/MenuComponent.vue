@@ -40,14 +40,14 @@
     </div>
 
 
-    <div class="Menu-ItemContainer">
-      <div class="Menu-Item">
-        <div class="Menu-ItemImagesLayer">
-          <v-img :src="contactIcon" class="Menu-ItemImages"></v-img>
-        </div>
-        <router-link :to="{ name: 'contact' }">Contact</router-link>
-      </div>
-    </div>
+<!--    <div class="Menu-ItemContainer">-->
+<!--      <div class="Menu-Item">-->
+<!--        <div class="Menu-ItemImagesLayer">-->
+<!--          <v-img :src="contactIcon" class="Menu-ItemImages"></v-img>-->
+<!--        </div>-->
+<!--        <router-link :to="{ name: 'contact' }">Contact</router-link>-->
+<!--      </div>-->
+<!--    </div>-->
 
   </div>
 

@@ -43,11 +43,11 @@ const routes = [
         name: 'projectFull',
         component: ProjectFull
     },
-    {
-        path: '/contact',
-        name: 'contact',
-        component: ProjectsList
-    },
+    // {
+    //     path: '/contact',
+    //     name: 'contact',
+    //     component: ProjectsList
+    // },
 ]
 
 const router = new createRouter({

@@ -34,6 +34,7 @@ export default {
     $route() {
       this.isMenuOpen = false
       this.emitter.emit(CLOSE_MENU);
+      window.scrollTo(0,0);
     }
   },
 

@@ -12,6 +12,10 @@
       <!--  footer-->
       <footer-component></footer-component>
 
+      <v-btn @click="scrollTop" ref="appButton" icon dark class="ScrollToTop-button">
+        <font-awesome-icon icon="fa-solid fa-arrow-up" style="color: #d64045;"/>
+      </v-btn>
+
     </v-app>
   </div>
 </template>
@@ -40,10 +44,15 @@ export default {
     }
   },
 
+  beforeMount() {
+    window.removeEventListener("scroll", this.userScroll);
+  },
+
   mounted() {
     this.getCurrentHomeState()
     this.emitter.on(OPEN_MENU, () => this.setHtmlStyle(true));
     this.emitter.on(CLOSE_MENU, () => this.setHtmlStyle(false));
+    window.addEventListener("scroll", this.userScroll);
   },
 
   updated() {
@@ -58,7 +67,38 @@ export default {
 
     getCurrentHomeState() {
       this.isCurrentHome = this.$router.currentRoute._value.path === "/";
+    },
+
+    userScroll() {
+      const appButton = this.$refs.appButton.$el
+      if (window.scrollY > 0) {
+        appButton.classList.add("showButton");
+        console.log('scrolled');
+      } else {
+        appButton.classList.remove("showButton");
+        console.log('top');
+      }
+    },
+
+    scrollTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 }
 </script>
+
+<style scoped>
+
+.ScrollToTop-button {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 999999;
+  opacity: 0;
+}
+
+.showButton {
+  opacity: 1;
+}
+
+</style>
