@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import 'vue3-carousel/dist/carousel.css'
+
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import './ProjectsSlider.scss'
 import ProjectsSlide from "@/includes/Projects/ProjectsSlide/ProjectsSlide";

@@ -24,6 +24,7 @@
 <script>
 
 import '@/assets/styles/index.scss';
+import 'vue3-carousel/dist/carousel.css'
 
 import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";

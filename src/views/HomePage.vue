@@ -10,7 +10,7 @@
     </v-container>
 
     <!-- PROJECT -->
-      <home-page-projects-simple  v-fade-in></home-page-projects-simple>
+    <home-page-projects-simple  v-fade-in></home-page-projects-simple>
 
     <!-- TESTIMONIES -->
     <v-container v-fade-in>
@@ -28,7 +28,6 @@
 import HomePageHero from "@/components/Homepage/HomePageHero/HomePageHero";
 import HomePageDescription from "@/components/Homepage/HomePageDescription/HomePageDescription";
 import HomePageTestimonies from "@/components/Homepage/HomePageTestimonies/HomePageTestimonies";
-// import HomePageProjects from "@/components/Homepage/HomePageProjects/HomePageProjects";
 import HomePageSkills from "@/components/Homepage/HomePageSkills/HomePageSkills";
 import HomePageProjectsSimple from "@/components/Homepage/HomePageProjectsSimple/HomePageProjectsSimple";
 
@@ -36,7 +35,6 @@ export default {
   components: {
     HomePageProjectsSimple,
     HomePageSkills,
-    // HomePageProjects,
     HomePageTestimonies,
     HomePageDescription,
     HomePageHero
