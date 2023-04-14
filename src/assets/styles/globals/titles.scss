@@ -31,3 +31,31 @@ h1, h2, h3, h4 {
 .Title-underline.whiteTitle:after {
   border-top: 2px solid rgba(#fff, 0.4);
 }
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .Title-underline {
+    text-align: center;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

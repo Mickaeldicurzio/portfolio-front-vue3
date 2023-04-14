@@ -31,3 +31,27 @@
   right: -20px;
   margin-top: 40px;
 }
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .HomePageDescription {
+   flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .HomePageDescription-logo {
+    width: 70%;
+    padding: 0;
+  }
+
+  .HomePageDescription-text {
+    font-size: 18px;
+  }
+
+  .HomePageDescription-inner {
+    width: 100%;
+    padding: 20px;
+  }
+}

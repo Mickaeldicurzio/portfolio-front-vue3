@@ -6,3 +6,28 @@
 .HomePageTestimonies-container {
   margin: 40px 20px;
 }
+
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .HomePageTestimonies {
+    position: relative;
+    margin-top: 0;
+    &:before {
+      content: '';
+      background-color: aliceblue;
+      height: 50px;
+      width: 100%;
+      top: -45px;
+      left: 0;
+      border-top-right-radius: 40px;
+      border-top-left-radius: 40px;
+      position: absolute;
+    }
+  }
+
+  .HomePageTestimonies-container {
+    margin: 20px;
+  }
+}

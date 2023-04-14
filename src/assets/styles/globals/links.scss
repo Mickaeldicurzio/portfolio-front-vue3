@@ -15,9 +15,9 @@ a:not(.HomeLinkIcon) {
   }
 
   &.RedLink {
-    color: rgba(#D64045, 1);
+    color: rgba($red-color, 1);
     &:after {
-      border-top: 2px solid rgba(#D64045,0.8);
+      border-top: 2px solid rgba($red-color,0.8);
     }
   }
 
@@ -65,4 +65,10 @@ a.Underlined:hover {
 
 a.HomeLinkIcon {
   color: rgba(0,0,0,0.9);
+}
+
+@media ($mq-phone) {
+  a:not(.HomeLinkIcon) {
+    font-size: 18px;
+  }
 }

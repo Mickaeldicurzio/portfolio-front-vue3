@@ -21,6 +21,8 @@
     "graphql": "^15.8.0",
     "graphql-tag": "^2.12.6",
     "mitt": "^3.0.0",
+    "sass": "^1.62.0",
+    "sass-mq-build": "^1.0.0",
     "strapi-plugin-random-sort": "^0.0.3",
     "vue": "^3.2.13",
     "vue-apollo": "^3.1.0",

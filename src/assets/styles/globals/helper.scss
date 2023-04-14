@@ -1,0 +1,11 @@
+.mobileOnly {
+  @media ($mq-from-tablet) {
+    display: none !important;
+  }
+}
+
+.tabletAndDesktopOnly {
+  @media ($mq-phone) {
+    display: none !important;
+  }
+}

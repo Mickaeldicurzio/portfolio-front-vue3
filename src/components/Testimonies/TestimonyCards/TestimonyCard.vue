@@ -8,18 +8,21 @@
       <div class="TestimonyCard-pictures">
         <v-img :src="$variables.getStrapiBaseUrl() + testimony.attributes.pictures.data.attributes.url"></v-img>
       </div>
-      <div class="TestimonyCard-name">
-        <bold>
-          {{ testimony.attributes.name }}
-        </bold>
-      </div>
-      <div class="TestimonyCard-profile">
+      <div class="TestimonyCard-profileInfo">
+        <div class="TestimonyCard-name">
+          <bold>
+            {{ testimony.attributes.name }}
+          </bold>
+        </div>
+        <div class="TestimonyCard-profile">
         <span>
           {{ testimony.attributes.profile }}
         </span>
-      </div>
-      <div class="TestimonyCard-company">
-        <v-img :src="$variables.getStrapiBaseUrl() + testimony.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+        </div>
+        <div class="TestimonyCard-company">
+          <v-img
+              :src="$variables.getStrapiBaseUrl() + testimony.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+        </div>
       </div>
     </div>
     <div class="TestimonyCard-content">

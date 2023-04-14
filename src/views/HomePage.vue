@@ -10,12 +10,10 @@
     </v-container>
 
     <!-- PROJECT -->
-    <home-page-projects-simple  v-fade-in></home-page-projects-simple>
+    <home-page-projects-simple v-fade-in></home-page-projects-simple>
 
     <!-- TESTIMONIES -->
-    <v-container v-fade-in>
-      <home-page-testimonies></home-page-testimonies>
-    </v-container>
+    <home-page-testimonies v-fade-in>></home-page-testimonies>
 
     <!-- SKILLS -->
     <home-page-skills v-fade-in></home-page-skills>

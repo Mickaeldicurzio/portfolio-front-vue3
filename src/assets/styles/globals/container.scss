@@ -1,3 +1,9 @@
+#app {
+  @media ($mq-phone) {
+    overflow: hidden;
+  }
+}
+
 .ColoredContainer {
   color: #fff;
   padding: 40px;
@@ -27,4 +33,15 @@
 .ColoredContainer-right .Title-underline:after {
   right: 0;
   left: auto;
+}
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .ColoredContainer {
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 20px;
+  }
 }

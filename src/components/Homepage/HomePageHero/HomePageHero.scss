@@ -38,3 +38,33 @@
     align-items: center;
   }
 }
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .HomePageHero-containerInner {
+    height: 50%;
+  }
+  .HomePageBackground2, .HomePageBackground3 {
+    display: none;
+  }
+  .HomePageSocials-link img, .HomePageSocials-link svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .HomePageSocials {
+    width: 90%;
+  }
+
+  a:not(.HomeLinkIcon) svg {
+    margin-left: inherit;
+  }
+
+  .HomePageSocials-link {
+    padding: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

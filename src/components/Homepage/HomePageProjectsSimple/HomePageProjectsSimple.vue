@@ -3,8 +3,11 @@
 
     <v-container>
       <h2 class="Title-underline whiteTitle">Projets auxquels j'ai participe </h2>
-      <div class="HomePageProjectsSimple-devIcon">
+      <div class="HomePageProjectsSimple-devIcon tabletAndDesktopOnly">
         <v-img :src="devIcon"></v-img>
+      </div>
+      <div class="HomePageProjectsSimple-devIcon mobileOnly">
+        <v-img :src="devIconMobile"></v-img>
       </div>
       <div class="HomePageProjectsSimple-description">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam consequatur dolore excepturi illo
@@ -13,14 +16,28 @@
       </div>
 
 
-      <div class="HomePageProjectsSimple-logoContainer" v-if="loading === 0">
-
+      <div class="HomePageProjectsSimple-logoContainer tabletAndDesktopOnly" v-if="loading === 0">
         <div class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key">
           <a :href="logo.attributes.link" target="_blank">
             <v-img :src="$variables.getStrapiBaseUrl() + logo.attributes.logo.data.attributes.url"
                    :alt="logo.attributes.title"></v-img>
           </a>
         </div>
+      </div>
+      <div class="HomePageProjectsSimple-logoContainer mobileOnly" v-if="loading === 0">
+        <carousel :items-to-show="1" :pagination="true"  >
+          <slide class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key" style="width: 100%">
+            <a :href="logo.attributes.link" target="_blank">
+              <v-img :src="$variables.getStrapiBaseUrl() + logo.attributes.logo.data.attributes.url"
+                     :alt="logo.attributes.title"></v-img>
+            </a>
+          </slide>
+
+          <template #addons>
+            <navigation />
+            <pagination class="WhitePagination" />
+          </template>
+        </carousel>
       </div>
       <div v-else>
         loading...
@@ -40,7 +57,9 @@
 
 import './homePageProjectsSimple.scss'
 import devIcon from "@/assets/images/cigarette-white.svg";
+import devIconMobile from "@/assets/images/cigarette.svg";
 import {repositories} from "@/repositories";
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 
 export default {
@@ -48,7 +67,15 @@ export default {
   setup() {
     return {
       devIcon,
+      devIconMobile,
     };
+  },
+
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
 
   data() {

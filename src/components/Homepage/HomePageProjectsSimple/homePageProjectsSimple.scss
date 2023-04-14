@@ -1,5 +1,5 @@
 .HomePageProjectsSimple {
-  background-color: #D64045;
+  background-color: $red-color;
 }
 
 .HomePageProjectsSimple-description {
@@ -10,14 +10,18 @@
 }
 
 
-.HomePageProjectsSimple-devIcon  {
-  position: absolute;
-  left: 0;
-  top: 250px;
-  width: 30%;
-  height: 40%;
-  transform: rotateY(180deg);
-  opacity: 0.9;
+.HomePageProjectsSimple-devIcon:not(.mobile)  {
+  display: none;
+  @media ($mq-from-tablet) {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 250px;
+    width: 30%;
+    height: 40%;
+    transform: rotateY(180deg);
+    opacity: 0.9;
+  }
 }
 
 .HomePageProjectsSimple-logoContainer {
@@ -39,4 +43,81 @@
   width: 250px;
   height: 100px;
   margin: 40px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .HomePageProjectsSimple {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+
+  .HomePageProjectsSimple-devIcon {
+    flex-direction: column;
+    width: 10rem;
+    margin: 40px auto auto auto;
+  }
+  .HomePageProjectsSimple-description {
+    display: none;
+  }
+
+  .HomePageProjectsSimple-logoContainer {
+    margin: 60px 0 60px 0;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .HomePageProjectsSimple-logo {
+    width: 100%;
+    height: auto;
+    margin: 40px 0;
+    padding: 0 40px;
+  }
+
+  .HomePageProjectsSimple-devIcon {
+    margin: inherit;
+    position: absolute;
+    top: -75px;
+  }
+}
+
+.carousel__pagination.WhitePagination {
+  top: 40px;
+  position: relative;
+}
+
+.WhitePagination .carousel__pagination-button::after {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.WhitePagination .carousel__pagination-button.carousel__pagination-button--active:after {
+  background-color: rgba(255,255,255,1);
+}
+
+.carousel__prev {
+  left: -45px;
+}
+
+.carousel__next {
+  right: -45px;
+}
+
+
+@media ($mq-phone) {
+
+  .HomePageProjectsSimple-logoContainer.mobileOnly .carousel {
+    width: 100%;
+    a {
+      width: 100%;
+    }
+  }
 }

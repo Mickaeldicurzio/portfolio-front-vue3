@@ -19,6 +19,7 @@
   right: -25px;
   transform: rotateY(180deg);
   opacity: 0.2;
+  z-index: 9;
 }
 
 .HomePageTestimonies-cards:nth-child(odd) .TestimonyCard {
@@ -77,4 +78,63 @@
 
 .TestimonyCard-testimony {
   margin: 20px;
+}
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .TestimonyCard {
+    width: 100%;
+    flex-direction: column !important;
+    padding: 10px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    box-shadow: inherit;
+  }
+
+  .TestimonyCard-content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .TestimonyCard-profileContainer {
+    width: 100%;
+    border: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .TestimonyCard-name {
+    font-size: 18px;
+  }
+  .TestimonyCard-profile {
+    font-size: 14px;
+  }
+  .TestimonyCard-company {
+    width: 75px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .TestimonyCard-pictures {
+    width: 50%;
+    height: auto;
+  }
+
+  .TestimonyCard-testimony {
+    font-size: 18px;
+    border-top: 2px solid rgba(0,0,0,0.2);
+    padding-top: 30px;
+  }
+
+  .TestimonyCard-quotes {
+    width: 50px;
+    right: 0;
+  }
+
+  .HomePageTestimonies-cards:nth-child(odd) .TestimonyCard .TestimonyCard-quotes {
+    left: 0;
+  }
 }

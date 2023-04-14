@@ -26,3 +26,43 @@
   justify-content: center;
   align-items: center;
 }
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .HomePageSkills-description {
+    display: none;
+  }
+
+  .HomePageSkills-categories .v-container {
+    padding: 0;
+  }
+
+  .ColoredContainer-right .HomePageLanguages {
+    left: 0;
+  }
+
+  .ColoredContainer-left .HomePageLanguages {
+    right: 0;
+  }
+
+  .HomePageLanguages {
+    justify-content: center;
+  }
+
+  .HomePageLanguages-logos {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+  }
+
+  .HomePageSkills-categories {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .ColoredContainer-right .HomePageLanguages,
+  .ColoredContainer-left .HomePageLanguages {
+    justify-content: space-around;
+  }
+}

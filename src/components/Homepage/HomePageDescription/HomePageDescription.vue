@@ -5,7 +5,6 @@
     </div>
     <div class="HomePageDescription-inner">
       <div class="HomePageDescription-text" v-html="homepageDescription.data.attributes.description"></div>
-      <br>
 
       <router-link :to="{ name: 'aboutMe'}">
         <v-btn class="HomePageDescription-link RedButton">About Me

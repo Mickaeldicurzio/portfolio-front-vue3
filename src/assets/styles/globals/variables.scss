@@ -1,0 +1,18 @@
+@import "~sass-mq-build/mq-build";
+
+$red-color: #D64045;
+
+// Dimensions
+$start-tablet: 700px;
+$start-desktop: 1100px;
+//$start-desktop: 1200px;
+$layout-width: 1200px;
+//$layout-width: 1440px;
+
+// Pre-built media queries
+// Example usage: @media ($mq-desktop) { … }
+$mq-phone:        mq-build($maxw: $start-tablet);
+$mq-tablet:       mq-build($minw: $start-tablet, $maxw: $start-desktop);
+$mq-desktop:      mq-build($minw: $start-desktop);
+$mq-upto-tablet:  mq-build($maxw: $start-desktop);
+$mq-from-tablet:  mq-build($minw: $start-tablet);
