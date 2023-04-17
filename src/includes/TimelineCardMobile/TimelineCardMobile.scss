@@ -1,0 +1,31 @@
+.TimelineCardMobile {
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  position: relative;
+  background-color: #fff;
+}
+
+.TimelineCardMobile-title {
+  color: #D64045;
+}
+
+.TimelineCardMobile-date {
+  margin: 10px 0;
+}
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .TimelineCardMobile {
+    padding: 20px;
+  }
+
+  .TimelineCardMobile-description .v-expansion-panel-text__wrapper {
+    font-size: 16px;
+  }
+
+  .v-timeline-item__body {
+    padding-inline-start: 10px !important;
+  }
+}

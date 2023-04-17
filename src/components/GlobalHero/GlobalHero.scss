@@ -2,6 +2,7 @@
 .GlobalHero-container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .GlobalHero-parallax {
@@ -141,4 +142,39 @@
 
 .v-responsive__content {
   height: 100%;
+}
+
+// RESPONSIVE
+
+@media ($mq-upto-tablet) {
+  .GlobalHero-titleContainer {
+    width: 100%;
+  }
+
+  .reverse .GlobalHero-title {
+    margin: auto;
+  }
+
+  .GlobalHero-titleContainer {
+    height: 50%;
+    position: relative;
+    top: -50px;
+  }
+
+  .GlobalHero-titleContainer h1 {
+    margin-right: 0;
+  }
+  .GlobalHero-titleContainer:after {
+    left: 80px;
+  }
+  .reverse .GlobalHero-parallax {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .GlobalHero-leftLink {
+    bottom: 30px;
+    z-index: 1;
+    width: 100%;
+  }
 }

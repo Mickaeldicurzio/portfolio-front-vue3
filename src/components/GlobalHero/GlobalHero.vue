@@ -12,7 +12,7 @@
           </div>
         </div>
       </v-parallax>
-      <div class="GlobalHero-left"
+      <div class="GlobalHero-left desktopOnly"
            :class="backgroundColor !== '#fff' ? 'blankFill' : ''"
            :style="{backgroundColor: backgroundColor}">
         <v-img :src="leftImageSrc" class="GlobalHero-leftImage"></v-img>
@@ -30,6 +30,17 @@
 
         </h3>
       </div>
+
+      <h3 class="GlobalHero-leftLink phoneAndTabletOnly">
+        <router-link  v-if="linkTextPrevious !== ''" :to="{ name: linkPrevious }">
+          <font-awesome-icon class="ChevronIcon ChevronLeft" icon="fa-solid fa-chevron-left"/>
+          {{ linkTextPrevious }}
+        </router-link>
+        <router-link  v-if="linkText !== ''" :to="{ name: link }">{{ linkText }}
+          <font-awesome-icon class="ChevronIcon" icon="fa-solid fa-chevron-right"/>
+        </router-link>
+
+      </h3>
 
     </div>
   </div>

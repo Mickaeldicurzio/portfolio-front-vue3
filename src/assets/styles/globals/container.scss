@@ -35,13 +35,30 @@
   left: auto;
 }
 
+
+
 // RESPONSIVE
 
-@media ($mq-phone) {
+@media ($mq-upto-tablet) {
   .ColoredContainer {
     width: 100%;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding: 20px;
   }
+  .GlobalContainer {
+    position: relative;
+  }
+
+  .GlobalContainer:before {
+    content: '';
+    top: -100px;
+    height: 100px;
+    background-color: aliceblue;
+    width: 100%;
+    position: absolute;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
 }

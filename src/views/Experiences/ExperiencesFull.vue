@@ -17,7 +17,7 @@
     </div>
 
     <!-- CONTAINER -->
-    <div class="ExperiencesFull-container">
+    <div class="ExperiencesFull-container GlobalContainer">
       <v-container>
         <experiences-timeline></experiences-timeline>
       </v-container>

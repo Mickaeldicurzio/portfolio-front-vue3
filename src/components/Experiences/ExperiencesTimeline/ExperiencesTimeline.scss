@@ -31,7 +31,8 @@
   margin: auto;
   position: relative;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   right: 32px;
   color: #D64045;
 
@@ -45,12 +46,49 @@
 }
 
 .ExperiencesTimeline-iconHand {
-  width: 800px;
-  height: 800px;
+  max-width: 800px;
+  max-height: 800px;
+  width: 100%;
+  height: 100%;
   margin: auto;
   right: 45px;
   position: relative;
   bottom: 200px;
   z-index: -1;
   opacity: 0.8;
+}
+
+// RESPONSIVE
+
+
+@media ($mq-phone) {
+  .v-timeline-divider__dot--size-default {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .ExperiencesFull-container {
+    position: relative;
+  }
+
+  .ExperiencesTimeline-iconHand {
+    right: auto;
+  }
+
+  .ExperiencesTimeline {
+    margin-bottom: 60px;
+  }
+
+  .ExperiencesTimeline-end {
+    margin-top: 200px;
+    top: -200px;
+    left: 5px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media ($mq-upto-tablet) {
+  .ExperiencesTimeline {
+    margin-top: 0;
+  }
 }
