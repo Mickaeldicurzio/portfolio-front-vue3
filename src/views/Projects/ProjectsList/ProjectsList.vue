@@ -14,7 +14,7 @@
       ></global-hero>
     </div>
 
-    <div class="ProjectsList-container">
+    <div class="ProjectsList-container GlobalContainer">
 
       <!-- FILTERS-->
       <div class="ProjectsList-filtersContainer">

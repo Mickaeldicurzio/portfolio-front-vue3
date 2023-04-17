@@ -21,6 +21,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 70%;
+  padding-right: 30px;
 }
 
 // FILTERS
@@ -89,4 +90,34 @@
   position: absolute;
   right: 20px;
   cursor: pointer;
+}
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+  .ProjectsList-container {
+    margin-bottom: 350px;
+  }
+
+  .ProjectsList-projectContainer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media ($mq-upto-tablet) {
+  .ProjectsList-container {
+    margin-top: 0;
+  }
+
+  .ProjectsList-filtersContainer {
+    display: none;
+  }
+
+  .ProjectsList-projectContainer {
+    width: 100%;
+    padding-right: 0;
+  }
 }

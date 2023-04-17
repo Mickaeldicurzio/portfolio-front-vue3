@@ -167,9 +167,9 @@
   .GlobalHero-titleContainer:after {
     left: 80px;
   }
-  .reverse .GlobalHero-parallax {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  .GlobalHero-parallax {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
   }
 
   .GlobalHero-leftLink {
