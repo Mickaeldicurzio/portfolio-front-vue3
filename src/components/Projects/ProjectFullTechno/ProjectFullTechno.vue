@@ -2,10 +2,9 @@
   <div class="ProjectFullTechno" @scroll="scrollRotate">
     <div class="ProjectFullTechno-title">
       <h2>Sous le capot</h2>
-
     </div>
-    <v-img ref="gears" class="ProjectFullTechno-gearsImage" :src="gears"></v-img>
-    <v-img ref="gearsAround" class="ProjectFullTechno-gearsImageAround" :src="gearsAround"></v-img>
+    <v-img ref="gears" class="ProjectFullTechno-gearsImage desktopOnly" :src="gears"></v-img>
+    <v-img ref="gearsAround" class="ProjectFullTechno-gearsImageAround desktopOnly" :src="gearsAround"></v-img>
     <v-container class="ProjectFullTechno-container">
 
       <div class="ProjectFullTechno-containerRow" v-for="(index, key) in formatedProjectLanguages" :key="key">

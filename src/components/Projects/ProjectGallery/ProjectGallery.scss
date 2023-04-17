@@ -29,3 +29,17 @@
   border-radius: 20px;
   border: 4px solid #fff;
 }
+
+// RESPONSIVE
+
+@media ($mq-upto-tablet) {
+  .ProjectGallery-gallery button {
+    color: black;
+  }
+}
+
+@media ($mq-phone) {
+  .ProjectGallery:after {
+    height: 600px !important;
+  }
+}

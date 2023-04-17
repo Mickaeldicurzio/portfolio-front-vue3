@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="HomePageProjectsSimple-logoContainer phoneAndTabletOnly" v-if="loading === 0">
-        <carousel :items-to-show="1" :pagination="true"  >
+        <Carousel :items-to-show="1" :pagination="true"  >
           <slide class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key" style="width: 100%">
             <a :href="logo.attributes.link" target="_blank">
               <v-img :src="$variables.getStrapiBaseUrl() + logo.attributes.logo.data.attributes.url"
@@ -37,7 +37,7 @@
             <navigation />
             <pagination class="WhitePagination" />
           </template>
-        </carousel>
+        </Carousel>
       </div>
       <div v-else>
         loading...

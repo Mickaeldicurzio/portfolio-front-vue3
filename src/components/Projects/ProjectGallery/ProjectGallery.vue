@@ -5,11 +5,16 @@
       <Slide v-for="slide in gallery" :key="slide">
         <v-img class="ProjectGallery-galleryImage" :src="$variables.getStrapiBaseUrl() + slide.attributes.url"></v-img>
       </Slide>
+
+      <template #addons>
+        <navigation />
+
+      </template>
     </Carousel>
 
     <Carousel
         id="thumbnails"
-        class="ProjectGallery-thumbnails"
+        class="ProjectGallery-thumbnails desktopOnly"
         :items-to-show="4"
         :wrap-around="true"
         v-model="currentSlide"
@@ -21,13 +26,14 @@
              @click="slideTo(key)">
         </div>
       </Slide>
+
     </Carousel>
   </div>
 </template>
 
 <script>
 
-import {Carousel, Slide} from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import './ProjectGallery.scss'
 
 export default {
@@ -37,7 +43,8 @@ export default {
   },
   components: {
     Carousel,
-    Slide
+    Slide,
+    Navigation
   },
   data: () => ({
     currentSlide: 0,

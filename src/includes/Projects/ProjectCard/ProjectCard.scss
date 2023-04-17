@@ -42,9 +42,20 @@
 
 // RESPONSIVE
 
+@media ($mq-tablet) {
+  .ProjectCard {
+    width: calc(100% - 40px);
+  }
+}
+
 @media ($mq-phone) {
   .ProjectCard {
     width: calc(100% - 40px);
+    margin: 20px 0;
+  }
+
+  .ProjectsRelated-container .ProjectCard {
+    width: 100%;
   }
 
   .ProjectCard-description {

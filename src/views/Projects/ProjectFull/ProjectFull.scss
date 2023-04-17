@@ -28,6 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .ProjectFull-link {
@@ -98,4 +99,87 @@
 
 .v-card--variant-elevated {
   box-shadow: inherit !important;
+}
+
+// RESPONSIVE
+
+@media ($mq-upto-tablet) {
+  .ProjectFull-linkList {
+    text-align: right;
+    a  {
+    font-size: 16px;
+    }
+  }
+
+  .ProjectFull-headerContainer {
+    padding-top: 0px;
+  }
+
+  .ProjectFull-header span {
+    right: 0;
+  }
+
+  .ProjectFull-gallery {
+    max-width: calc(100% - 40px);
+  }
+
+  .ProjectFullTechno-container, .ProjectsRelated {
+    top: 0 !important;
+  }
+
+  .ProjectFullTechno-containerRow h3 {
+    margin: 0 !important;
+  }
+
+}
+
+@media ($mq-phone) {
+  .ProjectFull-companyLogo img {
+    width: 80px;
+  }
+
+  .ProjectFull-header .Title-underline {
+    text-align: left;
+  }
+  .ProjectFull-header span {
+    bottom: -50px;
+    font-size: 20px;
+    position: absolute;
+  }
+
+  .ProjectFull-description {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .ProjectFull-companyLogo {
+    position: relative;
+    top: -80px;
+  }
+
+  .ProjectFull-technos {
+    padding-top: 0;
+    padding-bottom: 350px;
+  }
+
+  .ProjectFullTechno-languages {
+    height: inherit !important;
+  }
+
+  .ProjectFullTechno-languageRow {
+    flex-wrap: wrap;
+  }
+
+  .ProjectFullTechno-languages {
+    margin: 20px 20px !important;
+    width: calc(33% - 40px) !important;
+  }
+
+  .ProjectsRelated-container {
+    margin-top: 20px !important;
+  }
+}
+
+.ProjectFull-technos .v-container {
+  max-width: 100%;
 }
