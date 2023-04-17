@@ -6,6 +6,7 @@ import { categoriesRepository } from "@/repositories/categories";
 import { testimoniesRepository } from "@/repositories/testimonies";
 import { companiesRepository } from "@/repositories/companies";
 import { aboutMeRepository } from "@/repositories/aboutMe";
+import { usersRepository } from "@/repositories/users";
 
 export const repositories = {
     homepageRepository,
@@ -15,5 +16,6 @@ export const repositories = {
     categoriesRepository,
     testimoniesRepository,
     companiesRepository,
-    aboutMeRepository
+    aboutMeRepository,
+    usersRepository
 }

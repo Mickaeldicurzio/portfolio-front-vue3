@@ -16,7 +16,7 @@
       </div>
 
 
-      <div class="HomePageProjectsSimple-logoContainer tabletAndDesktopOnly" v-if="loading === 0">
+      <div class="HomePageProjectsSimple-logoContainer desktopOnly" v-if="loading === 0">
         <div class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key">
           <a :href="logo.attributes.link" target="_blank">
             <v-img :src="$variables.getStrapiBaseUrl() + logo.attributes.logo.data.attributes.url"
@@ -24,7 +24,7 @@
           </a>
         </div>
       </div>
-      <div class="HomePageProjectsSimple-logoContainer mobileOnly" v-if="loading === 0">
+      <div class="HomePageProjectsSimple-logoContainer phoneAndTabletOnly" v-if="loading === 0">
         <carousel :items-to-show="1" :pagination="true"  >
           <slide class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key" style="width: 100%">
             <a :href="logo.attributes.link" target="_blank">

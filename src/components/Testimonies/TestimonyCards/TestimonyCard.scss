@@ -38,7 +38,7 @@
 }
 
 .TestimonyCard-profileContainer {
-  width: 20%;
+  width: 30%;
   text-align: center;
   border-right: 2px solid rgba(0,0,0,0.1);
   padding-right: 30px;
@@ -136,5 +136,29 @@
 
   .HomePageTestimonies-cards:nth-child(odd) .TestimonyCard .TestimonyCard-quotes {
     left: 0;
+  }
+}
+
+@media ($mq-tablet) {
+  .HomePageTestimonies-container .carousel__prev {
+    left: -40px;
+    color: black !important;
+  }
+
+  .HomePageTestimonies-container .carousel__next {
+    right: -40px;
+  }
+
+
+  .TestimonyCard {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  .TestimonyCard-profileContainer {
+    width: 40%;
+  }
+  .TestimonyCard-content {
+    width: 60%;
   }
 }

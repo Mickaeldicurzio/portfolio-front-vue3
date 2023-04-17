@@ -1,6 +1,10 @@
 .HomePageTestimonies {
   margin-top: 60px;
   text-align: center;
+
+  .v-container {
+    max-width: 100%;
+  }
 }
 
 .HomePageTestimonies-container {

@@ -26,7 +26,7 @@
 
 .HomePageProjectsSimple-logoContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
@@ -111,10 +111,36 @@
   right: -45px;
 }
 
+@media ($mq-tablet) {
+  .HomePageProjectsSimple-logoContainer {
+    width: 70%;
+    margin: 60px -50px 60px auto;
+    padding: 40px 0;
+  }
 
-@media ($mq-phone) {
 
-  .HomePageProjectsSimple-logoContainer.mobileOnly .carousel {
+  .carousel__prev {
+    left: -60px;
+    color: black !important;
+  }
+
+  .carousel__next {
+    right: -60px;
+    color: black !important;
+  }
+
+  .carousel__pagination.WhitePagination {
+    top: 80px;
+  }
+}
+
+@media ($mq-upto-tablet) {
+
+  .HomePageProjectsSimple-logo {
+    margin: 0;
+  }
+
+  .HomePageProjectsSimple-logoContainer.phoneAndTabletOnly .carousel {
     width: 100%;
     a {
       width: 100%;

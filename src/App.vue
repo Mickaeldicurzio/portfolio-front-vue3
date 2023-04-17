@@ -1,5 +1,5 @@
 <template>
-  <div class="App">
+  <div class="App" v-if="loading === 0">
     <v-app>
 
       <!--  navbar-->
@@ -41,7 +41,8 @@ export default {
 
   data() {
     return {
-      isCurrentHome: true
+      isCurrentHome: true,
+      loading: 0,
     }
   },
 

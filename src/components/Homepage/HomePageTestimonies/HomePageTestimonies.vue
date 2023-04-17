@@ -4,20 +4,21 @@
     <v-container>
       <h2>Ils donnent leur avis</h2>
       <div class="HomePageTestimonies-container" v-if="loading === 0">
-        <div class="HomePageTestimonies-cards tabletAndDesktopOnly" v-for="(testimony, key) in testimonies.data"
+        <div class="HomePageTestimonies-cards desktopOnly" v-for="(testimony, key) in testimonies.data"
              :key="key">
           <testimony-card :testimony="testimony"></testimony-card>
         </div>
 
         <carousel :items-to-show="1" :pagination="true">
-          <slide class="HomePageTestimonies-cards mobileOnly" v-for="(testimony, key) in testimonies.data" :key="key"
+          <slide class="HomePageTestimonies-cards phoneAndTabletOnly" v-for="(testimony, key) in testimonies.data"
+                 :key="key"
                  style="width: 100%">
             <testimony-card :testimony="testimony"></testimony-card>
           </slide>
 
           <template #addons>
-            <navigation/>
-            <pagination/>
+            <navigation class="phoneAndTabletOnly"/>
+            <pagination class="phoneAndTabletOnly"/>
           </template>
         </carousel>
       </div>
@@ -26,7 +27,6 @@
       <div v-else>
         loading...
       </div>
-
     </v-container>
   </div>
 </template>

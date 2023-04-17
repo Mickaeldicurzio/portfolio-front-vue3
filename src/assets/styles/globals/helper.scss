@@ -3,6 +3,17 @@
     display: none !important;
   }
 }
+.desktopOnly {
+  @media ($mq-upto-tablet) {
+    display: none !important;
+  }
+}
+
+.phoneAndTabletOnly {
+  @media ($mq-desktop) {
+    display: none !important;
+  }
+}
 
 .tabletAndDesktopOnly {
   @media ($mq-phone) {

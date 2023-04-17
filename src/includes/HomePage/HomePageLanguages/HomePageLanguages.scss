@@ -66,3 +66,22 @@
     justify-content: space-around;
   }
 }
+
+@media ($mq-tablet) {
+  .HomePageLanguages {
+    width: calc(100% + 150px);
+  }
+
+  .HomePageLanguages-logos {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+  .ColoredContainer-right .HomePageLanguages {
+    left: -125px;
+  }
+
+  .ColoredContainer-left .HomePageLanguages {
+    right: -125px;
+  }
+}
