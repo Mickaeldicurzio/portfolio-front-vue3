@@ -90,12 +90,42 @@
 
 .TravelComponent-dialogContainer {
   height: 100%;
+  display: flex;
 }
 
 .TravelComponent-dialogCloseButton {
   position: fixed !important;
+  z-index: 99;
 }
 
 .v-overlay__content {
   padding: 40px !important;
+}
+
+// RESPONSIVE
+
+@media ($mq-phone) {
+
+  .TravelComponent-description, .TravelComponent-description.reversed {
+    flex-direction: column-reverse;
+
+    .Title-underline {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+
+  .TravelComponent-description .Title-underline {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .TravelComponent-description h4 {
+    position: relative;
+    top: 20px;
+  }
+
+  .TravelComponent-masonry {
+    margin: 80px 0 40px 0;
+  }
 }

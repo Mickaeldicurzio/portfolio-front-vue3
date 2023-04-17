@@ -75,10 +75,8 @@ export default {
       const appButton = this.$refs.appButton.$el
       if (window.scrollY > 0) {
         appButton.classList.add("showButton");
-        console.log('scrolled');
       } else {
         appButton.classList.remove("showButton");
-        console.log('top');
       }
     },
 

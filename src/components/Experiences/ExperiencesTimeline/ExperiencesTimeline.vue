@@ -111,7 +111,6 @@ export default {
         let experiencesArray = []
         companies.forEach((el) => {
           el.attributes.experiences.forEach((experience) => {
-            console.log(el)
             experiencesArray.push(
                 {
                   companyLogo: el.attributes.logo.data.attributes.url,
@@ -126,8 +125,6 @@ export default {
             )
           })
         })
-
-        console.log(experiencesArray)
 
         return experiencesArray.sort(function (a, b) {
           var c = new Date(a.startDate);

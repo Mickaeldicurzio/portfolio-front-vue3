@@ -3,6 +3,9 @@
 
     <h2 class="Title-center">Mes Voyages</h2>
 
+    <div class="AboutMeTravels-descriptionLogo">
+      <v-img :src="travel"></v-img>
+    </div>
 
       <v-card class="AboutMeTravels-descriptionContainer">
         <div class="AboutMeTravels-description">
@@ -13,7 +16,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ea nihil odit quasi sint ullam, unde? Aliquam,
           aperiam deleniti dignissimos ea est explicabo fuga laboriosam nemo quidem quo vero voluptatum.
         </div>
-        <div class="AboutMeTravels-descriptionLogo">
+        <div class="AboutMeTravels-descriptionLogo desktopOnly">
           <v-img :src="travel"></v-img>
         </div>
       </v-card>

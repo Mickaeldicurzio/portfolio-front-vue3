@@ -1,13 +1,41 @@
 .AboutMeTravels-descriptionContainer {
-  padding: 60px 300px 60px 40px !important;
-  max-width: 80%;;
-  margin: 100px auto 100px 0;
+ padding: 40px !important;
+  margin: 40px 0;
 }
 
-.AboutMeTravels-descriptionLogo {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  top: 0;
-  right: -200px;
+// RESPONSIVE
+
+@media ($mq-desktop) {
+  .AboutMeTravels-descriptionContainer {
+    padding: 60px 300px 60px 40px !important;
+    max-width: 80%;;
+    margin: 100px auto 100px 0;
+  }
+
+  .AboutMeTravels-descriptionLogo {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    right: -200px;
+  }
+}
+
+@media ($mq-tablet) {
+  .AboutMeTravels-descriptionLogo {
+    width: 30%;
+    margin: auto;
+  }
+}
+
+@media ($mq-phone) {
+
+    .AboutMeTravels {
+      padding-bottom: 350px !important;
+    }
+  .AboutMeTravels-descriptionContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
 }

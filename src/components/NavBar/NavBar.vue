@@ -1,6 +1,6 @@
 <template>
 
-  <v-app-bar app color="transparent" dark collapse>
+  <v-app-bar app color="transparent" dark collapse style="z-index: 9999">
     <v-app-bar-nav-icon v-if="!isMenuOpen" @click="openMenu">
       <font-awesome-icon icon="fa-solid fa-bars"/>
     </v-app-bar-nav-icon>

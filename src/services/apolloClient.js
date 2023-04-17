@@ -48,5 +48,3 @@ export const apolloClient = new ApolloClient({
         },
     },
 });
-
-console.log(apolloClient.link)

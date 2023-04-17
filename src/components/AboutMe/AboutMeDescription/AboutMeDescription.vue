@@ -2,8 +2,12 @@
   <v-container class="AboutMeDescription" v-if="loading === 0">
     <h2 class="Title-underline">{{aboutMeDescription.data.attributes.title}}</h2>
 
+    <div class="AboutMeDescription-logo phoneAndTabletOnly">
+      <v-img :src="whoamiLogo"></v-img>
+    </div>
+
     <v-card class="AboutMeDescription-container">
-      <div class="AboutMeDescription-logo">
+      <div class="AboutMeDescription-logo desktopOnly">
         <v-img :src="whoamiLogo"></v-img>
       </div>
       <div class="AboutMeDescription-text" v-html="aboutMeDescription.data.attributes.description">

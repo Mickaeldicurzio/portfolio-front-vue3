@@ -14,7 +14,7 @@
     <vue-masonry-gallery :imgs-arr="imgsArr"></vue-masonry-gallery>
   </div>
 
-  <div class="AboutMe-description">
+  <div class="AboutMe-description GlobalContainer">
     <about-me-description></about-me-description>
   </div>
 

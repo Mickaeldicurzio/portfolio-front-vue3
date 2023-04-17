@@ -1,31 +1,71 @@
-.AboutMeDescription {
-  margin: 60px auto;
-}
-
-.AboutMeDescription-logo {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  left: -300px;
-  top: 0px;
-}
-
-.AboutMeDescription-container {
-  padding: 60px 40px 60px 300px !important;
-  max-width: 80%;
-  margin-left: auto;
-}
-
 .AboutMeDescription-profilePicture {
-  width: 80%;
   margin: 160px auto 40px auto;
 
   .v-parallax {
     border-radius: 20px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   }
 }
 
 .AboutMeDescription .Title-underline {
   margin-bottom: 60px;
+}
+
+// RESPONSIVE
+
+@media ($mq-desktop) {
+  .AboutMeDescription {
+    margin: 60px auto;
+  }
+
+  .AboutMeDescription-profilePicture {
+    width: 80%;
+  }
+
+  .AboutMeDescription-container {
+    padding: 60px 40px 60px 300px !important;
+    max-width: 80%;
+    margin-left: auto;
+  }
+  .AboutMeDescription-logo {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -300px;
+    top: 0px;
+  }
+}
+
+@media ($mq-upto-tablet) {
+  .AboutMeDescription-container {
+    padding: 40px !important;
+    position: relative;
+  }
+  .AboutMeDescription-logo {
+    width: 30%;
+    margin: auto;
+  }
+
+  .AboutMeDescription-profilePicture .v-img__img--cover {
+    top: -300px;
+  }
+}
+
+@media ($mq-phone) {
+  .AboutMeDescription-container {
+    padding: 40px !important;
+    position: relative;
+    font-size: 18px;
+  }
+  .AboutMeDescription-logo {
+    width: 100%;
+  }
+
+  .AboutMeDescription-profilePicture {
+    padding: 10px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
 }
