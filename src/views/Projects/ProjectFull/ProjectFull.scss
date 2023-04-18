@@ -104,6 +104,9 @@
 // RESPONSIVE
 
 @media ($mq-upto-tablet) {
+  .ProjectFull-header .Title-underline {
+    margin-bottom: 0;
+  }
   .ProjectFull-linkList {
     text-align: right;
     a  {
@@ -131,11 +134,18 @@
     margin: 0 !important;
   }
 
+  .ProjectFull-technos {
+    padding-bottom: 200px;
+  }
 }
 
 @media ($mq-phone) {
   .ProjectFull-companyLogo img {
     width: 80px;
+  }
+
+  .ProjectFull-technos {
+    padding-top: 0;
   }
 
   .ProjectFull-header .Title-underline {
@@ -159,7 +169,7 @@
 
   .ProjectFull-technos {
     padding-top: 0;
-    padding-bottom: 350px;
+    padding-bottom: 200px;
   }
 
   .ProjectFullTechno-languages {

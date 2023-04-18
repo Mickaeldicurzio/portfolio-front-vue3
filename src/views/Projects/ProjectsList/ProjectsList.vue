@@ -21,7 +21,8 @@
 
         <!-- FILTERS RESET -->
         <div class="ProjectsList-resetFilters" v-if="hasFilters" @click="resetFilters">
-          Reset all <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
+          Reset all
+          <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
         </div>
 
 
@@ -33,7 +34,7 @@
             <div
                 :class="this.selectedCompanies.includes(index.id) ? 'ProjectsList-filtersCompany filtered' : 'ProjectsList-filtersCompany' "
                 @click="setSelectedCompanies(index.id)"
-                 v-for="(index, key) in companiesLogo" :key="key">
+                v-for="(index, key) in companiesLogo" :key="key">
               <v-img :src="$variables.getStrapiBaseUrl() + index.url"></v-img>
               <div class="ProjectsList-filtersIcon" v-if="this.selectedCompanies.includes(index.id)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
@@ -44,9 +45,10 @@
           <!-- FILTERS LANGUAGES -->
           <h3>Languages</h3>
           <div class="ProjectsList-containerFiltersInner">
-            <div :class="this.selectedLanguages.includes(index.id) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "
-                 @click="setSelectedLanguages(index.id)"
-                 v-for="(index, key) in languagesLogo" :key="key">
+            <div
+                :class="this.selectedLanguages.includes(index.id) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "
+                @click="setSelectedLanguages(index.id)"
+                v-for="(index, key) in languagesLogo" :key="key">
               <v-img :src="$variables.getStrapiBaseUrl() + index.url"></v-img>
               <div class="ProjectsList-filtersIcon" v-if="this.selectedLanguages.includes(index.id)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
@@ -109,7 +111,7 @@ export default {
     projectsCards: {
       query: repositories.projectRepository.GET_PROJECTS_CARDS,
       loadingKey: 'loading',
-      variables () {
+      variables() {
         return {
           selectedCompanies: this.selectedCompanies.length > 0 ? this.selectedCompanies : undefined,
           selectedLanguages: this.selectedLanguages.length > 0 ? this.selectedLanguages : undefined,
@@ -128,12 +130,14 @@ export default {
     getCompanies(projects) {
       let allCompaniesLogo = []
       projects.forEach((index) => {
-        allCompaniesLogo.push(
-            {
-              id: index.attributes.company.data.id,
-              url: index.attributes.company.data.attributes.logo.data.attributes.url
-            }
-        )
+        if (index.attributes.company.data) {
+          allCompaniesLogo.push(
+              {
+                id: index.attributes.company.data.id,
+                url: index.attributes.company.data.attributes.logo.data.attributes.url
+              }
+          )
+        }
       })
       this.companiesLogo = [...new Map(allCompaniesLogo.map((item) => [item["id"], item])).values()];
     },

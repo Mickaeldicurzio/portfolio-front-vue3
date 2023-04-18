@@ -9,12 +9,7 @@
 
       <v-card class="AboutMeTravels-descriptionContainer">
         <div class="AboutMeTravels-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ea nihil odit quasi sint ullam, unde? Aliquam,
-          aperiam deleniti dignissimos ea est explicabo fuga laboriosam nemo quidem quo vero voluptatum.
-          <br>
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ea nihil odit quasi sint ullam, unde? Aliquam,
-          aperiam deleniti dignissimos ea est explicabo fuga laboriosam nemo quidem quo vero voluptatum.
+          Ce dessous des photos de me différents voyages a travers different pays, en camion ou à pied
         </div>
         <div class="AboutMeTravels-descriptionLogo desktopOnly">
           <v-img :src="travel"></v-img>

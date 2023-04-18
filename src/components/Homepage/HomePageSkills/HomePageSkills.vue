@@ -3,9 +3,7 @@
     <v-container>
       <h2 class="HomePageSkills-title">Mes technos</h2>
       <div class="HomePageSkills-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos est facere harum natus. Accusantium aut,
-        commodi inventore qui repellendus sunt voluptatem? Animi dignissimos ducimus error, natus pariatur vel vitae!
-        Debitis!
+
       </div>
     </v-container>
     <div class="HomePageSkills-categories ColoredContainer"

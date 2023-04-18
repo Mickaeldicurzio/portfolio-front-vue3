@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
 export const GET_TESTIMONIES = gql`query GetTestimonies {
-  testimonies {
+  testimonies(sort: "date:desc") {
     data {
       attributes {
         testimony

@@ -96,6 +96,7 @@
 .TravelComponent-dialogCloseButton {
   position: fixed !important;
   z-index: 99;
+  right: 40px;
 }
 
 .v-overlay__content {
@@ -104,8 +105,10 @@
 
 // RESPONSIVE
 
-@media ($mq-phone) {
-
+@media ($mq-upto-tablet) {
+  .TravelComponent-masonry {
+    margin: 80px 0 40px 0;
+  }
   .TravelComponent-description, .TravelComponent-description.reversed {
     flex-direction: column-reverse;
 
@@ -113,19 +116,18 @@
       width: 100%;
       font-size: 20px;
     }
+    .Title-underline.rightAlign {
+      text-align: center;
+    }
   }
-
   .TravelComponent-description .Title-underline {
     width: 100%;
     font-size: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   .TravelComponent-description h4 {
     position: relative;
     top: 20px;
-  }
-
-  .TravelComponent-masonry {
-    margin: 80px 0 40px 0;
   }
 }

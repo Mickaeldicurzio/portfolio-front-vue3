@@ -7,7 +7,7 @@
       <h6>du {{ item.startDate }} au {{ item.endDate }}</h6>
     </div>
     <div class="TimelineCard-description">
-      <p>{{ item.description }}</p>
+      <p v-html="item.description"></p>
     </div>
   </div>
 </template>

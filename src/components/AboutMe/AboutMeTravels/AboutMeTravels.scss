@@ -16,7 +16,7 @@
     position: absolute;
     width: 400px;
     height: 400px;
-    top: 0;
+    top: -100px;
     right: -200px;
   }
 }
@@ -26,16 +26,22 @@
     width: 30%;
     margin: auto;
   }
+  .AboutMeTravels {
+    padding-bottom: 200px !important;
+  }
 }
 
 @media ($mq-phone) {
 
     .AboutMeTravels {
-      padding-bottom: 350px !important;
+      padding-bottom: 200px !important;
     }
+
+}
+@media ($mq-upto-tablet) {
+
   .AboutMeTravels-descriptionContainer {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
   }
+
 }

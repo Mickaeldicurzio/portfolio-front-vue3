@@ -95,10 +95,6 @@
 // RESPONSIVE
 
 @media ($mq-phone) {
-  .ProjectsList-container {
-    margin-bottom: 350px;
-  }
-
   .ProjectsList-projectContainer {
     width: 100%;
     flex-direction: column;
@@ -110,6 +106,10 @@
 @media ($mq-upto-tablet) {
   .ProjectsList-container {
     margin-top: 0;
+  }
+
+  .ProjectsList-container {
+    margin-bottom: 200px;
   }
 
   .ProjectsList-filtersContainer {

@@ -29,7 +29,7 @@
 
 // RESPONSIVE
 
-@media ($mq-phone) {
+@media ($mq-upto-tablet) {
   .HomePageSkills-description {
     display: none;
   }
@@ -61,6 +61,9 @@
     margin-top: 0;
   }
 
+}
+
+@media ($mq-phone) {
   .ColoredContainer-right .HomePageLanguages,
   .ColoredContainer-left .HomePageLanguages {
     justify-content: space-around;
@@ -68,20 +71,17 @@
 }
 
 @media ($mq-tablet) {
-  .HomePageLanguages {
-    width: calc(100% + 150px);
+  .HomePageSkills-categoriesContainer {
+    padding-bottom: 50px;
   }
-
   .HomePageLanguages-logos {
     width: 100px;
     height: 100px;
     margin: 20px;
   }
-  .ColoredContainer-right .HomePageLanguages {
-    left: -125px;
-  }
 
+  .ColoredContainer-right .HomePageLanguages,
   .ColoredContainer-left .HomePageLanguages {
-    right: -125px;
+    justify-content: space-around;
   }
 }

@@ -10,10 +10,12 @@
       <v-expansion-panels>
         <v-expansion-panel
             title="En savoirs plus"
-            :text="item.description"
             bg-color="transparent"
             ripple
         >
+          <v-expansion-panel-text>
+            <p v-html="item.description"></p>
+          </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
     </div>

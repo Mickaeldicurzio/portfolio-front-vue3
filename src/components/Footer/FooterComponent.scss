@@ -59,10 +59,18 @@
 
 // RESPONSIVE
 
-@media ($mq-phone) {
+@media ($mq-tablet) {
+  .Title-underline {
+    text-align: center;
+    margin-bottom: 80px;
+    &:after { width: 100% }
+  }
+}
+
+@media ($mq-upto-tablet) {
   .Footer {
     flex-direction: column-reverse;
-    margin-top: -150px;
+    margin-top: 0px;
     padding-top: 0;
     padding-bottom: 100px;
 
@@ -74,6 +82,8 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
+
+
   }
 
   .Footer-socials, .Footer-contact {

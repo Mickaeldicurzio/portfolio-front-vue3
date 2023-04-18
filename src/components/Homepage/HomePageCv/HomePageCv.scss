@@ -1,0 +1,104 @@
+.HomePageCv-title {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.HomePageDistinctions-title {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.HomePageCv-fileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+  flex-wrap: wrap;
+}
+
+.HomePageCv-files {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;align-items: center;
+  border: 4px solid $red-color;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.HomePageCv-files:hover {
+  background-color: $red-color;
+  transition: background-color 0.3s ease-in-out;
+  svg {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.HomePageCv-files svg {
+  color: $red-color;
+  width: 60px;
+  height: 100%;
+  transition: color 0.3s ease-in-out;
+}
+
+// DISTINCTION
+
+.HomePageDistinctions-containerInner {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.HomePageDistinctions-separator  {
+  margin: 0 30px 0 10px;
+}
+
+.HomePageDistinctions-link a {
+  color: $red-color;
+}
+
+// RESPONSIVE
+
+@media ($mq-desktop) {
+  .HomePageCv {
+    margin-top: 80px;
+  }
+}
+
+@media ($mq-phone) {
+  .HomePageCv-title {
+    padding-top: 40px;
+  }
+}
+@media ($mq-tablet) {
+  .HomePageCv-title {
+    margin: 0;
+  }
+}
+
+@media ($mq-upto-tablet) {
+  .HomePageCv {
+    position: relative;
+    top: -150px;
+  }
+
+  .HomePageDistinctions-separator  {
+    display: none;
+  }
+
+
+  .HomePageDistinctions-description {
+    text-align: center;
+  }
+
+  .HomePageDistinctions-containerInner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .HomePageDistinctions-link {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}

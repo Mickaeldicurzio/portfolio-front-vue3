@@ -1,4 +1,6 @@
 #app {
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
   @media ($mq-upto-tablet) {
     overflow: hidden;
   }

@@ -20,7 +20,7 @@
               }}</span></h2>
             <br>
             <div class="ProjectFull-description">
-              <p>{{ project.data.attributes.description }}</p>
+              <p v-html="project.data.attributes.description"></p>
             </div>
           </div>
 

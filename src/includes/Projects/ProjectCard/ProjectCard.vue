@@ -6,8 +6,9 @@
       </div>
       <div class="ProjectCard-description">
         <p> {{ project.attributes.title }}</p>
-        <div class="ProjectCard-companyLogo" v-if="project.attributes.company">
-          <v-img
+
+        <div class="ProjectCard-companyLogo" v-if="project.attributes.company && project.attributes.company.data">
+          <v-img v-if="project.attributes.company"
               :src="$variables.getStrapiBaseUrl() + project.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
         </div>
       </div>

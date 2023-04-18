@@ -18,6 +18,8 @@
     <!-- SKILLS -->
     <home-page-skills v-fade-in></home-page-skills>
 
+    <home-page-cv v-fade-in></home-page-cv>
+
   </div>
 </template>
 
@@ -28,9 +30,11 @@ import HomePageDescription from "@/components/Homepage/HomePageDescription/HomeP
 import HomePageTestimonies from "@/components/Homepage/HomePageTestimonies/HomePageTestimonies";
 import HomePageSkills from "@/components/Homepage/HomePageSkills/HomePageSkills";
 import HomePageProjectsSimple from "@/components/Homepage/HomePageProjectsSimple/HomePageProjectsSimple";
+import HomePageCv from "@/components/Homepage/HomePageCv/HomePageCv";
 
 export default {
   components: {
+    HomePageCv,
     HomePageProjectsSimple,
     HomePageSkills,
     HomePageTestimonies,

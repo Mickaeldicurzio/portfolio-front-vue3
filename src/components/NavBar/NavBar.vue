@@ -7,11 +7,11 @@
     <v-app-bar-nav-icon v-else @click="closeMenu">
       <font-awesome-icon icon="fa-solid fa-close"/>
     </v-app-bar-nav-icon>
-    <v-app-bar-nav-icon>
-      <router-link class="HomeLinkIcon" :to="{name: 'home'}">
+    <router-link class="HomeLinkIcon" :to="{name: 'home'}">
+      <v-app-bar-nav-icon>
         <font-awesome-icon icon="fa-solid fa-home"/>
-      </router-link>
-    </v-app-bar-nav-icon>
+      </v-app-bar-nav-icon>
+    </router-link>
   </v-app-bar>
 
 
@@ -34,7 +34,7 @@ export default {
     $route() {
       this.isMenuOpen = false
       this.emitter.emit(CLOSE_MENU);
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     }
   },
 
@@ -57,5 +57,9 @@ export default {
 
 .v-toolbar__content {
   background-color: aliceblue;
+}
+
+.v-app-bar:not(.v-toolbar--absolute) {
+  padding-inline-end: inherit !important;
 }
 </style>

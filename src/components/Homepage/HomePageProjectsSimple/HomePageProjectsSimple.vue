@@ -10,9 +10,10 @@
         <v-img :src="devIconMobile"></v-img>
       </div>
       <div class="HomePageProjectsSimple-description">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam consequatur dolore excepturi illo
-          odio quo saepe? Esse incidunt ipsum magni minima molestias neque officiis quibusdam ratione reiciendis, sint
-          sunt.</p>
+        <p>Au travers de ma carrière, j'ai eu la chance de participé à de nombreux projets au sein de plusieurs entreprises.<br><br>
+          Du client final au sein d'une start-up jusqu'aux grands comptes en plateau dans une ESI, chaque structure m’a permis de remettre en question mes process et ma façon de concevoir le code.<br><br>
+          ( Je ne peux malheureusement pas afficher ici tous les projets auxquels j'ai participé ici pour des raisons de confidentialité )
+        </p>
       </div>
 
 

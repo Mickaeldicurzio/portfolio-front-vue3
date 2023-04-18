@@ -7,6 +7,7 @@ import { testimoniesRepository } from "@/repositories/testimonies";
 import { companiesRepository } from "@/repositories/companies";
 import { aboutMeRepository } from "@/repositories/aboutMe";
 import { usersRepository } from "@/repositories/users";
+import { documentsRepository } from "@/repositories/documents";
 
 export const repositories = {
     homepageRepository,
@@ -17,5 +18,6 @@ export const repositories = {
     testimoniesRepository,
     companiesRepository,
     aboutMeRepository,
-    usersRepository
+    usersRepository,
+    documentsRepository
 }
