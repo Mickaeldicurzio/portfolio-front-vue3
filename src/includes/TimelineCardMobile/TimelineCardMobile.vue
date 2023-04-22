@@ -9,7 +9,7 @@
     <div class="TimelineCardMobile-description">
       <v-expansion-panels>
         <v-expansion-panel
-            title="En savoirs plus"
+            title="En savoir plus"
             bg-color="transparent"
             ripple
         >
