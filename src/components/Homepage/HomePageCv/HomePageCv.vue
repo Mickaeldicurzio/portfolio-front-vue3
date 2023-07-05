@@ -1,5 +1,5 @@
 <template>
-  <div class="HomePageCv" v-if="loading === 0">
+  <div class="HomePageCv" v-if="loading === 0" id="cv">
     <div class="HomePageCv-title">
       <h2>Mon CV</h2>
     </div>

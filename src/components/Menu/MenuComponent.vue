@@ -39,6 +39,14 @@
       </div>
     </div>
 
+    <div class="Menu-ItemContainer">
+      <div class="Menu-Item">
+        <div class="Menu-ItemImagesLayer">
+          <v-img :src="contactIcon" class="Menu-ItemImages"></v-img>
+        </div>
+        <a href="#cv">CV</a>
+      </div>
+    </div>
 
 <!--    <div class="Menu-ItemContainer">-->
 <!--      <div class="Menu-Item">-->
