@@ -29,6 +29,7 @@
     }
   }
 }
+
 @media ($mq-tablet) {
   @for $i from 3 through 5 {
     .HomePageSkills-categories:nth-child(#{$i}) {
