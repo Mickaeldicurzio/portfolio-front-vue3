@@ -6,6 +6,11 @@
   align-items: center;
   position: relative;
   height: calc(100vh);
+
+  // OVERRIDE DEFAULT WINDOWS RESCALE
+  @media (-webkit-device-pixel-ratio: 1.25) {
+    height: calc(130vh);
+  }
 }
 
 .HomePageHero-container {
