@@ -52,6 +52,22 @@ export default {
       loadingKey: 'loading',
     },
   },
+
+  updated() {
+    this.$nextTick(function () {
+      this.checkScroll()
+    })
+  },
+
+  methods: {
+    checkScroll() {
+      if (this.$route.fullPath === "/#cv") {
+        document.getElementById('cv').scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
 }
 </script>
 

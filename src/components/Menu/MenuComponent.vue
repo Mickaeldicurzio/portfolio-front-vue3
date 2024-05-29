@@ -44,7 +44,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="contactIcon" class="Menu-ItemImages"></v-img>
         </div>
-        <a href="#cv">CV</a>
+        <a href="/#cv">CV</a>
       </div>
     </div>
 
@@ -91,7 +91,9 @@ export default {
   mounted() {
     this.emitter.on(OPEN_MENU, () => this.menuDisplay = true);
     this.emitter.on(CLOSE_MENU, () => this.menuDisplay = false);
-  }
+  },
+
+
 }
 </script>
 
