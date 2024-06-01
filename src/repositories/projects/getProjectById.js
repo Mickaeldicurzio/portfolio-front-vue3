@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const GET_PROJECT_BY_ID = gql`query  GetProjectById ($id: ID!){
-  project(id : $id) {
+export const GET_PROJECT_BY_ID = gql`query  GetProjectById ($id: ID!, $locale: String = "en"){
+  project(id : $id, locale: "fr") {
     data {
       attributes {
         title
@@ -50,6 +50,22 @@ export const GET_PROJECT_BY_ID = gql`query  GetProjectById ($id: ID!){
             }
           }
         }
+        localizations (filters: {locale: {eq: $locale}}) {
+          data {
+            id
+            attributes {
+              localizations {
+                data {
+                  id
+                }
+              }
+              title
+              description
+              locale
+            }
+          }
+        }
+      
       }
     }
   }

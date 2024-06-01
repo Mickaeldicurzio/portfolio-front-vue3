@@ -26,6 +26,8 @@ const authMiddleware = new ApolloLink((operation, forward) => {
         }
     })
 
+    operation.variables['locale'] = "fr-FR"
+
     return forward(operation)
 })
 //
