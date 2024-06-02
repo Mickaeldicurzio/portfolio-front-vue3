@@ -1,7 +1,7 @@
 <template>
   <div class="ProjectFullTechno" @scroll="scrollRotate">
     <div class="ProjectFullTechno-title">
-      <h2>Sous le capot</h2>
+      <h2>{{ $t('projectFull.skills.title') }}</h2>
     </div>
     <v-img ref="gears" class="ProjectFullTechno-gearsImage desktopOnly" :src="gears"></v-img>
     <v-img ref="gearsAround" class="ProjectFullTechno-gearsImageAround desktopOnly" :src="gearsAround"></v-img>

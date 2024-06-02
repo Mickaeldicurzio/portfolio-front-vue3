@@ -8,7 +8,7 @@
   border-bottom-left-radius: 24px;
 }
 
-.Navbar-left button.v-btn--variant-elevated {
+.Navbar-left button.v-btn--variant-elevated:not(.active) {
   background: transparent;
   box-shadow: none;
 }

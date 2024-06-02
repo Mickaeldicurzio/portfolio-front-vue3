@@ -4,14 +4,14 @@
     <!-- HERO -->
     <div class="ExperiencesFull-hero">
       <global-hero
-          hero-title="Experiences"
+          :hero-title="$t('menuMessage.experiences.menuItem')"
           :left-image-src="experiencesIcon"
           :image-src="experiencesImage"
           :text-color="'#fff'"
-          linkText="Projects"
+          :linkText="$t('menuMessage.projects.menuItem')"
           :link="'projects'"
           :link-previous="'home'"
-          link-text-previous="Homepage"
+          :link-text-previous="$t('menuMessage.homepage.menuItem')"
           :reverse="true"
       ></global-hero>
     </div>

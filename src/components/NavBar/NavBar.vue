@@ -16,11 +16,11 @@
       </router-link>
     </v-app-bar>
 
-    <div class="Navbar-left">
-      <v-app-bar-nav-icon>
+    <div class="Navbar-left" v-if="!hideLanguagesMenu">
+      <v-app-bar-nav-icon @click="switchLanguage('fr-FR')" :class="{ active: currentLocale === 'fr-FR' }">
         <v-img :src="frenchFlagIcon" class="Navbar-leftIcon"></v-img>
       </v-app-bar-nav-icon>
-      <v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="switchLanguage('en')" :class="{ active: currentLocale === 'en' }">
         <v-img :src="englishFlagIcon" class="Navbar-leftIcon"></v-img>
       </v-app-bar-nav-icon>
     </div>
@@ -34,14 +34,20 @@ import './NavBar.scss'
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
 import frenchFlagIcon from "@/assets/images/france-flag-icon.svg";
 import englishFlagIcon from "@/assets/images/united-kingdom-flag-icon.svg";
+import {apolloClient} from "@/services/apolloClient";
+
 
 
 export default {
-  name: 'NavBar',
 
+
+  name: 'NavBar',
   data: () => ({
     group: null,
-    isMenuOpen: false
+    isMenuOpen: false,
+    listLanguages: [],
+    hideLanguagesMenu: false,
+    currentLocale: localStorage.getItem('currentLocale') ?? this.$i18n.locale
   }),
 
   setup() {
@@ -56,6 +62,7 @@ export default {
       this.isMenuOpen = false
       this.emitter.emit(CLOSE_MENU);
       window.scrollTo(0, 0);
+      this.hideLanguagesMenu = this.$route.name === "projectFull"
     }
   },
 
@@ -67,8 +74,15 @@ export default {
     closeMenu() {
       this.isMenuOpen = false
       this.emitter.emit(CLOSE_MENU);
+    },
+
+    switchLanguage(language) {
+      localStorage.setItem('currentLocale', language)
+      this.currentLocale = language
+      this.$i18n.locale = language
+      apolloClient.reFetchObservableQueries()
     }
-  }
+  },
 }
 </script>
 

@@ -4,13 +4,13 @@
     <div class="ProjectsList-hero">
       <global-hero
           :image-src="aboutImage"
-          hero-title="Projects"
+          :hero-title="$t('menuMessage.projects.menuItem')"
           :left-image-src="projectIcon"
           :text-color="'#fff'"
           :link="'aboutMe'"
-          link-text="About Me"
+          :link-text="$t('menuMessage.aboutMe.menuItem')"
           :link-previous="'experiences'"
-          link-text-previous="Experiences"
+          :link-text-previous="$t('menuMessage.experiences.menuItem')"
       ></global-hero>
     </div>
 
@@ -28,7 +28,7 @@
 
         <!-- FILTERS COMPANIES -->
         <div class="ProjectsList-containerFilters">
-          <h3>Companies</h3>
+          <h3>{{ $t('projectList.companies.title') }}</h3>
 
           <div class="ProjectsList-containerFiltersInner">
             <div
@@ -43,7 +43,7 @@
           </div>
 
           <!-- FILTERS LANGUAGES -->
-          <h3>Languages</h3>
+          <h3>{{ $t('projectList.languages.title') }}</h3>
           <div class="ProjectsList-containerFiltersInner">
             <div
                 :class="this.selectedLanguages.includes(index.id) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "

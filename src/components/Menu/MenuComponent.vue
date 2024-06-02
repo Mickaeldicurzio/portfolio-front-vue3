@@ -7,7 +7,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="homeIcon" class="Menu-ItemImages"></v-img>
         </div>
-        <router-link :to="{ name: 'home' }">HomePage</router-link>
+        <router-link :to="{ name: 'home' }">{{ $t("menuMessage.homepage.menuItem")}}</router-link>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="expriencesIcon" class="Menu-ItemImages"></v-img>
         </div>
-        <router-link :to="{ name: 'experiences' }">Experiences</router-link>
+        <router-link :to="{ name: 'experiences' }">{{ $t("menuMessage.experiences.menuItem")}}</router-link>
       </div>
     </div>
 
@@ -26,7 +26,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="projectsIcon" class="Menu-ItemImages"></v-img>
         </div>
-        <router-link :to="{ name: 'projects' }">Projects</router-link>
+        <router-link :to="{ name: 'projects' }">{{ $t("menuMessage.projects.menuItem")}}</router-link>
       </div>
     </div>
 
@@ -35,7 +35,7 @@
         <div class="Menu-ItemImagesLayer">
           <v-img :src="abouteMeIcon" class="Menu-ItemImages"></v-img>
         </div>
-        <router-link :to="{ name: 'aboutMe' }">About me</router-link>
+        <router-link :to="{ name: 'aboutMe' }">{{ $t("menuMessage.aboutMe.menuItem")}}</router-link>
       </div>
     </div>
 

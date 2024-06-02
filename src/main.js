@@ -4,6 +4,8 @@ import {apolloProvider} from "@/services/apolloProvider";
 import { getStrapiBaseUrl } from "@/services/getStrapiBaseUrl";
 import router from './router'
 
+
+
 // Create app
 let app = createApp(App)
 
@@ -41,8 +43,13 @@ app.config.globalProperties.$variables = {
 import {fadeInDirective} from "@/directives/fadeIn";
 app.directive("fade-in", fadeInDirective)
 
+// I18N
+
+import {i18nMessages} from "@/services/i18n";
+
 // app use and mount
-app.use(apolloProvider)
+app.use(i18nMessages)
+    .use(apolloProvider)
     .use(vuetify)
     .use(MasonryWall)
     .component('font-awesome-icon', FontAwesomeIcon)

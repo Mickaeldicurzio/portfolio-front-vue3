@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const GET_COMPANIES = gql`query GetCompanies {
-  companies {
+export const GET_COMPANIES = gql`query GetCompanies ( $locale: I18NLocaleCode! ) {
+  companies (locale: $locale) {
     data {
       id,
       attributes {

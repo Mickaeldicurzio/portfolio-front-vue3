@@ -1,13 +1,5 @@
-
-import {ApolloClient,ApolloLink, InMemoryCache, createHttpLink} from "@apollo/client/core";
-
-// function getHeaders() {
-//     const headers = []
-//     headers["Authorization"] = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjgxNzM1MDIxLCJleHAiOjE2ODQzMjcwMjF9.OVEsr0n0uaYFf60r5yct0XpTpe3WeZGVsNninUOTI9Y`;
-//     headers["Content-Type"] = "application/json";
-//     return headers;
-// }
-
+import {ApolloClient, ApolloLink, InMemoryCache, createHttpLink} from "@apollo/client/core";
+import { useI18n } from 'vue-i18n';
 
 // Create a http link:
 const httpLink = new createHttpLink({
@@ -19,23 +11,17 @@ const httpLink = new createHttpLink({
 
 const authMiddleware = new ApolloLink((operation, forward) => {
     // add the authorization to the headers
-    const token = `da7cbb446a03ba1ca0ce14d1a71dba46073619d2634798bd94397b2d8bcb7bf8c58affa26ec95c14d179e58a52373d2c324ce5e10478dadf978aa1212aab8c6bd5137bda844c6f368ea5ec42c43d6503d3cbbea19a56e5bff2fc92731065aa13a059a3c22a628068f14d8d493a0339649174ceae538cbc062691bd5e121e2bcf`
+    const token = `688209d543f41bd974fca2a30e1d5a91ede724ca608d990c70d1ab36d3d0d1cba3eaf36604f3101896f4bf6ef6b7d6e4e8e2449eda065fd837aa14e75443c813dbc9600d7747f7095a03b7dd3458a1cad06de41e9f6e15dd4c2c96b7f5426d43114267c26f6e8f68fa98ce1e6cae156e10959739120a891d548778b46d969ac4`
     operation.setContext({
         headers: {
-            authorization: token ? `Bearer ${token}` : null
-        }
+            authorization: token ? `Bearer ${token}` : null,
+        },
     })
 
-    operation.variables['locale'] = "fr-FR"
+    operation.variables['locale'] = localStorage.getItem('currentLocale') ?? useI18n().locale.value
 
     return forward(operation)
 })
-//
-// export const apolloClient = new ApolloClient({
-//     // You should use an absolute URL here
-//     uri: process.env.VUE_APP_STRAPI_BASE_URL + '/graphql',
-//     cache: new InMemoryCache(),
-// })
 
 // Create the apollo client
 export const apolloClient = new ApolloClient({

@@ -19,7 +19,7 @@
           {{ testimony.attributes.profile }}
         </span>
         </div>
-        <div class="TestimonyCard-company">
+        <div class="TestimonyCard-company" v-if="testimony.attributes.company.data">
           <v-img
               :src="$variables.getStrapiBaseUrl() + testimony.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
         </div>

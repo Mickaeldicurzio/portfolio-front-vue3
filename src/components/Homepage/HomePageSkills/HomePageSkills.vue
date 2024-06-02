@@ -1,7 +1,7 @@
 <template>
   <div class="HomePageSkills" v-if="loading === 0">
     <v-container>
-      <h2 class="HomePageSkills-title">Mes technos</h2>
+      <h2 class="HomePageSkills-title">{{ $t('home.skills.title')}}</h2>
       <div class="HomePageSkills-description">
 
       </div>
