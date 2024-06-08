@@ -56,7 +56,6 @@ export default {
   computed: {
     formatedProjectLanguages() {
       let categoriesObject = []
-      console.log(this.projectLanguages)
       this.projectLanguages.forEach((language) => {
         let categoryName = language.attributes.category.data?.attributes.CategoryName
         let languageObject = {
