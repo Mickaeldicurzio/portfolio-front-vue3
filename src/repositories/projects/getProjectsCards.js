@@ -18,7 +18,7 @@ export const GET_PROJECTS_CARDS = gql`query GetProjectsCards ($selectedCompanies
                     }
                   }
                 }
-                languages {
+                languages (sort: "name:asc") {
                   data {
                     id,
                     attributes {

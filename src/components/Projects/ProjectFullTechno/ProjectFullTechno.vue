@@ -7,7 +7,7 @@
     <v-img ref="gearsAround" class="ProjectFullTechno-gearsImageAround desktopOnly" :src="gearsAround"></v-img>
     <v-container class="ProjectFullTechno-container">
 
-      <div class="ProjectFullTechno-containerRow" v-for="(index, key) in formatedProjectLanguages" :key="key">
+      <div class="ProjectFullTechno-containerRow" v-for="(index, key) in formatedProjectLanguages" :key="key" :id="key.toLowerCase()">
         <h3>{{ key === 'undefined' ? 'Autres' : key }}</h3>
         <div class="ProjectFullTechno-languageRow">
           <div class="ProjectFullTechno-languages" v-for="(language) in index" :key="language">
@@ -56,6 +56,7 @@ export default {
   computed: {
     formatedProjectLanguages() {
       let categoriesObject = []
+      console.log(this.projectLanguages)
       this.projectLanguages.forEach((language) => {
         let categoryName = language.attributes.category.data?.attributes.CategoryName
         let languageObject = {

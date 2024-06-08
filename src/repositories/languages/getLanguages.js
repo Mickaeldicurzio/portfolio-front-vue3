@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
 export const GET_LANGUAGES = gql`query GetLanguages {
-  languages {
+  languages (sort: "name:asc") {
     data {
       id
       attributes {

@@ -8,7 +8,7 @@ export const GET_PROJECT_BY_ID = gql`query  GetProjectById ($id: ID!, $locale: S
         projectDate
         link
         description
-        languages {
+        languages (sort: "category:priority, name:asc") {
           data {
             attributes {
               name

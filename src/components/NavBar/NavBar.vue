@@ -47,7 +47,7 @@ export default {
     isMenuOpen: false,
     listLanguages: [],
     hideLanguagesMenu: false,
-    currentLocale: localStorage.getItem('currentLocale') ?? this.$i18n.locale
+    currentLocale: localStorage.getItem('currentLocale') ?? process.env.VUE_APP_DEFAULT_LOCALE
   }),
 
   setup() {
