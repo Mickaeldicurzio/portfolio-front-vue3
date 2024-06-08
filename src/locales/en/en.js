@@ -3,6 +3,7 @@ import {projectListMessage} from "@/locales/en/projectListMessage";
 import {projectFullMessage} from "@/locales/en/projectFullMessage";
 import {menuMessage} from "@/locales/en/menuMessage";
 import {aboutMeMessage} from "@/locales/en/aboutMeMessage";
+import {footerMessage} from "@/locales/en/footerMessage";
 
 
 const enMessage = {
@@ -10,7 +11,8 @@ const enMessage = {
     ...projectFullMessage,
     ...projectListMessage,
     ...menuMessage,
-    ...aboutMeMessage
+    ...aboutMeMessage,
+    ...footerMessage
 }
 
 export {enMessage}

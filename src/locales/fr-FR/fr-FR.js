@@ -3,6 +3,7 @@ import {projectListMessage} from "@/locales/fr-FR/projectListMessage";
 import {projectFullMessage} from "@/locales/fr-FR/projectFullMessage";
 import {menuMessage} from "@/locales/fr-FR/menuMessage";
 import {aboutMeMessage} from "@/locales/fr-FR/aboutMeMessage";
+import {footerMessage} from "@/locales/fr-FR/footerMessage";
 
 
 const frMessage = {
@@ -10,7 +11,8 @@ const frMessage = {
     ...projectListMessage,
     ...projectFullMessage,
     ...menuMessage,
-    ...aboutMeMessage
+    ...aboutMeMessage,
+    ...footerMessage
 }
 
 export { frMessage }
