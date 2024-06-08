@@ -1,7 +1,7 @@
 <template>
   <v-container class="AboutMeTravels" v-if="loading === 0">
 
-    <h2 class="Title-center">Mes Voyages</h2>
+    <h2 class="Title-center">{{ $t("aboutMeMessage.travels.title") }}</h2>
 
     <div class="AboutMeTravels-descriptionLogo">
       <v-img :src="travel"></v-img>
@@ -9,7 +9,7 @@
 
       <v-card class="AboutMeTravels-descriptionContainer">
         <div class="AboutMeTravels-description">
-          Ce dessous des photos de me différents voyages a travers different pays, en camion ou à pied
+          {{ $t("aboutMeMessage.travels.description") }}
         </div>
         <div class="AboutMeTravels-descriptionLogo desktopOnly">
           <v-img :src="travel"></v-img>

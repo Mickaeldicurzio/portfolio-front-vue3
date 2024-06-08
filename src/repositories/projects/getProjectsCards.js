@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const GET_PROJECTS_CARDS = gql`query GetProjectsCards ($selectedCompanies: [ID], $selectedLanguages: [ID]){
-          projectsCards: projects(sort: "projectDate:desc", filters: { 
+export const GET_PROJECTS_CARDS = gql`query GetProjectsCards ($selectedCompanies: [ID], $selectedLanguages: [ID], $locale: I18NLocaleCode!){
+          projectsCards: projects(sort: "projectDate:desc", locale: $locale, filters: { 
             languages: { id: { in: $selectedLanguages } },
             company: { id: { in: $selectedCompanies } }
           }) {
@@ -18,7 +18,7 @@ export const GET_PROJECTS_CARDS = gql`query GetProjectsCards ($selectedCompanies
                     }
                   }
                 }
-                languages {
+                languages (sort: "name:asc") {
                   data {
                     id,
                     attributes {

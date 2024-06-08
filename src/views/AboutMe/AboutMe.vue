@@ -4,12 +4,12 @@
   <div class="AboutMe-hero">
     <global-hero
         :image-src="aboutImage"
-        hero-title="About Me"
+        :hero-title="$t('menuMessage.aboutMe.menuItem')"
         :left-image-src="aboutIcon"
         :text-color="'#fff'"
         reverse="true"
         :link-previous="'projects'"
-        link-text-previous="Projects"
+        :link-text-previous="$t('menuMessage.projects.menuItem')"
     ></global-hero>
     <vue-masonry-gallery :imgs-arr="imgsArr"></vue-masonry-gallery>
   </div>

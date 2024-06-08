@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const GET_TESTIMONIES = gql`query GetTestimonies {
-  testimonies(sort: "date:desc") {
+export const GET_TESTIMONIES = gql`query GetTestimonies ( $locale: I18NLocaleCode!) {
+  testimonies(locale: $locale, sort: "date:desc") {
     data {
       attributes {
         testimony

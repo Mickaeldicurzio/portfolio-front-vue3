@@ -7,7 +7,7 @@
       <div class="HomePageDescription-text" v-html="homepageDescription.data.attributes.description"></div>
 
       <router-link :to="{ name: 'aboutMe'}">
-        <v-btn class="HomePageDescription-link RedButton">About Me
+        <v-btn class="HomePageDescription-link RedButton">{{ $t('home.description.buttonTitle')}}
           <font-awesome-icon icon="fa-solid fa-chevron-right"/>
         </v-btn>
       </router-link>

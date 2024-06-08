@@ -7,7 +7,7 @@
       <h3 class="Title-underline whiteTitle">Contact</h3>
       <div class="Footer-contactContainer">
         <h4>Email : <a href="mailto:mickael.dicurzio@gmail.com">mickael.dicurzio@gmail.com</a></h4>
-        <h4>Telephone : <a href="tel:+33629051745">+33629051745</a></h4>
+        <h4>{{ $t("footer.phone")}} : <a href="tel:+33629051745">+33629051745</a></h4>
       </div>
 
         <v-img :src="contactIcon" class="Footer-contactImage"></v-img>

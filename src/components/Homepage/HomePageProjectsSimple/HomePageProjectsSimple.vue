@@ -2,7 +2,7 @@
   <div class="HomePageProjectsSimple ColoredContainer ColoredContainer-left">
 
     <v-container>
-      <h2 class="Title-underline whiteTitle">Projets auxquels j'ai participe </h2>
+      <h2 class="Title-underline whiteTitle">{{ $t("home.projects.title") }} </h2>
       <div class="HomePageProjectsSimple-devIcon tabletAndDesktopOnly">
         <v-img :src="devIcon"></v-img>
       </div>
@@ -10,10 +10,7 @@
         <v-img :src="devIconMobile"></v-img>
       </div>
       <div class="HomePageProjectsSimple-description">
-        <p>Au travers de ma carrière, j'ai eu la chance de participé à de nombreux projets au sein de plusieurs entreprises.<br><br>
-          Du client final au sein d'une start-up jusqu'aux grands comptes en plateau dans une ESI, chaque structure m’a permis de remettre en question mes process et ma façon de concevoir le code.<br><br>
-          ( Je ne peux malheureusement pas afficher ici tous les projets auxquels j'ai participé ici pour des raisons de confidentialité )
-        </p>
+        <p v-html="$t('home.projects.description')"></p>
       </div>
 
 
@@ -45,7 +42,7 @@
       </div>
 
       <router-link :to="{ name: 'projects'}">
-        <v-btn class="HomePageDescription-link">Voir la liste des projets
+        <v-btn class="HomePageDescription-link"> {{ $t('home.projects.buttonList')}}
           <font-awesome-icon icon="fa-solid fa-chevron-right"/>
         </v-btn>
       </router-link>

@@ -1,7 +1,7 @@
 <template>
   <div class="HomePageCv" v-if="loading === 0" id="cv">
     <div class="HomePageCv-title">
-      <h2>Mon CV</h2>
+      <h2>{{ $t('home.cv.title') }}</h2>
     </div>
 
     <div class="HomePageCv-fileContainer">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="HomePageDistinctions-title">
-      <h2>Prix et distinctions</h2>
+      <h2>{{ $t("home.distinct.title") }}</h2>
     </div>
 
     <div class="HomePageDistinctions-container">

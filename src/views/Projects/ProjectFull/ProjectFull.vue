@@ -9,7 +9,7 @@
           <div class="ProjectFull-linkList" v-if="!isModal">
             <router-link :to="{ name: 'projects'}" :class="'WhiteLink'">
               <font-awesome-icon class="ChevronIcon ChevronLeft" icon="fa-solid fa-chevron-left"/>
-              Liste des projets
+              {{ $t("projectFull.linkProjectList.title") }}
             </router-link>
           </div>
 
@@ -24,14 +24,15 @@
             </div>
           </div>
 
-          <!--          GALLERY-->
+          <!--          GALLERY -->
           <div class="ProjectFull-gallery">
             <project-gallery :gallery="project.data.attributes.galerie.data"></project-gallery>
             <div class="ProjectFull-linkContainer" v-if="project.data.attributes.link">
               <v-img class="ProjectFull-companyLogo"
                      :src="$variables.getStrapiBaseUrl() + project.data.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
               <a class="ProjectFull-link" :href="project.data.attributes.link" target="_blank">
-                <button>Voir le site
+                <button>
+                  {{ $t('projectFull.seeWebsite.title') }}
                   <font-awesome-icon class="ProjectFull-linkIcon" icon="fa-solid fa-chevron-right"/>
                 </button>
               </a>
@@ -47,7 +48,7 @@
         <project-full-techno :project-languages="project.data.attributes.languages.data" :is-modal="isModal">
 
           <!--          NEXT PROJECT - slot    -->
-          <template v-slot:nextProject  v-if="!isModal">
+          <template v-slot:nextProject v-if="!isModal">
             <projects-related :exclude-id="getProjectId"></projects-related>
           </template>
         </project-full-techno>
@@ -98,7 +99,7 @@ export default {
           id: this.getProjectId,
         }
       },
-      loadingKey: 'loading'
+      loadingKey: 'loading',
     },
 
   },
@@ -107,6 +108,7 @@ export default {
     getProjectId() {
       return this.$route.params.id ? this.$route.params.id : this.projectId
     }
-  }
+  },
+
 }
 </script>
