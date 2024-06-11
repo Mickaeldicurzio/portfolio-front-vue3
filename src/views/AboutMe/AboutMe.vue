@@ -33,6 +33,7 @@ import aboutImage from "@/assets/images/about.jpg";
 import AboutMeDescription from "@/components/AboutMe/AboutMeDescription/AboutMeDescription";
 import AboutMeTravels from "@/components/AboutMe/AboutMeTravels/AboutMeTravels";
 
+const metaKey = "aboutme"
 
 export default {
   name: "AboutMe",
@@ -45,7 +46,8 @@ export default {
 
   metaInfo() {
     return {
-      title: 'aboutme',
+      title: metaKey,
+      description: metaKey,
     }
   },
 

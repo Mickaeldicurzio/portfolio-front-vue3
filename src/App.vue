@@ -1,6 +1,7 @@
 <template>
   <metainfo>
     <template v-slot:title="{ content }">{{ content ? `Mickaël DI CURZIO | ${$t('metas.title.' + content )}` : `Mickaël DI CURZIO` }}</template>
+    <template v-slot:description="{ content }">{{ content ? `${$t('metas.description.' + content )}` : `Mickaël DI CURZIO portfolio` }}</template>
   </metainfo>
 
 

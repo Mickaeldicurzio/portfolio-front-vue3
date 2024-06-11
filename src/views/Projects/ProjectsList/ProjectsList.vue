@@ -76,6 +76,8 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import './ProjectsList.scss'
 import ProjectCard from "@/includes/Projects/ProjectCard/ProjectCard";
 
+const metaKey = "projects"
+
 export default {
   name: "ProjectsList",
   components: {
@@ -97,7 +99,8 @@ export default {
 
   metaInfo() {
     return {
-      title: 'projects',
+      title: metaKey,
+      description: metaKey,
     }
   },
 

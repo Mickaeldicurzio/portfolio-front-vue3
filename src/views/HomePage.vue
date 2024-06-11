@@ -1,8 +1,6 @@
 <template>
   <div class="HomePage">
 
-
-
     <!-- HERO -->
     <home-page-hero v-fade-in></home-page-hero>
 
@@ -34,12 +32,15 @@ import HomePageSkills from "@/components/Homepage/HomePageSkills/HomePageSkills"
 import HomePageProjectsSimple from "@/components/Homepage/HomePageProjectsSimple/HomePageProjectsSimple";
 import HomePageCv from "@/components/Homepage/HomePageCv/HomePageCv";
 
+let metaKey = 'homepage';
+
 export default {
 
 
   metaInfo() {
     return {
-      title: 'homepage',
+      title: metaKey,
+      description: metaKey,
     }
   },
 

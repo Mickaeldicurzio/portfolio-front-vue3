@@ -33,6 +33,8 @@ import experiencesImage from "@/assets/images/experiences.jpg";
 import GlobalHero from "@/components/GlobalHero/GlobalHero";
 import ExperiencesTimeline from "@/components/Experiences/ExperiencesTimeline/ExperiencesTimeline";
 
+const metaKey = "experiences"
+
 export default {
   name: "ExperiencesFull",
   components: {
@@ -43,7 +45,8 @@ export default {
 
   metaInfo() {
     return {
-      title: 'experiences',
+      title: metaKey,
+      description: metaKey,
     }
   },
 

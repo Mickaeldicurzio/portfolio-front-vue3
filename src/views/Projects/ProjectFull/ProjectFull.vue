@@ -5,6 +5,8 @@
         content ? `Mickaël DI CURZIO | ${$t('metas.title.project')} - ${content}` : `Mickaël DI CURZIO`
       }}
     </template>
+    <template v-slot:description="{ content }">{{ content ? content : `Mickaël DI CURZIO` }}
+    </template>
   </metainfo>
 
   <v-card>
@@ -82,6 +84,7 @@ export default {
 
       return {
         title: this.project?.data.attributes.title ?? "",
+        description: this.project?.data.attributes.description ?? "",
       }
 
   },
