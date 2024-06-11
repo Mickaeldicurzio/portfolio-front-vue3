@@ -1,4 +1,14 @@
 <template>
+
+  <metainfo>
+    <template v-slot:title="{ content }">{{
+        content ? `Mickaël DI CURZIO | ${$t('metas.title.project')} - ${content}` : `Mickaël DI CURZIO`
+      }}
+    </template>
+    <template v-slot:description="{ content }">{{ content ? content : `Mickaël DI CURZIO` }}
+    </template>
+  </metainfo>
+
   <v-card>
     <div class="ProjectFull" v-if="loading === 0">
       <div class="ProjectFull-headerContainer">
@@ -69,6 +79,16 @@ import ProjectsRelated from "@/components/Projects/ProjectsRelated/ProjectsRelat
 
 export default {
   name: "ProjectFull",
+
+  metaInfo() {
+
+      return {
+        title: this.project?.data.attributes.title ?? "",
+        description: this.project?.data.attributes.description ?? "",
+      }
+
+  },
+
   components: {
     ProjectsRelated,
     ProjectFullTechno,

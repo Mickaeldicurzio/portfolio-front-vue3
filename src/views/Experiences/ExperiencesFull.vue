@@ -33,12 +33,23 @@ import experiencesImage from "@/assets/images/experiences.jpg";
 import GlobalHero from "@/components/GlobalHero/GlobalHero";
 import ExperiencesTimeline from "@/components/Experiences/ExperiencesTimeline/ExperiencesTimeline";
 
+const metaKey = "experiences"
+
 export default {
   name: "ExperiencesFull",
   components: {
     ExperiencesTimeline,
     GlobalHero,
   },
+
+
+  metaInfo() {
+    return {
+      title: metaKey,
+      description: metaKey,
+    }
+  },
+
   setup() {
     return {
       experiencesIcon,

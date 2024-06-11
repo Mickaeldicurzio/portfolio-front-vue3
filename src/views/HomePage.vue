@@ -32,7 +32,18 @@ import HomePageSkills from "@/components/Homepage/HomePageSkills/HomePageSkills"
 import HomePageProjectsSimple from "@/components/Homepage/HomePageProjectsSimple/HomePageProjectsSimple";
 import HomePageCv from "@/components/Homepage/HomePageCv/HomePageCv";
 
+let metaKey = 'homepage';
+
 export default {
+
+
+  metaInfo() {
+    return {
+      title: metaKey,
+      description: metaKey,
+    }
+  },
+
   components: {
     HomePageCv,
     HomePageProjectsSimple,

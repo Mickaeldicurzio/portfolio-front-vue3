@@ -5,6 +5,7 @@ import {menuMessage} from "@/locales/en/menuMessage";
 import {aboutMeMessage} from "@/locales/en/aboutMeMessage";
 import {footerMessage} from "@/locales/en/footerMessage";
 import {experiencesMessage} from "@/locales/en/experiencesMessage";
+import {metaMessage} from "@/locales/en/metaMessage";
 
 
 const enMessage = {
@@ -14,7 +15,8 @@ const enMessage = {
     ...projectListMessage,
     ...menuMessage,
     ...aboutMeMessage,
-    ...footerMessage
+    ...footerMessage,
+    ...metaMessage
 }
 
 export {enMessage}

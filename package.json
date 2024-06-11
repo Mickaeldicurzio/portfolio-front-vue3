@@ -28,6 +28,7 @@
     "sass-mq-build": "^1.0.0",
     "strapi-plugin-random-sort": "^0.0.3",
     "vue": "^3.2.13",
+    "vue-meta": "^3.0.0-alpha.7",
     "vue-apollo": "^3.1.0",
     "vue-i18n": "^9.13.1",
     "vue-masonry-gallery": "^1.1.1",

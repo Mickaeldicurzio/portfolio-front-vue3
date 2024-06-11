@@ -24,7 +24,7 @@ const routes = [
         component: ArticleFullPage
     },
     {
-        path: '/expriences',
+        path: '/experiences',
         name: 'experiences',
         component: ExperiencesFull
     },
