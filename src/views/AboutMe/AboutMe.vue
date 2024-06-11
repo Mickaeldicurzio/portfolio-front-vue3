@@ -1,29 +1,29 @@
 <template>
-<div class="AboutMe">
-  <!-- HERO -->
-  <div class="AboutMe-hero">
-    <global-hero
-        :image-src="aboutImage"
-        :hero-title="$t('menuMessage.aboutMe.menuItem')"
-        :left-image-src="aboutIcon"
-        :text-color="'#fff'"
-        reverse="true"
-        :link-previous="'projects'"
-        :link-text-previous="$t('menuMessage.projects.menuItem')"
-    ></global-hero>
-    <vue-masonry-gallery :imgs-arr="imgsArr"></vue-masonry-gallery>
-  </div>
+  <div class="AboutMe">
+    <!-- HERO -->
+    <div class="AboutMe-hero">
+      <global-hero
+          :image-src="aboutImage"
+          :hero-title="$t('menuMessage.aboutMe.menuItem')"
+          :left-image-src="aboutIcon"
+          :text-color="'#fff'"
+          reverse="true"
+          :link-previous="'projects'"
+          :link-text-previous="$t('menuMessage.projects.menuItem')"
+      ></global-hero>
+      <vue-masonry-gallery :imgs-arr="imgsArr"></vue-masonry-gallery>
+    </div>
 
-  <div class="AboutMe-description GlobalContainer">
-    <about-me-description></about-me-description>
-  </div>
+    <div class="AboutMe-description GlobalContainer">
+      <about-me-description></about-me-description>
+    </div>
 
-  <div class="AboutMe-travels">
-    <about-me-travels></about-me-travels>
-  </div>
+    <div class="AboutMe-travels">
+      <about-me-travels></about-me-travels>
+    </div>
 
-<!--  DESCRIPTION-->
-</div>
+    <!--  DESCRIPTION-->
+  </div>
 </template>
 
 <script>
@@ -43,6 +43,11 @@ export default {
 
   },
 
+  metaInfo() {
+    return {
+      title: 'aboutme',
+    }
+  },
 
   setup() {
     return {

@@ -5,6 +5,7 @@ import {menuMessage} from "@/locales/fr-FR/menuMessage";
 import {aboutMeMessage} from "@/locales/fr-FR/aboutMeMessage";
 import {footerMessage} from "@/locales/fr-FR/footerMessage";
 import {experiencesMessage} from "@/locales/fr-FR/experiencesMessage";
+import {metaMessage} from "@/locales/fr-FR/metaMessage";
 
 
 const frMessage = {
@@ -14,7 +15,8 @@ const frMessage = {
     ...projectFullMessage,
     ...menuMessage,
     ...aboutMeMessage,
-    ...footerMessage
+    ...footerMessage,
+    ...metaMessage
 }
 
 export { frMessage }

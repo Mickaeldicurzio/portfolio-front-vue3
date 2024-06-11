@@ -1,4 +1,9 @@
 <template>
+  <metainfo>
+    <template v-slot:title="{ content }">{{ content ? `Mickaël DI CURZIO | ${$t('metas.title.' + content )}` : `Mickaël DI CURZIO` }}</template>
+  </metainfo>
+
+
   <div class="App" v-if="loading === 0">
     <v-app>
 
@@ -30,8 +35,16 @@ import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
 import FooterComponent from "@/components/Footer/FooterComponent";
+import { useMeta } from 'vue-meta'
+import {useI18n} from "vue-i18n";
 
 export default {
+
+  setup () {
+    useMeta({
+      htmlAttrs: { lang: localStorage.getItem('currentLocale') ?? useI18n().locale.value, amp: true }
+    })
+  },
 
   components: {
     FooterComponent,

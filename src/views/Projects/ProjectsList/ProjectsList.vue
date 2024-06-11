@@ -94,6 +94,13 @@ export default {
       selectedLanguages: []
     }
   },
+
+  metaInfo() {
+    return {
+      title: 'projects',
+    }
+  },
+
   setup() {
     return {
       projectIcon,

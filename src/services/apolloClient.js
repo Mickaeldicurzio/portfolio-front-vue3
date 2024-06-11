@@ -10,7 +10,6 @@ const httpLink = new createHttpLink({
 });
 
 const authMiddleware = new ApolloLink((operation, forward) => {
-    console.log(process.env.VUE_APP_STRAPI_TOKKEN)
     // add the authorization to the headers
     const token = process.env.VUE_APP_STRAPI_TOKKEN
     operation.setContext({

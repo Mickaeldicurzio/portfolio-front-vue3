@@ -39,6 +39,14 @@ export default {
     ExperiencesTimeline,
     GlobalHero,
   },
+
+
+  metaInfo() {
+    return {
+      title: 'experiences',
+    }
+  },
+
   setup() {
     return {
       experiencesIcon,
