@@ -28,6 +28,10 @@ a:not(.HomeLinkIcon) {
       margin-right: 20px;
       margin-left: 0;
     }
+    &.ChevronRight {
+      margin-left: 20px;
+      margin-right: 0;
+    }
   }
 
   .ChevronIcon {

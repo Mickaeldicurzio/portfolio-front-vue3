@@ -8,7 +8,7 @@
 
       <router-link :to="{ name: 'aboutMe'}">
         <v-btn class="HomePageDescription-link RedButton">{{ $t('home.description.buttonTitle')}}
-          <font-awesome-icon icon="fa-solid fa-chevron-right"/>
+          <font-awesome-icon icon="fa-solid fa-chevron-right" class="ChevronRight"/>
         </v-btn>
       </router-link>
 

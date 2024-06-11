@@ -9,7 +9,7 @@
     <div class="TimelineCardMobile-description">
       <v-expansion-panels>
         <v-expansion-panel
-            title="En savoir plus"
+            :title="$t('experiences.knowMore')"
             bg-color="transparent"
             ripple
         >

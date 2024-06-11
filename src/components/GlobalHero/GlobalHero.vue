@@ -25,7 +25,7 @@
           </router-link>
 
           <router-link  v-if="linkText !== ''" :to="{ name: link }">{{ linkText }}
-            <font-awesome-icon class="ChevronIcon" icon="fa-solid fa-chevron-right"/>
+            <font-awesome-icon class="ChevronIcon ChevronRight" icon="fa-solid fa-chevron-right"/>
           </router-link>
 
         </h3>
@@ -37,7 +37,7 @@
           {{ linkTextPrevious }}
         </router-link>
         <router-link  v-if="linkText !== ''" :to="{ name: link }">{{ linkText }}
-          <font-awesome-icon class="ChevronIcon" icon="fa-solid fa-chevron-right"/>
+          <font-awesome-icon class="ChevronIcon ChevronRight" icon="fa-solid fa-chevron-right"/>
         </router-link>
 
       </h3>

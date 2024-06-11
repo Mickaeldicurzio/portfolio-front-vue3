@@ -43,7 +43,7 @@
 
       <router-link :to="{ name: 'projects'}">
         <v-btn class="HomePageDescription-link"> {{ $t('home.projects.buttonList')}}
-          <font-awesome-icon icon="fa-solid fa-chevron-right"/>
+          <font-awesome-icon icon="fa-solid fa-chevron-right" class="ChevronRight"/>
         </v-btn>
       </router-link>
 
