@@ -7,9 +7,8 @@
           :hero-title="$t('menuMessage.aboutMe.menuItem')"
           :left-image-src="aboutIcon"
           :text-color="'#fff'"
-          reverse="true"
-          :link-previous="'projects'"
-          :link-text-previous="$t('menuMessage.projects.menuItem')"
+          :link-previous="'articles'"
+          :link-text-previous="$t('menuMessage.articles.menuItem')"
       ></global-hero>
       <vue-masonry-gallery :imgs-arr="imgsArr"></vue-masonry-gallery>
     </div>

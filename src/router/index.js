@@ -29,6 +29,11 @@ const routes = [
         component: ExperiencesFull
     },
     {
+        path: '/expriences',
+        name: 'expriences',
+        component: ExperiencesFull
+    },
+    {
         path: '/about-me',
         name: 'aboutMe',
         component: AboutMe

@@ -6,6 +6,8 @@
     <div v-else>
       {{ article.data.attributes.title }}
     </div>
+
+    <div v-html="article.data.attributes.ckeditor"></div>
   </article>
 </template>
 

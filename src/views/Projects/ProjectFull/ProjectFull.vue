@@ -1,5 +1,6 @@
 <template>
 
+<!--  META-->
   <metainfo>
     <template v-slot:title="{ content }">{{
         content ? `Mickaël DI CURZIO | ${$t('metas.title.project')} - ${content}` : `Mickaël DI CURZIO`

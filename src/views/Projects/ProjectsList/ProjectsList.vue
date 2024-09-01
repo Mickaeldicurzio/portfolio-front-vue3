@@ -7,17 +7,17 @@
           :hero-title="$t('menuMessage.projects.menuItem')"
           :left-image-src="projectIcon"
           :text-color="'#fff'"
-          :link="'aboutMe'"
-          :link-text="$t('menuMessage.aboutMe.menuItem')"
+          :link="'articles'"
+          :link-text="$t('menuMessage.articles.menuItem')"
           :link-previous="'experiences'"
           :link-text-previous="$t('menuMessage.experiences.menuItem')"
       ></global-hero>
     </div>
 
-    <div class="ProjectsList-container GlobalContainer">
+    <div class="ProjectsList-container ContentList-container GlobalContainer">
 
       <!-- FILTERS-->
-      <div class="ProjectsList-filtersContainer">
+      <div class="ProjectsList-filtersContainer ContentList-filtersContainer">
 
         <!-- FILTERS RESET -->
         <div class="ProjectsList-resetFilters" v-if="hasFilters" @click="resetFilters">
@@ -118,6 +118,7 @@ export default {
   },
 
   apollo: {
+
     projectsCards: {
       query: repositories.projectRepository.GET_PROJECTS_CARDS,
       loadingKey: 'loading',

@@ -5,7 +5,8 @@ export const GET_ARTICLE_BY_ID = gql`query GetArticleById ($id: ID!){
     data {
       id
       attributes {
-        title
+        title,
+        ckeditor
       }
     }
   }

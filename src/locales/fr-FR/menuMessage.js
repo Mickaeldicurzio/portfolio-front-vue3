@@ -9,6 +9,9 @@ const menuMessage = {
         aboutMe: {
             menuItem: "a propos de moi"
         },
+        articles: {
+            menuItem: "articles"
+        },
         experiences: {
             menuItem: "experiences"
         }

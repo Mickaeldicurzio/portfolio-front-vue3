@@ -33,6 +33,15 @@
     <div class="Menu-ItemContainer">
       <div class="Menu-Item">
         <div class="Menu-ItemImagesLayer">
+          <v-img :src="articlesIcon" class="Menu-ItemImages"></v-img>
+        </div>
+        <router-link :to="{ name: 'articles' }">{{ $t("menuMessage.articles.menuItem")}}</router-link>
+      </div>
+    </div>
+
+    <div class="Menu-ItemContainer">
+      <div class="Menu-Item">
+        <div class="Menu-ItemImagesLayer">
           <v-img :src="abouteMeIcon" class="Menu-ItemImages"></v-img>
         </div>
         <router-link :to="{ name: 'aboutMe' }">{{ $t("menuMessage.aboutMe.menuItem")}}</router-link>
@@ -48,15 +57,6 @@
       </div>
     </div>
 
-<!--    <div class="Menu-ItemContainer">-->
-<!--      <div class="Menu-Item">-->
-<!--        <div class="Menu-ItemImagesLayer">-->
-<!--          <v-img :src="contactIcon" class="Menu-ItemImages"></v-img>-->
-<!--        </div>-->
-<!--        <router-link :to="{ name: 'contact' }">Contact</router-link>-->
-<!--      </div>-->
-<!--    </div>-->
-
   </div>
 
 </template>
@@ -68,6 +68,7 @@ import homeIcon from "@/assets/images/fire-red.svg";
 import abouteMeIcon from "@/assets/images/panda-red.svg";
 import expriencesIcon from "@/assets/images/anchor-red.svg";
 import projectsIcon from "@/assets/images/cigarette-red.svg";
+import articlesIcon from "@/assets/images/art-design-red.svg";
 import contactIcon from "@/assets/images/contact-red.svg";
 
 export default {
@@ -84,6 +85,7 @@ export default {
       expriencesIcon,
       projectsIcon,
       homeIcon,
+      articlesIcon,
       contactIcon
     };
   },

@@ -6,6 +6,16 @@
   }
 }
 
+.ContentList-container {
+  margin: 120px auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+// COLORED CONTAINER
+
 .ColoredContainer {
   color: #fff;
   padding: 40px;
