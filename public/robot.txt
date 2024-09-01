@@ -1,0 +1,20 @@
+# Bloquer tous les robots d'accéder aux fichiers spécifiques à Vue.js et à certaines sections du site
+
+User-agent: *
+# Bloque l'accès à tous les fichiers JavaScript dans le répertoire /js/
+Disallow: /js/
+# Bloque l'accès aux fichiers de configuration Vue (si stockés sur le serveur)
+Disallow: /config/
+# Bloque l'accès aux répertoires de construction
+Disallow: /build/
+Disallow: /dist/
+# Bloque l'accès aux pages d'administration (si elles existent)
+Disallow: /admin/
+# Bloque l'accès aux API internes
+Disallow: /api/
+
+# Permet l'accès à toutes les autres pages
+Allow: /
+
+# Indique l'emplacement du fichier sitemap
+Sitemap: https://www.votresite.com/sitemap.xml
