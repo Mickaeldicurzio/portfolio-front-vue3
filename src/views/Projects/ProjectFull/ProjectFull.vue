@@ -75,13 +75,13 @@ import {repositories} from "@/repositories";
 import ProjectGallery from "@/components/Projects/ProjectGallery/ProjectGallery";
 import ProjectFullTechno from "@/components/Projects/ProjectFullTechno/ProjectFullTechno";
 import ProjectsRelated from "@/components/Projects/ProjectsRelated/ProjectsRelated";
+import router from "@/router";
 
 
 export default {
   name: "ProjectFull",
 
   metaInfo() {
-
       return {
         title: this.project?.data.attributes.title ?? "",
         description: this.project?.data.attributes.description ?? "",
@@ -117,6 +117,11 @@ export default {
       variables() {
         return {
           id: this.getProjectId,
+        }
+      },
+      result(results) {
+        if(!results.data.project.data) {
+          router.push('/projects');
         }
       },
       loadingKey: 'loading',
