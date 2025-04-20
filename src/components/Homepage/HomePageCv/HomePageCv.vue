@@ -5,7 +5,7 @@
     </div>
 
     <div class="HomePageCv-fileContainer">
-      <a :href="$variables.getStrapiBaseUrl() + documents.data.attributes.cv.data.attributes.url" target="_blank">
+      <a :href="$variables.getStrapiBaseUrl() + documents.cv.url" target="_blank">
         <div class="HomePageCv-files">
           <font-awesome-icon icon="fa-solid fa-file-pdf"></font-awesome-icon>
         </div>
@@ -18,7 +18,7 @@
 
     <div class="HomePageDistinctions-container">
       <div class="HomePageDistinctions-containerInner"
-           v-for="(distinction, key) in documents.data.attributes.distinctions" :key="key">
+           v-for="(distinction, key) in documents.distinctions" :key="key">
         <div class="HomePageDistinctions-link">
           <a :href="distinction.link" target="_blank">{{ distinction.title }}</a>
         </div>

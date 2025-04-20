@@ -107,14 +107,14 @@ export default {
     getExperiences() {
       if (this.loading === 0) {
 
-        let companies = this.companies.data
+        let companies = this.companies
         let experiencesArray = []
         companies.forEach((el) => {
-          el.attributes.experiences.forEach((experience) => {
+          el.experiences.forEach((experience) => {
             experiencesArray.push(
                 {
-                  companyLogo: el.attributes.logo.data.attributes.url,
-                  companyName: el.attributes.name,
+                  companyLogo: el.logo.url,
+                  companyName: el.name,
                   companyId: el.id,
                   startDate: experience.startDate,
                   endDate: experience.endDate,

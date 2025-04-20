@@ -4,7 +4,7 @@
       <v-img :src="pandaLogo"></v-img>
     </div>
     <div class="HomePageDescription-inner">
-      <div class="HomePageDescription-text" v-html="homepageDescription.data.attributes.description"></div>
+      <div class="HomePageDescription-text" v-html="homepageDescription.description"></div>
 
       <router-link :to="{ name: 'aboutMe'}">
         <v-btn class="HomePageDescription-link RedButton">{{ $t('home.description.buttonTitle')}}

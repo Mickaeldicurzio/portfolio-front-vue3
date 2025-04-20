@@ -1,7 +1,7 @@
 <template>
   <div class="ProjectsSlider">
     <carousel :items-to-show="1.5" :pagination="false"  >
-      <slide v-for="slide in projects.data" :key="slide" >
+      <slide v-for="slide in projects" :key="slide" >
         <projects-slide :project="slide"></projects-slide>
       </slide>
 

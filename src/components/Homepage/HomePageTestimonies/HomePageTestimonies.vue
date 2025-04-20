@@ -4,13 +4,13 @@
     <v-container>
       <h2>{{ $t('home.testimonies.title')}}</h2>
       <div class="HomePageTestimonies-container" v-if="loading === 0">
-        <div class="HomePageTestimonies-cards desktopOnly" v-for="(testimony, key) in testimonies.data"
+        <div class="HomePageTestimonies-cards desktopOnly" v-for="(testimony, key) in testimonies"
              :key="key">
           <testimony-card :testimony="testimony"></testimony-card>
         </div>
 
         <carousel :items-to-show="1" :pagination="true">
-          <slide class="HomePageTestimonies-cards phoneAndTabletOnly" v-for="(testimony, key) in testimonies.data"
+          <slide class="HomePageTestimonies-cards phoneAndTabletOnly" v-for="(testimony, key) in testimonies"
                  :key="key"
                  style="width: 100%">
             <testimony-card :testimony="testimony"></testimony-card>

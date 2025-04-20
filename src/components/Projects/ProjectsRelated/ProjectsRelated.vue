@@ -1,9 +1,9 @@
 <template>
   <v-container v-if="loading === 0">
-    <div class="ProjectsRelated" v-if="nextProjects && nextProjects.data.length > 0">
+    <div class="ProjectsRelated" v-if="nextProjects && nextProjects.length > 0">
       <h2 class="Title-underline">{{ $t("projectFull.otherProject.title") }}</h2>
       <div class="ProjectsRelated-container">
-        <project-card :project="nextProject" v-for="(nextProject, key) in nextProjects.data"
+        <project-card :project="nextProject" v-for="(nextProject, key) in nextProjects"
                       :key="key"></project-card>
       </div>
     </div>

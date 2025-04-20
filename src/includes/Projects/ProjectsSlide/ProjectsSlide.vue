@@ -1,14 +1,14 @@
 <template>
   <div class="ProjectsSlide">
     <div class="ProjectsSlide-description">
-      <p> {{ project.attributes.title }}</p>
+      <p> {{ project.title }}</p>
       <div class="ProjectsSlide-companyLogo">
         <v-img
-            :src="$variables.getStrapiBaseUrl() + project.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+            :src="$variables.getStrapiBaseUrl() + project.company.logo.url"></v-img>
       </div>
     </div>
     <div class="ProjectsSlide-illustration"
-         v-bind:style="{ 'background-image': 'url('  + $variables.getStrapiBaseUrl() + project.attributes.galerie.data[0].attributes.url + ')' }">
+         v-bind:style="{ 'background-image': 'url('  + $variables.getStrapiBaseUrl() + project.galerie[0].url + ')' }">
     </div>
 
     <div class="ProjectsSlide-description">
@@ -16,8 +16,8 @@
         plus
         <font-awesome-icon icon="fa-solid fa-plus"/>
       </router-link>
-      <a :href="project.attributes.link" target="_blank">
-        <v-btn class="ProjectsSlide-button WhiteButton" v-if="project.attributes.link">Voir le site
+      <a :href="project.link" target="_blank">
+        <v-btn class="ProjectsSlide-button WhiteButton" v-if="project.link">Voir le site
           <font-awesome-icon icon="fa-solid fa-chevron-right"/>
         </v-btn>
       </a>

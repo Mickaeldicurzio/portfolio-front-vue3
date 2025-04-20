@@ -32,11 +32,11 @@
 
           <div class="ProjectsList-containerFiltersInner">
             <div
-                :class="this.selectedCompanies.includes(index.id) ? 'ProjectsList-filtersCompany filtered' : 'ProjectsList-filtersCompany' "
-                @click="setSelectedCompanies(index.id)"
+                :class="this.selectedCompanies.includes(index.documentId) ? 'ProjectsList-filtersCompany filtered' : 'ProjectsList-filtersCompany' "
+                @click="setSelectedCompanies(index.documentId)"
                 v-for="(index, key) in companiesLogo" :key="key">
               <v-img :src="$variables.getStrapiBaseUrl() + index.url"></v-img>
-              <div class="ProjectsList-filtersIcon" v-if="this.selectedCompanies.includes(index.id)">
+              <div class="ProjectsList-filtersIcon" v-if="this.selectedCompanies.includes(index.documentId)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
               </div>
             </div>
@@ -46,11 +46,11 @@
           <h3>{{ $t('projectList.languages.title') }}</h3>
           <div class="ProjectsList-containerFiltersInner">
             <div
-                :class="this.selectedLanguages.includes(index.id) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "
-                @click="setSelectedLanguages(index.id)"
+                :class="this.selectedLanguages.includes(index.documentId) ? 'ProjectsList-filtersLanguages filtered' : 'ProjectsList-filtersLanguages' "
+                @click="setSelectedLanguages(index.documentId)"
                 v-for="(index, key) in languagesLogo" :key="key">
               <v-img :src="$variables.getStrapiBaseUrl() + index.url"></v-img>
-              <div class="ProjectsList-filtersIcon" v-if="this.selectedLanguages.includes(index.id)">
+              <div class="ProjectsList-filtersIcon" v-if="this.selectedLanguages.includes(index.documentId)">
                 <font-awesome-icon icon="fa-solid fa-circle-xmark" style="color: #d64045;"/>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default {
         }
       },
       result(data) {
-        this.projects = data.data.projectsCards.data
+        this.projects = data.data.projectsCards
         this.loading = 0
         this.getCompanies(this.projects)
         this.getLanguages(this.projects)
@@ -140,16 +140,16 @@ export default {
     getCompanies(projects) {
       let allCompaniesLogo = []
       projects.forEach((index) => {
-        if (index.attributes.company.data) {
+        if (index.company) {
           allCompaniesLogo.push(
               {
-                id: index.attributes.company.data.id,
-                url: index.attributes.company.data.attributes.logo.data.attributes.url
+                documentId: index.company.documentId,
+                url: index.company.logo.url
               }
           )
         }
       })
-      this.companiesLogo = [...new Map(allCompaniesLogo.map((item) => [item["id"], item])).values()];
+      this.companiesLogo = [...new Map(allCompaniesLogo.map((item) => [item["documentId"], item])).values()];
     },
 
     resetFilters() {
@@ -160,32 +160,32 @@ export default {
     getLanguages(projects) {
       let allLanguagesLogo = []
       projects.forEach((project) => {
-        project.attributes.languages.data.forEach((index) => {
+        project.languages.forEach((index) => {
           allLanguagesLogo.push(
               {
-                id: index.id,
-                name: index.attributes.name,
-                url: index.attributes.logo.data.attributes.url
+                documentId: index.documentId,
+                name: index.name,
+                url: index.logo.url
               }
           )
         })
       })
 
-      this.languagesLogo = [...new Map(allLanguagesLogo.map((item) => [item["id"], item])).values()];
+      this.languagesLogo = [...new Map(allLanguagesLogo.map((item) => [item["documentId"], item])).values()];
     },
 
-    setSelectedCompanies(id) {
-      if (!this.selectedCompanies.includes(id)) {
-        this.selectedCompanies.push(id)
+    setSelectedCompanies(documentId) {
+      if (!this.selectedCompanies.includes(documentId)) {
+        this.selectedCompanies.push(documentId)
       } else {
-        this.selectedCompanies.splice(this.selectedCompanies.indexOf(id), 1);
+        this.selectedCompanies.splice(this.selectedCompanies.indexOf(documentId), 1);
       }
     },
-    setSelectedLanguages(id) {
-      if (!this.selectedLanguages.includes(id)) {
-        this.selectedLanguages.push(id)
+    setSelectedLanguages(documentId) {
+      if (!this.selectedLanguages.includes(documentId)) {
+        this.selectedLanguages.push(documentId)
       } else {
-        this.selectedLanguages.splice(this.selectedLanguages.indexOf(id), 1);
+        this.selectedLanguages.splice(this.selectedLanguages.indexOf(documentId), 1);
       }
     }
   }

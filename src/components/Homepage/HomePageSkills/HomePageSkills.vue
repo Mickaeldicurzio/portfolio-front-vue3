@@ -7,17 +7,17 @@
       </div>
     </v-container>
     <div class="HomePageSkills-categories ColoredContainer"
-         v-for="(index, key) in categories.data" :key="key"
+         v-for="(index, key) in categories" :key="key"
          :class="key % 2 ?  'ColoredContainer-left' :  'ColoredContainer-right'"
-         :style="{ backgroundColor: index.attributes.color.data.attributes.color }"
+         :style="{ backgroundColor: index.color.color }"
     >
       <v-container>
         <div class="Title-underline whiteTitle">
-          <h3>{{ index.attributes.CategoryName }}</h3>
+          <h3>{{ index.CategoryName }}</h3>
         </div>
 
         <div class="HomePageSkills-categoriesContainer">
-            <home-page-languages :languages="index.attributes.languages.data"></home-page-languages>
+            <home-page-languages :languages="index.languages"></home-page-languages>
         </div>
       </v-container>
     </div>

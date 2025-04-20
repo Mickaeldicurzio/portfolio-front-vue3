@@ -57,10 +57,10 @@ export default {
     formatedProjectLanguages() {
       let categoriesObject = []
       this.projectLanguages.forEach((language) => {
-        let categoryName = language.attributes.category.data?.attributes.CategoryName
+        let categoryName = language.category?.CategoryName
         let languageObject = {
-          name: language.attributes.name,
-          logoUrl: language.attributes.logo.data.attributes.url
+          name: language.name,
+          logoUrl: language.logo.url
         }
         categoriesObject.push({categoryName: categoryName, languageObject: languageObject})
       })

@@ -6,27 +6,27 @@
     </div>
     <div class="TestimonyCard-profileContainer">
       <div class="TestimonyCard-pictures">
-        <v-img :src="$variables.getStrapiBaseUrl() + testimony.attributes.pictures.data.attributes.url"></v-img>
+        <v-img :src="$variables.getStrapiBaseUrl() + testimony.pictures.url"></v-img>
       </div>
       <div class="TestimonyCard-profileInfo">
         <div class="TestimonyCard-name">
           <bold>
-            {{ testimony.attributes.name }}
+            {{ testimony.name }}
           </bold>
         </div>
         <div class="TestimonyCard-profile">
         <span>
-          {{ testimony.attributes.profile }}
+          {{ testimony.profile }}
         </span>
         </div>
-        <div class="TestimonyCard-company" v-if="testimony.attributes.company.data">
+        <div class="TestimonyCard-company" v-if="testimony.company">
           <v-img
-              :src="$variables.getStrapiBaseUrl() + testimony.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+              :src="$variables.getStrapiBaseUrl() + testimony.company.logo.url"></v-img>
         </div>
       </div>
     </div>
     <div class="TestimonyCard-content">
-      <div class="TestimonyCard-testimony" v-html="testimony.attributes.testimony"></div>
+      <div class="TestimonyCard-testimony" v-html="testimony.testimony"></div>
     </div>
   </div>
 </template>

@@ -7,10 +7,10 @@
     </div>
 
     <div class="TravelComponent-masonry" v-if="travel.galery">
-      <masonry-wall :items="travel.galery.data" :ssr-columns="4" :column-width="500" :gap="30">
+      <masonry-wall :items="travel.galery" :ssr-columns="4" :column-width="500" :gap="30">
         <template #default="{ item }">
-          <div class="TravelComponent-masonryItem" @click="setImageAndOpenDialog(item.attributes.url)">
-            <img :src="$variables.getStrapiBaseUrl() + item.attributes.url"/>
+          <div class="TravelComponent-masonryItem" @click="setImageAndOpenDialog(item.url)">
+            <img :src="$variables.getStrapiBaseUrl() + item.url"/>
             <div class="TravelComponent-masonryItemLayer">
               <font-awesome-icon class="TravelComponent-masonryItemIcon" icon="fa-solid fa-magnifying-glass-plus"/>
             </div>

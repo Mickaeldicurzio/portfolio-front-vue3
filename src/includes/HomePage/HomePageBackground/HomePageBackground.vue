@@ -2,21 +2,21 @@
   <div class="HomePageBackground" :key="key"
        v-for="(index, key) in images">
     <v-app>
-      <v-parallax :src="$variables.getStrapiBaseUrl() + index.attributes.url" :scale="0.75"></v-parallax>
+      <v-parallax :src="$variables.getStrapiBaseUrl() + index.url" :scale="0.75"></v-parallax>
     </v-app>
 
   </div>
   <div class="HomePageBackground2" :key="key"
        v-for="(index, key) in images">
     <v-app>
-      <v-parallax :src="$variables.getStrapiBaseUrl() + index.attributes.url" :scale="0.5"></v-parallax>
+      <v-parallax :src="$variables.getStrapiBaseUrl() + index.url" :scale="0.5"></v-parallax>
     </v-app>
 
   </div>
   <div class="HomePageBackground3" :key="key"
        v-for="(index, key) in images">
     <v-app>
-      <v-parallax :src="$variables.getStrapiBaseUrl() + index.attributes.url" :scale="0.25"></v-parallax>
+      <v-parallax :src="$variables.getStrapiBaseUrl() + index.url" :scale="0.25"></v-parallax>
     </v-app>
 
   </div>
