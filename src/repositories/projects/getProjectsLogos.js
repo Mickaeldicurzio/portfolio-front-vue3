@@ -7,19 +7,11 @@ export const GET_PROJECTS_LOGOS = gql`query GetProjectsLogos ($locale: I18NLocal
           filters: {link: {not: null}}
           pagination: {start: 0, limit: 6},
           ) {
-            data {
-              id
-              attributes {
-                title
-                link
-                logo {
-                    data {
-                    attributes {
-                        url
-                    }
-                    }
-                }
+              documentId
+              title
+              link
+              logo {
+                url
               }
-            }
-          }
+            }            
       }`

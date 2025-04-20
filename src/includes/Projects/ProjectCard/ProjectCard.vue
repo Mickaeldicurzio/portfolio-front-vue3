@@ -1,15 +1,15 @@
 <template>
 
-  <router-link :to="{ name: 'projectFull', params: { id: project.id }}"  class="ProjectCard">
+  <router-link :to="{ name: 'projectFull', params: { id: project.documentId }}"  class="ProjectCard">
       <div class="ProjectCard-illustration"
-           v-bind:style="{ 'background-image': 'url(' + $variables.getStrapiBaseUrl() + project.attributes.galerie.data[0].attributes.url + ')' }">
+           v-bind:style="{ 'background-image': 'url(' + $variables.getStrapiBaseUrl() + project.galerie[0].url + ')' }">
       </div>
       <div class="ProjectCard-description">
-        <p> {{ project.attributes.title }}</p>
+        <p> {{ project.title }}</p>
 
-        <div class="ProjectCard-companyLogo" v-if="project.attributes.company && project.attributes.company.data">
-          <v-img v-if="project.attributes.company"
-              :src="$variables.getStrapiBaseUrl() + project.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
+        <div class="ProjectCard-companyLogo" v-if="project.company && project.company">
+          <v-img v-if="project.company"
+              :src="$variables.getStrapiBaseUrl() + project.company.logo.url"></v-img>
         </div>
       </div>
 

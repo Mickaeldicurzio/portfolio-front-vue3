@@ -15,19 +15,19 @@
 
 
       <div class="HomePageProjectsSimple-logoContainer desktopOnly" v-if="loading === 0">
-        <div class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key">
-          <a :href="logo.attributes.link" target="_blank">
-            <v-img :src="$variables.getStrapiBaseUrl() + logo.attributes.logo.data.attributes.url"
-                   :alt="logo.attributes.title"></v-img>
+        <div class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos" :key="key">
+          <a :href="logo.link" target="_blank">
+            <v-img :src="$variables.getStrapiBaseUrl() + logo.logo.url"
+                   :alt="logo.title"></v-img>
           </a>
         </div>
       </div>
       <div class="HomePageProjectsSimple-logoContainer phoneAndTabletOnly" v-if="loading === 0">
         <Carousel :items-to-show="1" :pagination="true"  >
-          <slide class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos.data" :key="key" style="width: 100%">
-            <a :href="logo.attributes.link" target="_blank">
-              <v-img :src="$variables.getStrapiBaseUrl() + logo.attributes.logo.data.attributes.url"
-                     :alt="logo.attributes.title"></v-img>
+          <slide class="HomePageProjectsSimple-logo" v-for="(logo, key) in projectsLogos" :key="key" style="width: 100%">
+            <a :href="logo.link" target="_blank">
+              <v-img :src="$variables.getStrapiBaseUrl() + logo.logo.url"
+                     :alt="logo.title"></v-img>
             </a>
           </slide>
 

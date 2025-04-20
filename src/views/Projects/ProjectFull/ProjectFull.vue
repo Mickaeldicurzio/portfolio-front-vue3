@@ -25,22 +25,22 @@
 
           <!--          HEADER-->
           <div class="ProjectFull-header">
-            <h2 class="Title-underline whiteTitle">{{ project.data.attributes.title }} <span>{{
-                project.data.attributes.projectDate
+            <h2 class="Title-underline whiteTitle">{{ project.title }} <span>{{
+                project.projectDate
               }}</span></h2>
             <br>
             <div class="ProjectFull-description">
-              <p v-html="project.data.attributes.description"></p>
+              <p v-html="project.description"></p>
             </div>
           </div>
 
           <!--          GALLERY -->
           <div class="ProjectFull-gallery">
-            <project-gallery :gallery="project.data.attributes.galerie.data"></project-gallery>
-            <div class="ProjectFull-linkContainer" v-if="project.data.attributes.link">
+            <project-gallery :gallery="project.galerie"></project-gallery>
+            <div class="ProjectFull-linkContainer" v-if="project.link">
               <v-img class="ProjectFull-companyLogo"
-                     :src="$variables.getStrapiBaseUrl() + project.data.attributes.company.data.attributes.logo.data.attributes.url"></v-img>
-              <a class="ProjectFull-link" :href="project.data.attributes.link" target="_blank">
+                     :src="$variables.getStrapiBaseUrl() + project.company.logo.url"></v-img>
+              <a class="ProjectFull-link" :href="project.link" target="_blank">
                 <button>
                   {{ $t('projectFull.seeWebsite.title') }}
                   <font-awesome-icon class="ProjectFull-linkIcon" icon="fa-solid fa-chevron-right"/>
@@ -55,7 +55,7 @@
 
       <!--      TECHNOS-->
       <div class="ProjectFull-technos">
-        <project-full-techno :project-languages="project.data.attributes.languages.data" :is-modal="isModal">
+        <project-full-techno :project-languages="project.languages" :is-modal="isModal">
 
           <!--          NEXT PROJECT - slot    -->
           <template v-slot:nextProject v-if="!isModal">
@@ -83,8 +83,8 @@ export default {
 
   metaInfo() {
       return {
-        title: this.project?.data.attributes.title ?? "",
-        description: this.project?.data.attributes.description ?? "",
+        title: this.project?.title ?? "",
+        description: this.project?.description ?? "",
       }
 
   },
@@ -97,7 +97,7 @@ export default {
 
   props: {
     projectId: {
-      type: Number,
+      type: String,
     },
     isModal: {
       type: Boolean,
@@ -120,8 +120,8 @@ export default {
         }
       },
       result(results) {
-        if(!results.data.project.data) {
-          router.push('/projects');
+        if(!results.project) {
+          router;
         }
       },
       loadingKey: 'loading',

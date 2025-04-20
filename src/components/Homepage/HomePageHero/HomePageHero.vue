@@ -10,17 +10,17 @@
       </div>
       <div class="HomePageHero-containerInner HomePageHero-containerInnerRight">
         <div class="HomePageHero-title">
-          <h1>{{ homepageHero.data.attributes.hero.title }}</h1>
+          <h1>{{ homepageHero.hero.title }}</h1>
         </div>
         <br>
         <div class="HomePageHero-description">
-          <h3>{{ homepageHero.data.attributes.hero.subtitle }}</h3>
+          <h3>{{ homepageHero.hero.subtitle }}</h3>
         </div>
       </div>
     </div>
 
     <!--  backgrounds-->
-    <home-page-background :images="homepageHero.data.attributes.hero.background.data"></home-page-background>
+    <home-page-background :images="homepageHero.hero.background"></home-page-background>
   </div>
 </template>
 

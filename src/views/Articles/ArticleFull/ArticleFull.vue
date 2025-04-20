@@ -4,7 +4,7 @@
       loading...
     </div>
     <div v-else>
-      {{ article.data.attributes.title }}
+      {{ article.title }}
     </div>
   </article>
 </template>

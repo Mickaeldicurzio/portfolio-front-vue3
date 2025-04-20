@@ -3,9 +3,9 @@
     <div v-if="loading > 0">
       loading...
     </div>
-    <div v-else-if="articlesList" v-for="(article, key) in articlesList.data" :key="key">
+    <div v-else-if="articlesList" v-for="(article, key) in articlesList" :key="key">
       <router-link :to="{ name: 'articleFull', params: { id: article.id }}">
-        {{ article.attributes.title }}
+        {{ article.title }}
       </router-link>
     </div>
   </article>

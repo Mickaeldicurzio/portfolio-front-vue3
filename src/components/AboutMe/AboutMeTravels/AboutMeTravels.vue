@@ -16,7 +16,7 @@
         </div>
       </v-card>
 
-    <div v-for="(travel, key) in travels.data.attributes.Travel" :key="key">
+    <div v-for="(travel, key) in travels.Travel" :key="key">
       <travel-component :travel="travel" :travel-key="key"></travel-component>
     </div>
 

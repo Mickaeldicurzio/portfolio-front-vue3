@@ -4,38 +4,21 @@ export const GET_NEXT_PROJECT_WITH_EXCLUDE_ID = gql`query getNextProjectWithExcl
   nextProjects: projects(
     locale: $locale,
     pagination: {start: $startPosition, limit:6},
-    filters: {id: {notIn: [$excludeId] }}
+    filters: {documentId: {notIn: [$excludeId] }}
   ) {
-    data {
-      id
-      attributes {
-        title
-        link
-        projectDate
-        description
-        languages {
-          data {
-            attributes {
-              name
-              logo {
-                data {
-                  attributes {
-                    url
-                  }
-                }
-              }
-            }
-          }
-        }
-       
-        galerie {
-          data {
-            attributes {
-              url
-            }
-          }
-        }
+    documentId
+    title
+    link
+    projectDate
+    description
+    languages {
+      name
+      logo {
+        url
       }
+    }
+    galerie {
+      url
     }
   }
 }

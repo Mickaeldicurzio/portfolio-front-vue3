@@ -1,6 +1,6 @@
 <template>
   <v-container class="AboutMeDescription" v-if="loading === 0">
-    <h2 class="Title-underline">{{aboutMeDescription.data.attributes.title}}</h2>
+    <h2 class="Title-underline">{{aboutMeDescription.title}}</h2>
 
     <div class="AboutMeDescription-logo phoneAndTabletOnly">
       <v-img :src="whoamiLogo"></v-img>
@@ -10,12 +10,12 @@
       <div class="AboutMeDescription-logo desktopOnly">
         <v-img :src="whoamiLogo"></v-img>
       </div>
-      <div class="AboutMeDescription-text" v-html="aboutMeDescription.data.attributes.description">
+      <div class="AboutMeDescription-text" v-html="aboutMeDescription.description">
       </div>
     </v-card>
 
     <div class="AboutMeDescription-profilePicture">
-      <v-parallax :src="$variables.getStrapiBaseUrl() + aboutMeDescription.data.attributes.profilePicture.data.attributes.url"></v-parallax>
+      <v-parallax :src="$variables.getStrapiBaseUrl() + aboutMeDescription.profilePicture.url"></v-parallax>
     </div>
 
   </v-container>
