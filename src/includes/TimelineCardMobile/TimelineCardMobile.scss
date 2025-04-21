@@ -14,6 +14,31 @@
   margin: 10px 0;
 }
 
+// active case
+
+
+.TimelineCardMobile-actual {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.TimelineCardMobile.active {
+  background-color: #D64045;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(#D64045, 0.1);
+
+  .bg-transparent {
+    background-color: #fff !important;
+    color: #012A36 !important;
+  }
+}
+
+.active .TimelineCardMobile-title {
+  color: #fff;
+}
+
+
+
 // RESPONSIVE
 
 @media ($mq-phone) {

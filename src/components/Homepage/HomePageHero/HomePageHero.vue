@@ -18,10 +18,12 @@
         </div>
         <div class="HomePageHero-actualCompany">
           <h5>{{ $t('home.actualCompany') }} : </h5>
-          <div v-if="companies.length > 0" class="HomePageHero-actualCompanyIcon"
+          <a :href="companies[0].link" target="_blank">
+            <div v-if="companies.length > 0" class="HomePageHero-actualCompanyIcon"
                :style="{backgroundImage: 'url(' + $variables.getStrapiBaseUrl() + companies[0].logo.url + ')' }"></div>
-        </div> 
+          </a>
       </div>
+    </div>
     </div>
 
     <!--  backgrounds-->

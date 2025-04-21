@@ -17,6 +17,7 @@ export const GET_ACTUAL_COMPANIES = gql`query GetCompanies ( $locale: I18NLocale
       post
     }
     actual
+    link
   }
 }
 `
