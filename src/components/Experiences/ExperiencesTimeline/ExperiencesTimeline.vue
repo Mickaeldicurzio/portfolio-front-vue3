@@ -116,6 +116,7 @@ export default {
                   companyLogo: el.logo.url,
                   companyName: el.name,
                   companyId: el.id,
+                  actual: el.actual,
                   startDate: experience.startDate,
                   endDate: experience.endDate,
                   contractType: experience.contractType,

@@ -14,6 +14,7 @@ export const GET_COMPANIES = gql`query GetCompanies ( $locale: I18NLocaleCode! )
       description
       post
     }
+    actual
   }
 }
 `

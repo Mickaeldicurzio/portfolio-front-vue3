@@ -16,6 +16,11 @@
         <div class="HomePageHero-description">
           <h3>{{ homepageHero.hero.subtitle }}</h3>
         </div>
+        <div class="HomePageHero-actualCompany">
+          <h5>{{ $t('home.actualCompany') }} : </h5>
+          <div v-if="companies.length > 0" class="HomePageHero-actualCompanyIcon"
+               :style="{backgroundImage: 'url(' + $variables.getStrapiBaseUrl() + companies[0].logo.url + ')' }"></div>
+        </div> 
       </div>
     </div>
 
@@ -35,6 +40,7 @@ export default {
   data() {
     return {
       homepageHero: {},
+      companies: {},
       loading: 0,
     }
   },
@@ -43,6 +49,15 @@ export default {
     homepageHero: {
       query: repositories.homepageRepository.GET_HOMEPAGE_HERO,
       loadingKey: 'loading'
+    },
+    companies: {
+      query: repositories.companiesRepository.GET_ACTUAL_COMPANIES,
+      loadingKey: 'loading',
+      variables() {
+        return {
+          actual: true,
+        }
+      },
     },
   },
 }

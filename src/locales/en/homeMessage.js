@@ -21,7 +21,8 @@ const homeMessage = {
         },
         distinct: {
             title: "Awards and Recognition"
-        }
+        },
+        actualCompany: 'Actual Company'
     }
 }
 

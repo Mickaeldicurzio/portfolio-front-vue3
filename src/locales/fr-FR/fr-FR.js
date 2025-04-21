@@ -6,6 +6,7 @@ import {aboutMeMessage} from "@/locales/fr-FR/aboutMeMessage";
 import {footerMessage} from "@/locales/fr-FR/footerMessage";
 import {experiencesMessage} from "@/locales/fr-FR/experiencesMessage";
 import {metaMessage} from "@/locales/fr-FR/metaMessage";
+import {timelineMessage} from "@/locales/fr-FR/timeline";
 
 
 const frMessage = {
@@ -16,7 +17,8 @@ const frMessage = {
     ...menuMessage,
     ...aboutMeMessage,
     ...footerMessage,
-    ...metaMessage
+    ...metaMessage,
+    ...timelineMessage
 }
 
 export { frMessage }

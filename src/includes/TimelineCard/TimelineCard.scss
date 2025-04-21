@@ -13,3 +13,20 @@
 .TimelineCard-date {
   margin: 10px 0;
 }
+
+.TimelineCard-actual {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+// active case
+
+.TimelineCard.active {
+  background-color: #D64045;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(#D64045, 0.1);
+}
+
+.active .TimelineCard-title {
+  color: #fff;
+}

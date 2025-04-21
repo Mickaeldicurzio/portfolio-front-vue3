@@ -44,6 +44,28 @@
   }
 }
 
+.HomePageHero-actualCompany {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 200px;
+    position: relative;
+    margin-right: 80px;
+
+    h5 {
+      margin-right: 40px;
+    }
+}
+
+
+.HomePageHero-actualCompanyIcon {
+  width: 220px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
 // RESPONSIVE
 
 @media ($mq-phone) {
@@ -71,5 +93,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+
+  .HomePageHero-actualCompany {
+    margin-right: inherit;
+    padding: 0 20px 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 40px;
+    h5 {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 }

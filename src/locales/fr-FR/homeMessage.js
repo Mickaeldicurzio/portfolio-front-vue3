@@ -21,7 +21,8 @@ const homeMessage = {
         },
         distinct: {
             title: "Prix et distinctions"
-        }
+        },
+        actualCompany: 'Actuellement en poste à'
     }
 }
 
