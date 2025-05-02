@@ -30,9 +30,13 @@ import {repositories} from "@/repositories";
 import travel from "@/assets/images/travel-red.svg";
 import TravelComponent from "@/includes/Travels/TravelComponent";
 
+
 export default {
   name: "AboutMeTravels",
-  components: {TravelComponent},
+  components: {
+    TravelComponent,
+  },
+
   setup() {
     return {
       travel,

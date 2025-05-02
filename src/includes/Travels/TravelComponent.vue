@@ -6,6 +6,8 @@
       <h2 class="Title-underline" :class="reverseTitle ? 'rightAlign' : ''">{{ travel.Place }}</h2>
     </div>
 
+    <travel-map :countryCode="travel.countryCode" :polarstepTrip="polarstepTrip"></travel-map>
+
     <div class="TravelComponent-masonry" v-if="travel.galery">
       <masonry-wall :items="travel.galery" :ssr-columns="4" :column-width="500" :gap="30">
         <template #default="{ item }">
@@ -48,14 +50,22 @@
 <script>
 
 import './TravelComponent.scss'
+import TravelMap from "@/includes/TravelMap/TravelMap";
+import polarstepTrip from '/src/assets/polarstep/trip.json'
 
 export default {
   name: "TravelComponent",
+
+  components: {
+    TravelMap
+  },
+
   data() {
     return {
       reverseTitle: false,
       dialog: false,
-      imageDialogSrc: ""
+      imageDialogSrc: "",
+      polarstepTrip: polarstepTrip
     }
   },
   props: {

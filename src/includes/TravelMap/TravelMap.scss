@@ -1,0 +1,42 @@
+.TravelMap {
+  margin-top: 80px;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.TripMarker-popUpTitle {
+  font-weight: bold;
+  color: #d64045;
+}
+
+.TripMarker-weather {
+  display: flex;
+  flex-direction: row;
+}
+
+.TripMarker-weatherIcon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.leaflet-bottom {
+  display: none;
+}
+
+.leaflet-marker-icon {
+  margin-top: -30px !important;
+}
+
+.leaflet-container {
+  border-radius: 20px;
+}
+
+@media ($mq-phone) {
+  .TravelMap {
+    //padding-left: 20px;
+    //padding-right: 20px;
+  }
+}

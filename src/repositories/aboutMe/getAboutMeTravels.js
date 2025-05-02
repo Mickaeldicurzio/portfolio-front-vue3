@@ -6,6 +6,7 @@ export const GET_ABOUT_ME_TRAVELS = gql`query getAboutMeTravels ($locale: I18NLo
       Place
       dateStart
       dateEnd
+      countryCode
       galery {
         url
       }

@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#D64045" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Trait 1 : double tracé tremblé -->
+        <path d="M12 10
+             C18 16, 24 22, 30 28
+             C34 32, 38 36, 44 42
+             C48 46, 52 50, 56 54" />
+        <path d="M14 12
+             C20 18, 26 24, 32 30
+             C36 34, 40 38, 46 44
+             C50 48, 54 52, 57 55" />
+
+        <!-- Trait 2 : double tracé croisé -->
+        <path d="M52 10
+             C46 16, 40 22, 34 28
+             C30 32, 26 36, 20 42
+             C16 46, 12 50, 8 54" />
+        <path d="M50 12
+             C44 18, 38 24, 32 30
+             C28 34, 24 38, 18 44
+             C14 48, 10 52, 7 55" />
+    </g>
+</svg>
+
