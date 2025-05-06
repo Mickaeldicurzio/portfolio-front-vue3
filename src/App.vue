@@ -36,14 +36,21 @@ import NavBar from "@/components/NavBar/NavBar";
 import MenuComponent from "@/components/Menu/MenuComponent";
 import {CLOSE_MENU, OPEN_MENU} from "@/constants/event-constants";
 import FooterComponent from "@/components/Footer/FooterComponent";
-import { useMeta } from 'vue-meta'
+
 import {useI18n} from "vue-i18n";
+import { useHead } from '@vueuse/head'
 
 export default {
 
-  setup () {
-    useMeta({
-      htmlAttrs: { lang: localStorage.getItem('currentLocale') ?? useI18n().locale.value, amp: true }
+  setup() {
+    const { locale } = useI18n()
+    const currentLang = localStorage.getItem('currentLocale') ?? locale.value
+
+    useHead({
+      htmlAttrs: {
+        lang: currentLang,
+        amp: true
+      }
     })
   },
 

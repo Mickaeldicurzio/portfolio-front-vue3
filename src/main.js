@@ -46,16 +46,14 @@ app.directive("fade-in", fadeInDirective)
 // I18N
 import {i18nMessages} from "@/services/i18n";
 
-// VUE Meta
-import { createMetaManager } from 'vue-meta'
-import { plugin as vueMetaPlugin } from 'vue-meta'
+// VUE Head
+import { createHead } from '@vueuse/head'
 
 // app use and mount
 app.use(i18nMessages)
     .use(apolloProvider)
     .use(vuetify)
-    .use(createMetaManager())
-    .use(vueMetaPlugin)
+    .use(createHead())
     .use(MasonryWall)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(router)
